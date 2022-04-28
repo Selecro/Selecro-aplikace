@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Slovnik</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of slovnik" button (click)="buttonClick()">
+    <ion-label>
+      {{item}}
+    </ion-label>
+  </ion-item>
+</ion-content>

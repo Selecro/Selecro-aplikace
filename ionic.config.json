@@ -1,0 +1,7 @@
+{
+  "name": "Selecro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
