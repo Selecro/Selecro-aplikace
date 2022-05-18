@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+//Moje classy
+
+.lista  {
+    --background: #4FC4F5;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.text {
+    padding: 12px;
+    text-align: justify;
+}
+
+.bunka {
+    --background: #c8e7f4;
+}

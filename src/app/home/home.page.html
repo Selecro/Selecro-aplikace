@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Selecro
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="lista">
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Selecro</ion-title>
+  <ion-buttons slot="start">
+    <ion-menu-button menuId="main-menu"></ion-menu-button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+<body class="zada">
+  <div class="uvod">
+  <h1>Vítejte v aplikaci SELECRO!</h1>
+  <p><img src="assets/icon/pink-blue.png"></p>
+  <h2>Můžete navštívit naše sociální sítě:</h2>
+  <p>Instagram: <a href="https://www.instagram.com/_selecro_/">_selecro_</a></p>
+  <p>Pinterest: <a href="https://cz.pinterest.com/selecro/_saved/">selecro</a></p>
   </div>
+</body>
 </ion-content>
