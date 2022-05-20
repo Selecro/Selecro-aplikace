@@ -16,6 +16,16 @@
 </ion-header>
 
 <ion-content class="pozadi">
+  <h4>Play Offline Video</h4>
+  <ion-button expand="full" fill="outline" (click)="playLocalVideo()">Offline Video</ion-button>
+
+  <h4>Play Online Video</h4>
+  <ion-button expand="full" fill="outline" (click)="playRemoteVideo()">Online Video</ion-button>
+
+
+  <h4>Close Player</h4>
+  <ion-button expand="full" fill="outline" (click)="closeVideo()">Stop Video</ion-button>
+
   <div class="uvod">
   <h1>Vítejte v aplikaci SELECRO!</h1>
   <p><img src="assets/icon/pink-blue.png"></p>
