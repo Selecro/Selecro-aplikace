@@ -1,6 +1,7 @@
-export type Styl = {
+export type Style =  {
     Nazev: string,
-    popis: string,
+    zkratka: string,
     znacka: string,
+    popis: string,
     animace: string,
-}
+  }

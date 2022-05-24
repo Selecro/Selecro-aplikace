@@ -62,7 +62,19 @@ const routes: Routes = [
   {
     path: 'prihlaseni',
     loadChildren: () => import('./prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
+  },  {
+    path: 'todos',
+    loadChildren: () => import('./pages/todos/todos.module').then( m => m.TodosPageModule)
   },
+  {
+    path: 'edit-todo',
+    loadChildren: () => import('./pages/edit-todo/edit-todo.module').then( m => m.EditTodoPageModule)
+  },
+  {
+    path: 'todo',
+    loadChildren: () => import('./pages/todo/todo.module').then( m => m.TodoPageModule)
+  },
+
 ];
 
 @NgModule({
