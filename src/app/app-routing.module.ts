@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'navody',
     loadChildren: () => import('./navody/navody.module').then( m => m.NavodyPageModule)
   },
+  {
+    path: 'prihlaseni',
+    loadChildren: () => import('./prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
+  },
 ];
 
 @NgModule({

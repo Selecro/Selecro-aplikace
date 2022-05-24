@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { RouterLinkDelegate } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slovnik',
@@ -9,16 +8,17 @@ import { RouterLinkDelegate } from '@ionic/angular';
 })
 
 export class SlovnikPage implements OnInit {
-  slovnik : Array<String> = ["Řetízkové oko", "Pevné oko", "Krátký sloupek", "Dlouhý sloupek", "Polodlouhý sloupek", "Rozháčkování", "Sháčkování", "Magický kroužek"];
-  odkaz : Array<String> = ["retizkove-oko", "pevne-oko", "kratky-sloupek", "dlouhy.sloupek", "polodlouhy-sloupek", "rozhackovani", "shackovani", "magicky-krouzek"];
+  slovnik : Array<Object> = [{nazev: "Řetízkové oko", cesta: "retizkove-oko"}, "Pevné oko", "Krátký sloupek", "Dlouhý sloupek", "Polodlouhý sloupek", "Rozháčkování", "Sháčkování", "Magický kroužek"];
+  
+  constructor(private router: Router) {
 
-  constructor() { }
+   }
 
   ngOnInit() {
   }
   
-  buttonClick() {
-  
+  buttonClick(cesta: string) {
+    this.router.navigate(['/'+cesta])
     console.log("Klik");
   }
 }
