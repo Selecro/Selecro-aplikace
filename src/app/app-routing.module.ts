@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -12,12 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'slovnik',
-    loadChildren: () => import('./slovnik/slovnik.module').then( m => m.SlovnikPageModule)
-  },
-  {
-    path: 'kratky-sloupek',
-    loadChildren: () => import('./kratky-sloupek/kratky-sloupek.module').then( m => m.KratkySloupekPageModule)
+    path: 'home/kratky-sloupek',
+    loadChildren: () => import('./pages/styly/styly.module').then( m => m.StylyPageModule)
   },
   {
     path: 'retizkove-oko',
@@ -62,17 +58,6 @@ const routes: Routes = [
   {
     path: 'prihlaseni',
     loadChildren: () => import('./prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
-  },  {
-    path: 'todos',
-    loadChildren: () => import('./pages/todos/todos.module').then( m => m.TodosPageModule)
-  },
-  {
-    path: 'edit-todo',
-    loadChildren: () => import('./pages/edit-todo/edit-todo.module').then( m => m.EditTodoPageModule)
-  },
-  {
-    path: 'todo',
-    loadChildren: () => import('./pages/todo/todo.module').then( m => m.TodoPageModule)
   },
 
 ];

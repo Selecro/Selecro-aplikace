@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="lista">
+  <ion-buttons slot="end">
+    <ion-button href="/prihlaseni">
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>{{styl.titulek}}</ion-title>
+  <ion-buttons slot="start">
+    <ion-menu-button menuId="main-menu"></ion-menu-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="text">
+    <p><b>Zkratka:</b> {{styl.zkratka}} </p>
+    <p><b>Popis:</b>{{styl.popis}}</p>
+    <p><b>Značka:</b><br>
+    <img class="obraz" src="assets/icon/{{styl.zkratka}}.png"></p>
+  </div>
+</ion-content>

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TodosPageRoutingModule } from './todos-routing.module';
+import { StylyPageRoutingModule } from './styly-routing.module';
 
-import { TodosPage } from './todos.page';
+import { StylyPage } from './styly.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TodosPageRoutingModule
+    StylyPageRoutingModule
   ],
-  declarations: [TodosPage]
+  declarations: [StylyPage]
 })
-export class TodosPageModule {}
+export class StylyPageModule {}

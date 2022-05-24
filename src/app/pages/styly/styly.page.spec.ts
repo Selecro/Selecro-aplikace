@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TodosPage } from './todos.page';
+import { StylyPage } from './styly.page';
 
-describe('TodosPage', () => {
-  let component: TodosPage;
-  let fixture: ComponentFixture<TodosPage>;
+describe('StylyPage', () => {
+  let component: StylyPage;
+  let fixture: ComponentFixture<StylyPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodosPage ],
+      declarations: [ StylyPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TodosPage);
+    fixture = TestBed.createComponent(StylyPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
