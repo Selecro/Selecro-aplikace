@@ -13,7 +13,7 @@ const routes: Routes = [
   },
 
   {
-    path: ':nazevStylu',
+    path: 'slovnik/:nazevStylu',
     loadChildren: () => import('./pages/slovnik/slovnik.module').then( m => m.SlovnikPageModule)
   },
 
