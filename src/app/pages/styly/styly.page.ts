@@ -17,7 +17,8 @@ export class StylyPage implements OnInit {
   }
 
   ngOnInit() {
-    const nazev = (this.router.url.split('/'))[2];
+    const nazev = (this.router.url.split('/'))[1];
+    console.log(nazev)
     this.styl = this.dictionaryService.getStylByName(nazev);
   }
 
