@@ -13,37 +13,25 @@ const routes: Routes = [
   },
 
   {
-    path: 'home/retizkove-oko',
-    loadChildren: () => import('./pages/styly/styly.module').then( m => m.StylyPageModule)
-  },
-  
-  {
     path: ':nazevStylu',
-    loadChildren: () => import('./pages/styly/styly.module').then( m => m.StylyPageModule)
+    loadChildren: () => import('./pages/slovnik/slovnik.module').then( m => m.SlovnikPageModule)
   },
-  
+
   {
-<<<<<<< HEAD
-    path: 'home/retizkove-oko',
-    loadChildren: () => import('./retizkove-oko/retizkove-oko.module').then( m => m.RetizkoveOkoPageModule)
-  },
-  {
-=======
->>>>>>> da043247e5063db475304ca61f0988ea3057f541
     path: 'pomucky',
-    loadChildren: () => import('./pomucky/pomucky.module').then( m => m.PomuckyPageModule)
+    loadChildren: () => import('./pages/pomucky/pomucky.module').then( m => m.PomuckyPageModule)
   },
   {
     path: 'vyukovy-mod',
-    loadChildren: () => import('./vyukovy-mod/vyukovy-mod.module').then( m => m.VyukovyModPageModule)
+    loadChildren: () => import('./pages/vyukovy-mod/vyukovy-mod.module').then( m => m.VyukovyModPageModule)
   },
   {
     path: 'navody',
-    loadChildren: () => import('./navody/navody.module').then( m => m.NavodyPageModule)
+    loadChildren: () => import('./pages/navody/navody.module').then( m => m.NavodyPageModule)
   },
   {
     path: 'prihlaseni',
-    loadChildren: () => import('./prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
+    loadChildren: () => import('./pages/prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
   },
 ];
 

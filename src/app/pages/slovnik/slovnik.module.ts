@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PevneOkoPageRoutingModule } from './pevne-oko-routing.module';
+import { SlovnikPageRoutingModule } from './slovnik-routing.module';
 
-import { PevneOkoPage } from './pevne-oko.page';
+import { SlovnikPage } from './slovnik.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PevneOkoPageRoutingModule
+    SlovnikPageRoutingModule
   ],
-  declarations: [PevneOkoPage]
+  declarations: [SlovnikPage]
 })
-export class PevneOkoPageModule {}
+export class SlovnikPageModule {}

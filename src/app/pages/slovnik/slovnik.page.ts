@@ -4,11 +4,11 @@ import { DictionaryService } from 'src/app/services/dictionary.service';
 import { Styl } from 'src/app/types';
 
 @Component({
-  selector: 'app-styly',
-  templateUrl: './styly.page.html',
-  styleUrls: ['./styly.page.scss'],
+  selector: 'app-slovnik',
+  templateUrl: './slovnik.page.html',
+  styleUrls: ['./slovnik.page.scss'],
 })
-export class StylyPage implements OnInit {
+export class SlovnikPage implements OnInit {
 
   styl: Styl
 
