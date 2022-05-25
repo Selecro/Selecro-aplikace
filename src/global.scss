@@ -34,7 +34,9 @@
 }
 
 .rozdeleni {
-    padding: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     display: flex;
     text-align: justify;
 }
@@ -44,7 +46,9 @@
 }
 
 .text {
-    padding: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     text-align: justify;
 }
 

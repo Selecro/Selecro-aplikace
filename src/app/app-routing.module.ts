@@ -11,12 +11,19 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+
+  {
+    path: 'home/retizkove-oko',
+    loadChildren: () => import('./pages/styly/styly.module').then( m => m.StylyPageModule)
+  },
+  
   {
     path: 'home/kratky-sloupek',
     loadChildren: () => import('./pages/styly/styly.module').then( m => m.StylyPageModule)
   },
+  
   {
-    path: 'retizkove-oko',
+    path: 'home/retizkove-oko',
     loadChildren: () => import('./retizkove-oko/retizkove-oko.module').then( m => m.RetizkoveOkoPageModule)
   },
   {
