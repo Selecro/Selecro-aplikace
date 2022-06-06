@@ -7,6 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VyukovyModPage implements OnInit {
 
+  items = [
+    {
+      nazev: 'nazev',
+      popis: "popis",
+      kroky:  [{
+        popis: "popis",
+        video:  "video"
+      }
+      ]
+    },
+    {
+      nazev: 'nazev',
+      popis: "popis"
+    },
+    {
+      nazev: 'nazev',
+      popis: "popis"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {

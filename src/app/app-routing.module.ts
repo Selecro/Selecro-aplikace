@@ -32,7 +32,7 @@ const routes: Routes = [
   {
     path: 'prihlaseni',
     loadChildren: () => import('./pages/prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
-  },
+  }
 ];
 
 @NgModule({

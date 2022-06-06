@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: VyukovyModPage
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
   }
 ];
 
