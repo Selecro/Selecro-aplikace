@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { VideoService } from './video.service';
+import { VyukaService } from './vyuka.service';
 
 describe('VideoService', () => {
-  let service: VideoService;
+  let service: VyukaService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(VideoService);
+    service = TestBed.inject(VyukaService);
   });
 
   it('should be created', () => {

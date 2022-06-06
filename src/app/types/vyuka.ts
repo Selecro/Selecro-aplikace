@@ -1,4 +1,4 @@
-export type Video =  {
+export type Vyuka =  {
     nazev: string;
     krok: number,
     pouzijeme: string,

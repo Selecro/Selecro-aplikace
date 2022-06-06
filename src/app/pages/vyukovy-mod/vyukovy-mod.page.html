@@ -8,7 +8,7 @@
       <ion-icon slot="icon-only" name="search"></ion-icon>
     </ion-button>
   </ion-buttons>
-  <ion-title>Vyukovy Mod</ion-title>
+  <ion-title>Výukový mód</ion-title>
   <ion-buttons slot="start">
     <ion-menu-button menuId="main-menu"></ion-menu-button>
   </ion-buttons>
@@ -16,8 +16,18 @@
 </ion-header>
 
 <ion-content>
-<ion-card *ngFor="let item of items">
-  {{item.nazev}}
-</ion-card>
-
+  <button href="">
+    <ion-card *ngFor="let item of items">
+      <div class="rozdeleni">
+        <div class="sloupec">
+          <img src="assets/icon/{{item.nazev}}.JPG">
+        </div>
+        <div class="sloupec" class="text">
+          <b>Název:</b> {{item.nazev}} <br>
+          <b>Čas:</b> {{item.cas}}<br>
+          <b>Počet kroků:</b> {{item.pocet}}
+        </div >
+      </div>
+    </ion-card> 
+  </button>
 </ion-content>

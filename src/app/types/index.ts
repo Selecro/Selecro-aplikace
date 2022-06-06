@@ -1,2 +1,2 @@
 export * from './styly';
-export * from './video';
+export * from './vyuka';

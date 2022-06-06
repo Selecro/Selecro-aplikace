@@ -9,21 +9,24 @@ export class VyukovyModPage implements OnInit {
 
   items = [
     {
-      nazev: 'nazev',
-      popis: "popis",
+      nazev: "Chobotnička",
+      obrazek: "chobotnicka",
+      cas: "20 min.",
+      pocet: "11",
       kroky:  [{
+        krok: 1,
         popis: "popis",
-        video:  "video"
+        video:  "video",
       }
       ]
     },
     {
-      nazev: 'nazev',
-      popis: "popis"
+      nazev: 'Růže a list',
+      popis: "ruze",
     },
     {
-      nazev: 'nazev',
-      popis: "popis"
+      nazev: 'Záložka',
+      popis: "zalozka",
     }
   ]
 
