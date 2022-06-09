@@ -1,7 +1,12 @@
-export type Vyuka =  {
-    nazev: string;
-    krok: number,
-    pouzijeme: string,
-    popis: string,
-    url: string,
-  }
+export type Postup = {
+  nazev: string,
+  popis: string,
+  videoUrl: string,
+  pouzijeme: string
+}
+
+ export type Navod={
+   nazev: string,
+   kroky: Array<Postup>,
+   popis: string,
+ }

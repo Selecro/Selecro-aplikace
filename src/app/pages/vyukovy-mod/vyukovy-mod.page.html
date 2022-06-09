@@ -16,8 +16,8 @@
 </ion-header>
 
 <ion-content>
-  <button href="">
-    <ion-card *ngFor="let item of items">
+  <div *ngFor="let item of items">
+    <ion-card (click)='goDetail(item)'>
       <div class="rozdeleni">
         <div class="sloupec">
           <img src="assets/icon/{{item.nazev}}.JPG">
@@ -28,6 +28,6 @@
           <b>Počet kroků:</b> {{item.pocet}}
         </div >
       </div>
-    </ion-card> 
-  </button>
+    </ion-card>
+  </div>
 </ion-content>

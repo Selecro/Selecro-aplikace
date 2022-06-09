@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { VyukaService } from 'src/app/services';
+import { Navod } from 'src/app/types';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPage implements OnInit {
 
-  constructor() { }
+  item: Navod;
+
+  constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
+    this.item = this.vyukaService.getNavodByName(nazev);
   }
+
 
 }
