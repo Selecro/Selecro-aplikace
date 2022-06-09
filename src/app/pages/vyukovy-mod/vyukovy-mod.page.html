@@ -19,10 +19,10 @@
   <div *ngFor="let item of items">
     <ion-card (click)='goDetail(item)'>
       <div class="rozdeleni">
-        <div class="sloupec">
-          <img src="assets/icon/{{item.nazev}}.JPG">
+        <div class="avatar">
+          <img src="assets/icon/{{item.nazev}}.jpg">
         </div>
-        <div class="sloupec" class="text">
+        <div class="popis" class="text">
           <b>Název:</b> {{item.nazev}} <br>
           <b>Čas:</b> {{item.cas}}<br>
           <b>Počet kroků:</b> {{item.pocet}}
