@@ -25,6 +25,9 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* Swiper */
+@import '~swiper/scss';
+
 //Moje classy
 
 .lista  {
@@ -62,7 +65,7 @@
     display: block;
     margin: auto;
     //width: 50%;
-} 
+}
 
 .obrazek {
     height: 200px;
@@ -70,7 +73,7 @@
     display: block;
     margin: auto;
     //width: 50%;
-} 
+}
 
 
 .popisek {
