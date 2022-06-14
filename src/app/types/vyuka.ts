@@ -5,7 +5,7 @@ export type Postup = {
   pouzijeme: string
 }
 
- export type Navod={
+ export type Vyrobek = {
    nazev: string,
    kroky: Array<Postup>,
    popis: string,

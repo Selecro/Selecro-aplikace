@@ -7,10 +7,11 @@ ion-card{
 }
 
 .avatar{
-    flex:1;
-    max-width: 30%;
+    //flex:2;
+    max-width: 50%;
 }
 
 .popis{
-    flex:3;
+    flex:2;
+    text-align: left;
 }
