@@ -14,5 +14,26 @@
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 1em;
+}
+
+.karta-popisu{
+    --background: #4FC4F5;
+    color: white
+}
+
+ion-buttons{
+    flex: 0 1 auto;
+    width: 20%;
+}
+
+.footer-button{
+    --background: #4FC4F5;
+}
+
+.footer-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
 }
 
