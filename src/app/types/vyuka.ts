@@ -10,3 +10,10 @@ export type Postup = {
    kroky: Array<Postup>,
    popis: string,
  }
+
+ export type Navod =  {
+  nazev: string,
+  pomucky: string,
+  zkratky: string,
+  popis: string,
+}
