@@ -21,32 +21,9 @@
       <h2>Budeme potřebovat:</h2> <p>{{navod.pomucky}} </p>
       <h2>Použijeme tyto styly:</h2> <p>{{navod.zkratky}}</p>
       <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast1}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}1.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast2}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}2.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast3}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}3.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast4}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}4.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast5}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}5.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast6}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}6.jpg"></div>
-      </div>
-      <div class="rozdeleni">
-        <div class="popis" innerHTML="{{popis.cast7}}"></div>
-        <div class="avatar"><img src="assets/icon/{{navod.nazev}}7.jpg"></div>
+        <h2>{{popis.nazevCasti}}</h2>
+        <div class="popis" innerHTML="{{popis.popis}}"></div>
+        <div *ngIf="popis.obrazek" class="avatar"><img src="assets/icon/{{navod.nazev}}1.jpg"></div>
       </div>
     </div>
   </div>

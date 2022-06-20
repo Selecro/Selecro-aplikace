@@ -19,11 +19,7 @@ export type Vyrobek = {
 }
 
 export type PopisNavodu = {
-  cast1: string,
-  cast2: string,
-  cast3: string,
-  cast4: string,
-  cast5: string,
-  cast6: string,
-  cast7: string,
+  obrazek: boolean,
+  nazevCasti: string,
+  popis: string
 }
