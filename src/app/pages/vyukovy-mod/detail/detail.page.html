@@ -8,7 +8,7 @@
       <ion-icon slot="icon-only" name="search"></ion-icon>
     </ion-button>
   </ion-buttons>
-  <ion-title>Title</ion-title>
+  <ion-title>{{vyrobek.nazev}}</ion-title>
   <ion-buttons slot="start">
     <ion-menu-button menuId="main-menu"></ion-menu-button>
   </ion-buttons>
@@ -21,8 +21,9 @@
       <ion-card class="karta-popisu">
         <ion-card-content>
           <div class="text">
-            <b>Krok:</b> {{krok.nazev}}<br>
-            <b>Použijeme:</b> {{krok.pouzijeme}}<br>
+            <b>Krok:</b> {{krok.cislo}}<br>
+            <b>Styl:</b> {{krok.styl}}<br>
+            <b>Pomůcky:</b> {{krok.pouzijeme}}<br>
             <b>Popis:</b><p class="popisek" innerHTML="{{krok.popis}}"></p>
           </div>
         </ion-card-content>
@@ -35,6 +36,7 @@
     </ng-template>
   </swiper>
 </ion-content>
+
 <ion-toolbar >
   <div class="footer-buttons" >
     <ion-button start class="footer-button" (click)="goToPreviousSlide()" shape="round">

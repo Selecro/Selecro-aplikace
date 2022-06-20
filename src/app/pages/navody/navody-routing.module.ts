@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: NavodyPage
+  },
+  {
+    path: 'vnitrek',
+    loadChildren: () => import('./vnitrek/vnitrek.module').then( m => m.VnitrekPageModule)
   }
 ];
 

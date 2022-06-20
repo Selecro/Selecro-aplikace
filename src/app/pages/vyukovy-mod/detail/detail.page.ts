@@ -22,12 +22,11 @@ export class DetailPage implements OnInit {
 
   constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
-    this.vyrobek = this.vyukaService.getNavodByName(nazev);
+    this.vyrobek = this.vyukaService.getVyrobekByName(nazev);
     this.kroky = this.vyrobek.kroky;
   }
 
   ngOnInit() {
-
   }
 
   getEmbedVideo(embed: string){
@@ -41,6 +40,4 @@ export class DetailPage implements OnInit {
   goToPreviousSlide(){
     this.swiper.swiperRef.slidePrev();
   }
-
-
 }

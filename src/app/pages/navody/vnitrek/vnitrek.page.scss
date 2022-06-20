@@ -1,0 +1,22 @@
+
+.rozdeleni {
+    display: flex;
+}
+
+.avatar {
+    //flex:2;
+    max-width: 50%;
+}
+
+.popis {
+    flex:2;
+    text-align: left;
+}
+
+.zalomeni:before {
+        content: '\a';
+        white-space: pre;
+   
+
+
+}

@@ -20,8 +20,8 @@ export class VyukovyModPage implements OnInit {
     this.items = this.vyukaService.getVsechnyVyrobky()
   }
 
-  goDetail(item: Vyrobek){
+  goDetail(item: Vyrobek) {
     this.router.navigate([`vyukovy-mod/detail`, {nazevVyrobku: item.nazev}]);
-  }
+  }cd
 
-}
+}  
