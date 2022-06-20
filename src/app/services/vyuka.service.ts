@@ -211,10 +211,123 @@ const poleVyrobku: Array<Vyrobek>= [
   kroky:[{
     cislo: '1.',
     styl: "Mk",
-    pouzijeme: "Mk",
-    popis:" Nejdůležitější na tomto kroku je neutahovat, abyste byli schopni konečný výsledek utáhnout. Neustále si hlídám zadní nit, aby mi neutekla. Potřebujeme ji tam mít zaháčkovanou, abychom měli vůbec možnost utáhnout celý kroužek.</p><p>Postup na magický kroužek je uveden ve slovníku v jeho samostatné kapitole. Existuje však spousta způsobů, jak jej vytvořit. Ve většině způsobů se dostanete ke stejnému základu, jako ve videu (viz 35 vteřina). Můžeme k tomu však použít i pouhá 2 řetízková oka, vrátit se a udělat do toho prvního 6 ks.",
-    videoUrl: "dBmU8n4AfDg"
-    }
+    pouzijeme: "Háček",
+    popis:"Začneme jedním z nejtěžších stylů, a to je magický kroužek. Buď ho můžete dělat jako já na videu, nebo si práci zjednodušit za pomoci 2 řetízkových ok a následného píchnutí 6krát do prvního oka.",
+    videoUrl: "NOXIskqmC0Q"
+    },
+    {
+    cislo: '2.',
+    styl: "V",
+    pouzijeme: "Háček, značkovač",
+    popis:"Označíme si nějakým způsobem začátek řady. Já mám značkovače, ale vám může stačit i nit jiné příze. Rozháčkování je o tom, že dělám 2 krátké sloupky do každého jednoho oka. </p><p>První očko není vždycky úplně zřetelné a mnohdy se do něj nedá ani dostat, to je ovšem ovlivněno samotným utahováním. </p><p>Nit, kterou jsem kroužek stahovala, si držím stále pod výrobkem, abych mohla mírně utáhnout.",
+    videoUrl: "8COmvVjuNCI"
+    },
+    {
+    cislo: '3.',
+    styl: "Ks, V",
+    pouzijeme: "Háček, značkovač",
+    popis:"Postupné rozháčkování. Přidáváme mezi rozháčkování krátké sloupky. V tomto případě to bude jeden krátký sloupek, rozháčkování. Celkem 6krát. Kontrolou vám může být přepočítání ok. Vždycky se zvyšuje počet o 6, pokud nejedeme zrovna rovné řady, tam se nic nemění.",
+    videoUrl: "s61YbmAz8ig"
+    },
+    {
+    cislo: '4.',
+    styl: "Ks, V",
+    pouzijeme: "Háček, značkovač",
+    popis:"Pokračujeme v postupném rozháčkování, takže už vás asi napadne, že budeme postupovat 2 krátké sloupky, rozháčkování. Na konci celkem 24 oček. </p><p> Už na konci tohoto kroku vidíte, jak se naše kolečko plynule zvětšuje.",
+    videoUrl: "Eu2U2H1vOsM"
+    },
+    {
+    cislo: '5.',
+    styl: "Ks, V",
+    pouzijeme: "Háček, značkovač",
+    popis:"Co asi bude dál? Ano, správně! 3 krátké sloupky a rozháčkování, zase celkem 6krát a nakonec bude 30 oček k napočítání.</p><p>Naposledy se rozšíříme. 4 krátké sloupky a rozháčkování. Celkem 6krát, z toho plyne, že nakonec bude 36 oček.",
+    videoUrl: "Soz8p-_p0gk"
+    },
+    {
+    cislo: '6., 7. a 8.',
+    styl: "ks",
+    pouzijeme: "Háček, značkovač",
+    popis:"Následující 3 řady budou stejné. Skládat je budeme pouze z krátkých sloupků, čili rovných řad, abychom výrobku dali nějakou velikost.",
+    videoUrl: "nFvPTp6DPl0"
+    },
+    {
+    cislo: '9.',
+    styl: "Ks, A",
+    pouzijeme: "Háček, značkovač",
+    popis:"Vytvořenou kopuli budeme teď stahovat, abychom z ní udělali kouli. Stejně jako existuje postupné rozháčkování, tak teď se seznámíme s postupným sháčkováním. To funguje úplně stejně, ale s opačným pořadím. Rozháčkování přidává krátké sloupky do mezer, sháčkování ubírá. </p><p>Takže teď nás čekají 4 krátké sloupky, sháčkování. Celkem 6krát a budeme očka zase po 6 odebírat. Závěr této řady bude vyjádřen 30 očky.",
+    videoUrl: "qKeh_ILkgm4"
+    },
+    {
+    cislo: '10.',
+    styl: "Ks, A",
+    pouzijeme: "Háček, značkovač",
+    popis:"Tentokrát 3 krátké sloupky a stažení. Už v tomto bodě jde hezky vidět, jak se nám výrobek stahuje a tvaruje. </p><p>Pokud vlastníte bezpečnostní očka, tak je teď můžete přidat a upevnit. Já je budu pro tento okamžik háčkovat.",
+    videoUrl: "eM3djYCpFu0"
+    },
+    {
+    cislo: '11. a 12.',
+    styl: "Ks, A",
+    pouzijeme: "Háček, značkovač",
+    popis:"Postupně pokračujeme dolů s počtem krátkých sloupků. Teď 2 krátké sloupky a stáhnu.</p><p>Stažení na 1 krátký sloupek a sháčkování. Po tomto kroku budeme hlavičku vyplňovat a pro vás s bezpečnostními očky je tohle poslední možnost je přidat. </p><p>Vyplníme výrobek vatou, dutým vláknem, zbytky přízí, nebo výplní ze starých polštářů.",
+    videoUrl: "oXCrwIgnyfE"
+    },
+    {
+    cislo: '13. ',
+    styl: "A",
+    pouzijeme: "Háček, značkovač",
+    popis:"Když jsme s vyplněním spokojeni, tak jednoduše po dvojicích stáhneme všech 12 současných oček. Bodneme do dalšího oka, jako když se začíná další řada a uděláme pevné očko, ukončíme, necháme nit delší na zapošití.",
+    videoUrl: "LRfLBApNgvQ"
+    },
+    {
+    cislo: '14.',
+    styl: " ",
+    pouzijeme: "Jehla, nůžky",
+    popis:"Zašijeme kouli tak, aby zmizela díra uprostřed a projedeme ji tak, aby se nám schovaly veškeré nedokonalosti. Zapošijeme, zakončíme. Upravíme kouli.",
+    videoUrl: "BP8IxCX-xR4"
+    },
+    {
+    cislo: '15.',
+    styl: "Mk, Po",
+    pouzijeme: "Háček, nůžky",
+    popis:"Vytvoříme si spolu oči. Pokud se vám nechce je háčkovat, můžete si vzít filc a vystřihnout i oči. Pokud vás to háčkování zatím baví, pojďte si je se mnou uháčkovat. Magický kroužek, stejně jako v prvním kroku.</p><p>Do prvního oka uděláme pevné očko. Vytvoříme jen takto malinká očko. Postup opakujeme a vytvoříme si druhé.",
+    videoUrl: "SyGaT44H728"
+    },
+    {
+    cislo: '16.',
+    styl: " ",
+    pouzijeme: "Jehla, nůžky",
+    popis:"Našijeme očka. Opět je to na vás, video jen ukazuje, jak bych to dělala já.",
+    videoUrl: "7VhN_yctywY"
+    },
+    {
+    cislo: '17.',
+    styl: " ",
+    pouzijeme: "Jehla",
+    popis:"Našijeme pusinku, a to buď opět nějak individuálně, nebo podle mého typu z videa. Samozřejmě můžete mít i jiný výraz. Smajlík může být smutný, naštvaný… prostě jaký chcete.",
+    videoUrl: "7iNCCeg7G1Q"
+    },
+    {
+    cislo: '18.',
+    styl: "Řo, ks",
+    pouzijeme: "Háček",
+    popis:"Teď k tomu té záložce. Buď uděláme řetízkové oko, nebo jenom natáhneme provázek, nebo podle videa můžeme vytvořit širší pruh. Řetízková oka podle šířky, udělám si jedno navíc. Výrobek otočím a vracím se krátkými sloupky, na konci si udělám jedno řetízkové a zase se vracím sloupky zpět. Takto opakuju, dokud nemám vyhovující délku.",
+    videoUrl: "c0hboILLyRI"
+    },
+    {
+    cislo: '17.',
+    styl: "Po",
+    pouzijeme: "Háček, nůžky",
+    popis:"Připevníme pás k hlavičce. Naberu oko z pásu a zároveň z hlavičky, pevným okem spojím. Na konci po, ustřihnu a zakončím.",
+    videoUrl: "6mgPGFgQMCg"
+    },
+    {
+    cislo: '18.',
+    styl: "Řo",
+    pouzijeme: "Háček",
+    popis:"Druhý způsob je udělat si jenom jeden jednoduchý řetízek, který se pak jedním jednoduchým utažením připevní k hlavičce smajlíka.",
+    videoUrl: "JF-W5Dk3IE0"
+    },
+
   ]
 }]
 

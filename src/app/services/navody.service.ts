@@ -15,7 +15,7 @@ import { Navod } from '../types';
     cast7: "<h2>Osten (6x):</h2> Mk (6)<br> 2ks, V<br> 3ks, V<br> 4ks, V<br> 5ks, V<br> 6ks, V<br> Po",
   }
 ]},
-  { nazev: "Chobotnice Harold",
+  { nazev: "Harold",
     zkratky: "Mk, Ks, Řo, Po, V, A",
     pomucky: "Háček (velikost 3,5 mm, jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     popisy: [{
