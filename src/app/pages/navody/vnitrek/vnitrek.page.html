@@ -1,25 +1,29 @@
 <ion-header>
   <ion-toolbar class="lista">
-  <ion-buttons slot="end">
-    <ion-button href="/prihlaseni">
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button slot="end">
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>{{navod.nazev}}</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button menuId="main-menu"></ion-menu-button>
-  </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{navod.nazev}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div *ngFor="let popis of popisy">
     <div class="text">
-      <h2>Budeme potřebovat:</h2> <p>{{navod.pomucky}} </p>
-      <h2>Použijeme tyto styly:</h2> <p>{{navod.zkratky}}</p>
+      <h2>Budeme potřebovat:</h2>
+      <p>{{navod.pomucky}} </p>
+      <h2>Použijeme tyto styly:</h2>
+      <p>{{navod.zkratky}}</p>
       <div class="rozdeleni">
         <h2>{{popis.nazevCasti}}</h2>
         <div class="popis" innerHTML="{{popis.popis}}"></div>

@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar class="lista">
-  <ion-buttons slot="end">
-    <ion-button href="/prihlaseni">
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button slot="end">
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>{{vyrobek.nazev}}</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button menuId="main-menu"></ion-menu-button>
-  </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{vyrobek.nazev}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -24,21 +24,25 @@
             <b>Krok:</b> {{krok.cislo}}<br>
             <b>Styl:</b> {{krok.styl}}<br>
             <b>Pomůcky:</b> {{krok.pouzijeme}}<br>
-            <b>Popis:</b><p class="popisek" innerHTML="{{krok.popis}}"></p>
+            <b>Popis:</b>
+            <p class="popisek" innerHTML="{{krok.popis}}"></p>
           </div>
         </ion-card-content>
       </ion-card>
       <div class="video-center">
         <div class="video">
-          <iframe width="100%" height="100%" [src]=getEmbedVideo(krok.videoUrl) title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" [src]=getEmbedVideo(krok.videoUrl) title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
     </ng-template>
   </swiper>
 </ion-content>
 
-<ion-toolbar >
-  <div class="footer-buttons" >
+<ion-toolbar>
+  <div class="footer-buttons">
     <ion-button start class="footer-button" (click)="goToPreviousSlide()" shape="round">
       <ion-icon size="small" name="arrow-back-outline"></ion-icon>
     </ion-button>
@@ -46,4 +50,4 @@
       <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
     </ion-button>
   </div>
-  </ion-toolbar>
+</ion-toolbar>
