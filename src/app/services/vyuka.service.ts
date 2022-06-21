@@ -4,6 +4,7 @@ import { Vyrobek } from '../types'
 const poleVyrobku: Array<Vyrobek>= [
   {nazev: "Chobotnicka",
    popis: "Navod na vytvoreni chobotnicky",
+   pocet: '12',
    kroky:[{
      cislo: '1.',
      styl: "Mk",
@@ -85,6 +86,7 @@ const poleVyrobku: Array<Vyrobek>= [
 
   {nazev: "Růže",
   popis: "Vytvořme si společně okrasnou růži společně s listem.",
+  pocet: '17',
   kroky:[{
     cislo: '1.',
     styl: " ",
@@ -208,6 +210,7 @@ const poleVyrobku: Array<Vyrobek>= [
   },
   {nazev: "Záložka",
   popis: "Veselá záložka do knihy pro malé i velké.",
+  pocet: '18',
   kroky:[{
     cislo: '1.',
     styl: "Mk",

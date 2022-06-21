@@ -2,6 +2,7 @@ export type Vyrobek = {
    nazev: string,
    kroky: Array<Postup>,
    popis: string,
+   pocet: string,
  }
  export type Postup = {
   cislo: string,

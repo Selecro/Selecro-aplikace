@@ -18,16 +18,18 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let popis of popisy">
+  <div >
     <div class="text">
       <h2>Budeme potřebovat:</h2>
       <p>{{navod.pomucky}} </p>
       <h2>Použijeme tyto styly:</h2>
-      <p>{{navod.zkratky}}</p>
-      <div class="rozdeleni">
-        <h2>{{popis.nazevCasti}}</h2>
-        <div class="popis" innerHTML="{{popis.popis}}"></div>
-        <div *ngIf="popis.obrazek" class="avatar"><img src="assets/icon/{{navod.nazev}}1.jpg"></div>
+      <div>{{navod.zkratky}}</div>
+      <div class="rozdeleni" *ngFor="let popis of popisy">
+        <div class="sloupec">
+          <h2>{{popis.nazevCasti}}:</h2>
+          <div class="popis" innerHTML="{{popis.popis}}"></div>
+        </div>
+        <div *ngIf="popis.obrazek" class="avatar"><img src="assets/icon/{{navod.nazev}}/{{popis.nazevCasti}}.jpg"></div>
       </div>
     </div>
   </div>

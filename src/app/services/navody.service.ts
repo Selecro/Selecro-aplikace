@@ -4,7 +4,7 @@ import { Navod } from '../types';
  const poleNavodu = [
  {nazev: "Dinosaurus",
   zkratky: "Mk, V, Ks, A, Po, Řo",
-  pomucky: "Háček velikosti 2mm, jehla, značkovač, duté vlákno, bezpečnostní očka",
+  pomucky: "Háček (velikosti 2mm), jehla, značkovač, duté vlákno, bezpečnostní očka",
   popisy: [
     {
       obrazek: true,
@@ -45,40 +45,68 @@ import { Navod } from '../types';
 ]},
   { nazev: "Harold",
     zkratky: "Mk, Ks, Řo, Po, V, A",
-    pomucky: "Háček (velikost 3,5 mm, jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
+    pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     popisy: [{
       obrazek: true,
-      nazevCasti: 'Tělo',
+      nazevCasti: 'Hlava',
       popis: 'Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> ks (6 řad)<br> 4 ks, A<br> 3 ks, A<br> 2 ks, A<br> ks, A<br> Po'
     },
     {
       obrazek: true,
-      nazevCasti: 'Tělo',
+      nazevCasti: 'Chapadla',
       popis: "6*(25řo, otočím směr háčkování a střídám 2V, W, Po do dalšího oka opět za vnější přízi) "
     },
     {
       obrazek: true,
-      nazevCasti: 'Tělo',
+      nazevCasti: 'Vyplnění',
       popis: "Nezapomeňte v tomto bodě vyplnit."
     },
     {
       obrazek: true,
-      nazevCasti: 'Tělo',
+      nazevCasti: 'Uzavření',
       popis: "A<br>Po na zakončení, necháme si delší kus příze na zapošití."
     },
     {
       obrazek: true,
-      nazevCasti: 'Tělo',
-      popis: "<h2>Doplňky:</h2> Obočí a pusinku našijeme černou přízí."
-    },
-    {
-      obrazek: true,
-      nazevCasti: 'Tělo',
-      popis: ""
+      nazevCasti: 'Doplňky',
+      popis: "Obočí a pusinku našijeme černou přízí."
     }
+]},
+  { nazev: "Vodní želva",
+  zkratky: "Mk, Ks, Řo, Po, V, A",
+  pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
+  popisy: [{
+    obrazek: true,
+    nazevCasti: "Hlava",
+    popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> ks (4 řad)<br> 4 ks, A<br> 3 ks, A<br> 2 ks, A<br> ks, A<br> Po"
+  },
+  {
+    obrazek: true,
+    nazevCasti: "Horní část krunýře",
+    popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> ks (3 řady)<br> Po"
+  },
+  {
+    obrazek: true,
+    nazevCasti: "Spodní část krunýře",
+    popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> Po"
+  },
+  {
+    obrazek: true,
+    nazevCasti: "Zadní ploutev (2x)",
+    popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> Po<br> Po dokončení kolečko ohneme napůl a sešijeme k sobě."
+  },
+  {
+    obrazek: true,
+    nazevCasti: "Přední ploutev (2x)",
+    popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> Po<br> Po dokončení kolečko ohneme napůl a sešijeme k sobě."
+  },
+  {
+    obrazek: false,
+    nazevCasti: "Ocásek",
+    popis: "Mk (4)<br> ks (2 řady)<br> Po"
+  },
 ],
-
-  }];
+}];
 
 
 @Injectable({
