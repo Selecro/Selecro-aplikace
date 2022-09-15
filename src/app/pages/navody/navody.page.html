@@ -18,12 +18,15 @@
 <ion-content>
   <div *ngFor="let item of items">
     <ion-card (click)='goVnitrek(item)'>
+      <div class="obtiznost">
+        <b>{{item.nazev}}</b>
+      </div>
       <div class="rozdeleni">
         <div class="avatar">
           <img src="assets/icon/{{item.nazev}}.jpg">
         </div>
         <div class="popis" class="text">
-          <b>Název:</b> {{item.nazev}} <br>
+          
           <b>Zkratky:</b> {{item.zkratky}} <br>
           <b>Pomůcky:</b> {{item.pomucky}}
         </div>

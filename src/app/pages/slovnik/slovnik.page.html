@@ -13,21 +13,32 @@
 </ion-header>
 
 <ion-content>
-  <div class="rozdeleni">
-    <div class="sloupec">
-      <b>Zkratka:</b> {{styl.zkratka}}
-    </div>
-    <div class="sloupec">
-      <b>Značka:</b>
-      <img class="obraz" src="assets/icon/{{styl.zkratka}}.png">
-    </div>
-  </div>
-
   <div class="text">
-    <b>Popis:</b><p class="popisek" innerHTML="{{styl.popis}}"></p>
-    <p><b>Animace:</b><br>
-    <img src="assets/icon/{{styl.zkratka}}.gif"></p>
-    <p><b>Ve skutečnosti:</b><br>
-    <img src="assets/icon/{{styl.zkratka}}real.jpg"> </p>
+    <ion-card class="modra">
+      <div class="rozdeleni">
+        <div class="sloupec">
+          <b>Zkratka</b>
+          <ion-card class="zkratka">
+            {{styl.zkratka}}
+          </ion-card>
+        </div>
+        <div class="sloupec">
+          <b>Značka</b>
+          <ion-card class="znacka">
+            <img class="obraz" src="assets/icon/{{styl.zkratka}}.png">
+          </ion-card>
+        </div>
+      </div>
+
+      <br><b>Popis</b><p class="popisek" innerHTML="{{styl.popis}}"></p>
+    </ion-card>
+  
+    <div class="nadpis"><b>Animace</b><br>
+      <ion-card class="fotky-slovnik">
+        <img src="assets/icon/{{styl.zkratka}}.gif">
+      </ion-card>
+    </div>
+    <p class="nadpis"><b>Ve skutečnosti</b>
+    <img src="assets/icon/{{styl.zkratka}}real.png"></p>
   </div>
 </ion-content>

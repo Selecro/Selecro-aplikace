@@ -1,17 +1,24 @@
-ion-card{
+ion-card {
     margin: 10px;
 }
 
-.rozdeleni{
+.rozdeleni {
     display: flex;
 }
 
-.avatar{
+.avatar {
     //flex:2;
     max-width: 50%;
 }
 
-.popis{
+.popis {
     flex:2;
     text-align: left;
+}
+
+.obtiznost {
+    --background: #4FC4F5;
+    text-align: center;
+    padding-top: 5px;
+    
 }
