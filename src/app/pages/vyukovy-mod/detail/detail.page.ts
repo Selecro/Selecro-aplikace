@@ -12,6 +12,7 @@ import { SwiperComponent } from 'swiper/angular';
   styleUrls: ['./detail.page.scss'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class DetailPage implements OnInit {
   @ViewChild('swiper') swiper: SwiperComponent;
   config: SwiperOptions = {

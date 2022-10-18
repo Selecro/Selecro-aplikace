@@ -22,6 +22,6 @@ export class VyukovyModPage implements OnInit {
 
   goDetail(item: Vyrobek) {
     this.router.navigate([`vyukovy-mod/detail`, {nazevVyrobku: item.nazev}]);
-  }cd
+  }
 
 }  

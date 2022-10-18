@@ -5,6 +5,7 @@ const poleVyrobku: Array<Vyrobek>= [
   {nazev: "Chobotnicka",
    popis: "Navod na vytvoreni chobotnicky",
    pocet: '12',
+   cas: "60min",
    kroky:[{
      cislo: '1.',
      styl: "Mk",
@@ -86,6 +87,7 @@ const poleVyrobku: Array<Vyrobek>= [
 
   {nazev: "Růže",
   popis: "Vytvořme si společně okrasnou růži společně s listem.",
+  cas: "60 min",
   pocet: '17',
   kroky:[{
     cislo: '1.',
@@ -210,6 +212,7 @@ const poleVyrobku: Array<Vyrobek>= [
   },
   {nazev: "Záložka",
   popis: "Veselá záložka do knihy pro malé i velké.",
+  cas: "60min",
   pocet: '18',
   kroky:[{
     cislo: '1.',

@@ -134,6 +134,4 @@ export class NavodyService {
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;
   }
-
-
 }
