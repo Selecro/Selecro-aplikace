@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Vyrobek } from '../types'
 
 const poleVyrobku: Array<Vyrobek>= [
-  {nazev: "Chobotnicka",
+  {nazev: "chobotnicka",
+  title: "Chobotnička",
    popis: "Navod na vytvoreni chobotnicky",
    pocet: '12',
    cas: "60min",
@@ -85,7 +86,8 @@ const poleVyrobku: Array<Vyrobek>= [
      }
   ]},
 
-  {nazev: "Růže",
+  {nazev: "ruze",
+  title: "Růže",
   popis: "Vytvořme si společně okrasnou růži společně s listem.",
   cas: "60 min",
   pocet: '17',
@@ -210,7 +212,8 @@ const poleVyrobku: Array<Vyrobek>= [
     }
   ]
   },
-  {nazev: "Záložka",
+  {nazev: "zalozka",
+  title: "Záložka",
   popis: "Veselá záložka do knihy pro malé i velké.",
   cas: "60min",
   pocet: '18',

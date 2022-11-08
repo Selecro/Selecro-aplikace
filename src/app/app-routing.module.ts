@@ -18,7 +18,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'pomucky/:nazevPomucek',
+    path: 'pomucky',
     loadChildren: () => import('./pages/pomucky/pomucky.module').then( m => m.PomuckyPageModule)
   },
   {

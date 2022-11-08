@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { PopisNavodu, Navod } from 'src/app/types';
+import { PopisNavodu, Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';

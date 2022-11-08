@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod } from '../../types';
+import { Navod } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 

@@ -1,5 +1,6 @@
 export type Vyrobek = {
    nazev: string,
+   title: string,
    kroky: Array<Postup>,
    cas: string,
    popis: string,
@@ -14,15 +15,4 @@ export type Vyrobek = {
   pouzijeme: string
 }
 
- export type Navod =  {
-  nazev: string,
-  pomucky: string,
-  zkratky: string,
-  popisy: Array<PopisNavodu>
-}
 
-export type PopisNavodu = {
-  obrazek: boolean,
-  nazevCasti: string,
-  popis: string
-}
