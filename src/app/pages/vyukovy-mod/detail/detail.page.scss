@@ -1,0 +1,36 @@
+.video-center{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    text-align:center
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.karta-popisu{
+    --background: #4FC4F5;
+    color: white
+}
+
+.footer-button{
+    flex: 0 1 auto;
+    width: 20%;
+    --background: #4FC4F5;
+}
+
+.footer-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+

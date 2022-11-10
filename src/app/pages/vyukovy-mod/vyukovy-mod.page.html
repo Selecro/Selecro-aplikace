@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="lista">
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Výukový mód</ion-title>
+  <ion-buttons slot="start">
+    <ion-menu-button menuId="main-menu"></ion-menu-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of items">
+    <ion-card (click)='goDetail(item)'>
+      <div class="rozdeleni">
+        <div class="avatar">
+          <img src="assets/icon/{{item.nazev}}.jpg">
+        </div>
+        <div class="popis" class="text">
+          <b>Název:</b> {{item.title}} <br>
+          <b>Čas:</b> {{item.cas}}<br>
+          <b>Počet kroků:</b> {{item.pocet}} <br>
+          <b>Popis:</b> {{item.popis}}
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

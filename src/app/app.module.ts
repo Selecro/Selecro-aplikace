@@ -9,17 +9,18 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { VideoPlayer } from '@ionic-native/video-player/ngx';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
+
+
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [//StatusBar,
-    //SplashScreen,
-    VideoPlayer,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
+  imports: [SwiperModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

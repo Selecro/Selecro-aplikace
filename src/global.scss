@@ -25,7 +25,18 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+/* Swiper */
+@import '~swiper/scss';
+
 //Moje classy
+ion-content{
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background: #FFFFFF;
+    color: black;
+
+}
 
 .lista  {
     --background: #4FC4F5;
@@ -33,8 +44,23 @@
     text-align: left;
 }
 
+.rozdeleni {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    display: flex;
+    text-align: center;
+}
+
+.sloupec {
+    flex: 2;
+    border: 5px;
+}
+
 .text {
-    padding: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     text-align: justify;
 }
 
@@ -42,7 +68,33 @@
     --background: #c8e7f4;
 }
 
+.obraz {
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
+.obrazek {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+    //width: 50%;
+}
+
+.popisek {
+    margin-top: -2px;
+}
+
+.obtiznost {
+    --background: #4ef44e;
+    text-align: center;
+    padding-top: 5px;
+
+}
 .obrazky {
     height: 200px;
     width: 200px;
 }
+
