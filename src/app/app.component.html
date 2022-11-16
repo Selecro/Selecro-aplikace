@@ -17,12 +17,86 @@
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-menu-toggle>
-          <ion-item routerLink="/pomucky">
-            <ion-icon name="pom" slot="primary"></ion-icon>
-            <ion-label>Pomůcky</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
+        <ion-accordion-group>
+          <ion-accordion>
+            <ion-item slot="header">
+              <ion-label>Pomůcky</ion-label>
+            </ion-item>
+
+            <ion-list slot="content">
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/hacek">
+                  <ion-icon name="hacek"></ion-icon>
+                  <ion-label>Háček</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/prize">
+                  <ion-icon name="prize"></ion-icon>
+                  <ion-label>Příze</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/znackovac">
+                  <ion-icon name="znackovac"></ion-icon>
+                  <ion-label>Značkovač</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/jehla">
+                  <ion-icon name="jehla"></ion-icon>
+                  <ion-label>Jehla</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/nuzky">
+                  <ion-icon name="nuzky"></ion-icon>
+                  <ion-label>Nůžky</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/bezpecnostni-oci-a-nos">
+                  <ion-icon name="bezpecnostni-oci-a-nos"></ion-icon>
+                  <ion-label>Bezpečnostní oči a nos</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/chrastitko">
+                  <ion-icon name="chrastitko"></ion-icon>
+                  <ion-label>Chrastítko</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/pocitadlo">
+                  <ion-icon name="pocitadlo"></ion-icon>
+                  <ion-label>Počítadlo</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/navijec-prize">
+                  <ion-icon name="navijec-prize"></ion-icon>
+                  <ion-label>Navíječ příze</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/vypln">
+                  <ion-icon name="vypln"></ion-icon>
+                  <ion-label>Výplň</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+            </ion-list>
+          </ion-accordion>
+        </ion-accordion-group>
+        
 
         <ion-accordion-group>
           <ion-accordion>
