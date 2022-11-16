@@ -25,7 +25,7 @@ import { Pomucka, PopisPomucek } from '../types/pomucka'
    
     { nazev: "prize", 
     titulek: "Příze", 
-    videoURL: "", 
+    videoURL: "XL4ze9vLC3s", 
     kroky: [
       {
         popis: "Dnes můžeme najít obrovské množství značek a materiálů (akrylové, bavlněné, směsové).",
@@ -46,7 +46,7 @@ import { Pomucka, PopisPomucek } from '../types/pomucka'
 
     { nazev: "znackovac", 
     titulek: "Značkovač", 
-    videoURL: "",
+    videoURL: "XL4ze9vLC3s",
     kroky: [
       {
         popis: "Slouží nám k označení počátku řady, ale dá se použít i jiný kousek příze.",
