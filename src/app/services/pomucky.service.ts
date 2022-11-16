@@ -18,8 +18,8 @@ import { Pomucka, PopisPomucek } from '../types/pomucka'
       },
       {
         popis: "Mohou být zdobeny rukojeťmi, ergonomickými úchyty a podobně.",
-        obrazek: " ",  
-        exist: false,   
+        obrazek: "okrasny-hacek",  
+        exist: true,   
       },
     ]},
    
@@ -82,8 +82,8 @@ import { Pomucka, PopisPomucek } from '../types/pomucka'
     kroky: [
       {
         popis: "Nůžky asi už někdy používal každý z nás a u háčkování to není nějak zvlášť jiné.",
-        obrazek: "",  
-        exist: false, 
+        obrazek: "nuzky",  
+        exist: true, 
       },
       {
         popis: "Klasické nůžky na papír nejsou na některé příze vhodné, protože potom ji přestříháváme na několikrát a akorát se nám konec třepí.",
