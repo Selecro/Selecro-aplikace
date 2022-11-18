@@ -3,12 +3,34 @@ ion-card {
 }
 
 .rozdeleni {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     display: flex;
+    text-align: center;
 }
 
+.sloupec {
+    flex: 2;
+    border: 5px;
+}
+
+.text {
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    text-align: justify;
+}
 .avatar {
     //flex:2;
     max-width: 50%;
+}
+
+.obraz {
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin: auto;
 }
 
 .popis {
@@ -21,4 +43,28 @@ ion-card {
     text-align: center;
     padding-top: 5px;
     
+}
+
+.green {
+    background-color: #E2FAE3;
+}
+
+.yellow {
+    background-color: #F9FAE1;
+}
+
+.red {
+    background-color: #FDE6E6;
+}
+
+.green_name {
+    background: #3EDE44;
+}
+
+.yellow_name {
+    background: #D6DA34;
+}
+
+.red_name {
+    background: #f73636;
 }

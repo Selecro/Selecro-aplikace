@@ -23,5 +23,8 @@ export class VnitrekPage implements OnInit {
 
   ngOnInit() {
   }
-
+/*
+  goDetail(item: Navod) {
+    this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
+  }*/
 }

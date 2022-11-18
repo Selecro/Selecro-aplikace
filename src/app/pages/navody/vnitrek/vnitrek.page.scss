@@ -1,13 +1,34 @@
 
 .rozdeleni {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     display: flex;
+    text-align: center;
 }
 
+.sloupec {
+    flex: 2;
+    border: 5px;
+}
+
+.text {
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    text-align: justify;
+}
 .avatar {
     //flex:2;
     max-width: 50%;
 }
 
+.obraz {
+    height: 100px;
+    width: 80px;
+    display: block;
+    margin: auto;
+}
 .popis {
     flex:2;
     text-align: left;
