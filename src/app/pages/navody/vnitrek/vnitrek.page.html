@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>{{navod.title}}</ion-title>
+    <ion-title>{{navod.titulek}}</ion-title>
 
     <ion-buttons slot="end">
       <ion-button>
@@ -31,7 +31,7 @@
         <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
       </div>
     </div>
-    <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje-->
+    <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
     
     <button *ngFor="let popis of popisy" (click)='goDetail(popis)'>
       {{popis.titulekCasti}}<br>

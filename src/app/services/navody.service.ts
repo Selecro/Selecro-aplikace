@@ -3,8 +3,8 @@ import { Navod, Obtiznost } from '../types/navod';
 
  const poleNavodu = [
   { obtiznost: Obtiznost.lehky, 
-    titulek: "dinosaurus", 
-    title: "Dinosaurus", 
+    nazev: "dinosaurus", 
+    titulek: "Dinosaurus", 
     zkratky: "Mk, V, Ks, A, Po, Řo", 
     pomucky: "Háček (velikosti 2mm), jehla, značkovač, duté vlákno, bezpečnostní očka", 
     popisy: [ 
@@ -46,8 +46,8 @@ import { Navod, Obtiznost } from '../types/navod';
     ]
   },
   { obtiznost: Obtiznost.stredni,
-    titulek: "harold", 
-    title: "Harold", 
+    nazev: "harold", 
+    titulek: "Harold", 
     zkratky: "Mk, Ks, Řo, Po, V, A", 
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň", 
     popisy: [
@@ -79,8 +79,8 @@ import { Navod, Obtiznost } from '../types/navod';
     ]
   },
   { obtiznost: Obtiznost.tezky, 
-    titulek: "vodni-zelva", 
-    title: "Vodní želva", 
+    nazev: "vodni-zelva", 
+    titulek: "Vodní želva", 
     zkratky: "Mk, Ks, Řo, Po, V, A", 
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň", 
     popisy: [
@@ -127,8 +127,6 @@ export class NavodyService {
   constructor() {
     this.initMap();
   }
-
-  
 
   private initMap(){
     this.mapaNavodu = new Map();
