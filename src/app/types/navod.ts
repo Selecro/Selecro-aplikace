@@ -8,8 +8,9 @@ export type Navod =  {
   }
   
   export type PopisNavodu = {
-    obrazek: boolean,
     nazevCasti: string,
+    titulekCasti: string,
+    obrazek: boolean,
     popis: string
   }
   

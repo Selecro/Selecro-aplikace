@@ -3,6 +3,7 @@ import { PopisNavodu, Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vnitrek',
@@ -13,18 +14,22 @@ import { ActivatedRoute } from '@angular/router';
 export class VnitrekPage implements OnInit {
 
   navod: Navod;
-  popisy: Array<PopisNavodu>
+  popisy: Array<PopisNavodu>;
+  popis: Navod[];
 
-  constructor(private navodyService: NavodyService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(nazev); 
     this.popisy = this.navod.popisy;
+    
+    
   }
 
   ngOnInit() {
+    this.popis = this.navodyService.getVsechnyNavody();
   }
-/*
-  goDetail(item: Navod) {
-    this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
-  }*/
+
+  goDetail(popis: PopisNavodu) {
+    this.router.navigate([`vnitrek/detail`, {nazevPopisu: popis.nazevCasti}]);
+  }
 }
