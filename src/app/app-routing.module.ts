@@ -34,7 +34,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/prihlaseni/prihlaseni.module').then( m => m.PrihlaseniPageModule)
   },
   {
-    path: 'vnitrek',
+    path: 'vnitrek/:nazevNavodu',
     loadChildren: () => import('./pages/navody/vnitrek/vnitrek.module').then( m => m.VnitrekPageModule)
   },
   {

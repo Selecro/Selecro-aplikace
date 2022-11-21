@@ -14,6 +14,7 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
 
   constructor(private router: Router, private navodyService: NavodyService) { 
+  
 
   }
 
