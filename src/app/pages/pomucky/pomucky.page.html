@@ -16,7 +16,7 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let krok of kroky" class="bublina">
+  <ion-card *ngFor="let krok of kroky" class="bublina">
     <div>
       <div>
         {{krok.popis}}
@@ -25,6 +25,6 @@
         <img  class="pomucka" src="../assets/icon/{{krok.obrazek}}.png">
       </div>
     </div>
-  </div>
+  </ion-card>
 
 </ion-content>
