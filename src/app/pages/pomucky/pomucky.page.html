@@ -16,15 +16,15 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let krok of kroky" class="bublina">
-    <div class="rozdeleni">
-      <div class="sloupec">
+  <ion-card *ngFor="let krok of kroky" class="bublina">
+    <div>
+      <div>
         {{krok.popis}}
       </div>
-      <div *ngIf="krok.exist" class="sloupec1">
+      <div *ngIf="krok.exist">
         <img  class="pomucka" src="../assets/icon/{{krok.obrazek}}.png">
       </div>
     </div>
-  </div>
+  </ion-card>
 
 </ion-content>
