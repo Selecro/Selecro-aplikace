@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Navod, Obtiznost } from '../types/navod';
+import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
 
  const poleNavodu = [
   { obtiznost: Obtiznost.lehky,
@@ -123,9 +123,12 @@ import { Navod, Obtiznost } from '../types/navod';
 export class NavodyService {
 
   mapaNavodu: Map<string,Navod>;
+  mapaPopisu: Map<string, PopisNavodu>;
+  polePopisu: Array<PopisNavodu>;
 
   constructor() {
     this.initMap();
+    //this.initMapPopisu();
   }
 
   private initMap(){
@@ -135,11 +138,24 @@ export class NavodyService {
       this.mapaNavodu.set(navod.nazev, navod);
     });
   }
+
+  /*private initMapPopisu(){
+    this.mapaPopisu = new Map();
+    this.polePopisu.forEach(popisek=>{
+
+      this.mapaPopisu.set(popisek.nazevCasti, popisek);
+    });
+  }*/
+
   public getNavodByName(name: string): Navod {
     return this.mapaNavodu.get(name);
   }
 
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;
+  }
+
+  public getVsechnyPopisy(): Array<PopisNavodu> {
+    return this.polePopisu;
   }
 }

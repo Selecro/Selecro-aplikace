@@ -11,15 +11,14 @@ import { Navod, PopisNavodu } from 'src/app/types/navod';
 export class DetailPage implements OnInit {
   navod: Navod;
   popisy: Array<PopisNavodu>;
+  
 
   constructor(private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
-    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
-    this.navod = this.navodyService.getNavodByName(nazev); 
-    this.popisy = this.navod.popisy; 
   }
 
   ngOnInit() {
-    
+    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevPopisu');
+    this.navod = this.navodyService.getNavodByName(nazev);
+    this.popisy = this.navod.popisy;
   }
-
 }

@@ -15,17 +15,20 @@ export class VnitrekPage implements OnInit {
   popisy: Array<PopisNavodu>;
   popis: Navod[];
 
+  itemy: Array<Navod>;
+
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
-    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
-    this.navod = this.navodyService.getNavodByName(nazev); 
-    this.popisy = this.navod.popisy; 
+    
   }
 
   ngOnInit() {
-    this.popis = this.navodyService.getVsechnyNavody();
+    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
+    this.navod = this.navodyService.getNavodByName(nazev);
+    this.itemy = this.navodyService.getVsechnyNavody();
+    this.popisy = this.navod.popisy;
   }
 
-  goDetail(popis: PopisNavodu) {
-    this.router.navigate([`vnitrek/detail`, {nazevPopisu: popis.titulekCasti}]);
+  goDetail(item: PopisNavodu) {
+    this.router.navigate([`vnitrek/detail/`, {nazevPopisu: item.nazevCasti}]);
   }
 }
