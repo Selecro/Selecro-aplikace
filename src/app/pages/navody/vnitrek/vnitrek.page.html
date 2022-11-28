@@ -31,21 +31,9 @@
       <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
     </div>
   </div>
-  <hr> mělo by to dělat čáru pod textem, ale nefunguje 
+  <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
   
   <button *ngFor="let itemy of popisy" (click)='goDetail(itemy)'>
     {{itemy.titulekCasti}}
   </button>
 </ion-content>
-
-<!--
-  vnitřek
-
-
-      <div class="rozdeleni" *ngFor="let popis of popisy">
-        <div class="sloupec">
-          <h2>{{popis.nazevCasti}}:</h2>
-          <div class="popis" innerHTML="{{popis.popis}}"></div>
-        </div>
-        <div *ngIf="popis.obrazek" class="avatar"><img src="assets/icon/{{navod.nazev}}/{{popis.nazevCasti}}.jpg"></div>
-      </div>-->
