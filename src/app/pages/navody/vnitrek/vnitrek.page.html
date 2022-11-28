@@ -18,28 +18,30 @@
 </ion-header>
 
 <ion-content>
-    <div class="rozdeleni">
-      <div class="sloupec">
-        <b>Budeme potřebovat:</b>
-        <p>{{navod.pomucky}} </p>
-        <b>Použijeme tyto styly:</b>
-        <div>
-          {{navod.zkratky}}
-        </div>
-      </div>
-      <div class="sloupec">
-        <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
+  <div class="rozdeleni">
+    <div class="sloupec">
+      <b>Budeme potřebovat:</b>
+      <p>{{navod.pomucky}} </p> <!--vyhazuje chybu-->
+      <b>Použijeme tyto styly:</b>
+      <div>
+        {{navod.zkratky}}
       </div>
     </div>
-    <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
-    
-    <button *ngFor="let popis of popisy" (click)='goDetail(popis)'>
-      {{popis.titulekCasti}}
-    </button>
+    <div class="sloupec">
+      <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
+    </div>
+  </div>
+  <hr> mělo by to dělat čáru pod textem, ale nefunguje 
   
+  <button *ngFor="let itemy of popisy" (click)='goDetail(itemy)'>
+    {{itemy.titulekCasti}}
+  </button>
 </ion-content>
 
 <!--
+  vnitřek
+
+
       <div class="rozdeleni" *ngFor="let popis of popisy">
         <div class="sloupec">
           <h2>{{popis.nazevCasti}}:</h2>

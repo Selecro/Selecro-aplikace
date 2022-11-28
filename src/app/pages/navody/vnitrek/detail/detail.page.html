@@ -5,6 +5,24 @@
 </ion-header>
 
 <ion-content>
-  jdbfg kgjf kgnjvbf gfdvb cn
+  <div *ngFor="let popis of popisy">
+    <div class="rozdeleni">
+      <div class="sloupec">
+        <div>
+          {{popis.titulekCasti}}
+        </div>
+        <div>
+          <b>Použijeme tyto styly: </b>
+          {{navod.zkratky}}
+        </div>
+      </div>
+      <div class="sloupec">
+        <img src="assets/icon/{{navod.nazev}}/{{popis.nazevCasti}}.jpg">
+      </div>
+    </div>
+    <hr>
+    <div class="popis" innerHTML="{{popis.popis}}">
+    </div>
+  </div>
 
 </ion-content>

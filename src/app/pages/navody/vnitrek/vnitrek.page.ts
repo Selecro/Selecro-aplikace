@@ -13,19 +13,17 @@ import { Router } from '@angular/router';
 export class VnitrekPage implements OnInit {
   navod: Navod;
   popisy: Array<PopisNavodu>;
-  popis: Navod[];
 
-  itemy: Array<Navod>;
+  itemy: Navod[];
 
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
-    
   }
 
   ngOnInit() {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(nazev);
     this.itemy = this.navodyService.getVsechnyNavody();
-    this.popisy = this.navod.popisy;
+    this.popisy = this.navod.popisy; //vyhazuje chybu
   }
 
   goDetail(item: PopisNavodu) {

@@ -24,12 +24,12 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
         popis: "Mk (6)<br V<br> ks, V<br> 2ks, V<br> 3ks, V<br> 4ks, V<br> 5ks, V<br> 6ks, V<br> ks (3 řady)<br> 6ks, A<br> 5ks, A<br> 4ks, A<br> ks (3 řady)<br> 3ks, A<br> ks (1 řada)<br> 2ks, A<br> ks (1 řada)<br> Po"
       },
       { obrazek: true,
-        nazevCasti: 'predni-nohy',
+        nazevCasti: 'predni-noha',
         titulekCasti: 'Přední noha (2x)',
         popis: "Mk (6)<br> V<br> ks (7 řad)<br> Po"
       },
       { obrazek: true,
-        nazevCasti: 'zadni-nohy',
+        nazevCasti: 'zadni-noha',
         titulekCasti: 'Zadní noha (2x)',
         popis: "Mk (6)<br> V<br> ks, V<br> 2ks, V<br> ks (2 řady)<br> 2ks, A<br> 4A, 10ks<br> 2A, 10ks<br> ks (8 řad)<br> A<br> Po"
       },
@@ -153,9 +153,5 @@ export class NavodyService {
 
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;
-  }
-
-  public getVsechnyPopisy(): Array<PopisNavodu> {
-    return this.polePopisu;
   }
 }
