@@ -22,11 +22,11 @@ export class VnitrekPage implements OnInit {
   ngOnInit() {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(nazev);
-    this.itemy = this.navodyService.getVsechnyNavody();
+    this.itemy = this.navodyService.getVsechnyPopisy();
     this.popisy = this.navod.popisy; //vyhazuje chybu
   }
 
   goDetail(item: PopisNavodu) {
-    this.router.navigate([`vnitrek/detail/`, {nazevPopisu: item.nazevCasti}]);
+    this.router.navigate([`vnitrek/detail`, {nazevPopisu: item.nazevCasti}]);
   }
 }

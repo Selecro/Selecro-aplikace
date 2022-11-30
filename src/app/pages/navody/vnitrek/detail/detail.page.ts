@@ -23,4 +23,17 @@ export class DetailPage implements OnInit {
     this.itemy = this.navodyService.getVsechnyNavody();
     this.popisy = this.navod.popisy;
   }
+
+  skrtnuti(){
+    ;
+  }
+
+  odpreskrtnuti(){
+    ;
+  }
+
+  hotovo(){
+    ;
+  }
+
 }

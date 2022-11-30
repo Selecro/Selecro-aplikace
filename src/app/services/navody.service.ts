@@ -125,10 +125,10 @@ export class NavodyService {
   mapaNavodu: Map<string,Navod>;
   mapaPopisu: Map<string, PopisNavodu>;
   polePopisu: Array<PopisNavodu>;
-
+  
   constructor() {
     this.initMap();
-    //this.initMapPopisu();
+    this.initMapPopisu();
   }
 
   private initMap(){
@@ -139,13 +139,13 @@ export class NavodyService {
     });
   }
 
-  /*private initMapPopisu(){
+  private initMapPopisu(){
     this.mapaPopisu = new Map();
-    this.polePopisu.forEach(popisek=>{
+    polePopisu.forEach(popis=>{
 
-      this.mapaPopisu.set(popisek.nazevCasti, popisek);
+      this.mapaPopisu.set(popis.nazevCasti, popis);
     });
-  }*/
+  }
 
   public getNavodByName(name: string): Navod {
     return this.mapaNavodu.get(name);
@@ -153,5 +153,9 @@ export class NavodyService {
 
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;
+  }
+
+  public getVsechnyPopisy(): Array<PopisNavodu> {
+    return polePopisu;
   }
 }
