@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PopisNavodu, Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,19 +14,20 @@ export class VnitrekPage implements OnInit {
   navod: Navod;
   popisy: Array<PopisNavodu>;
 
-  itemy: Navod[];
-
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
-    this.navod = this.navodyService.getNavodByName(nazev);
-    this.itemy = this.navodyService.getVsechnyPopisy();
-    this.popisy = this.navod.popisy; //vyhazuje chybu
+    const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
+    this.navod = this.navodyService.getNavodByName(name);
+    this.popisy = this.navodyService.getPopisyByName(name);
+     //vyhazuje chybu
   }
 
-  goDetail(item: PopisNavodu) {
-    this.router.navigate([`vnitrek/detail`, {nazevPopisu: item.nazevCasti}]);
+  goDetail(popis: PopisNavodu) {
+    const params: NavigationExtras = {
+      queryParams: popis}
+
+    this.router.navigate([`vnitrek/detail`], params);
   }
 }

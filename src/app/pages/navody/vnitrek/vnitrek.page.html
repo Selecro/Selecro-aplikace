@@ -33,7 +33,7 @@
   </div>
   <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
   
-  <button *ngFor="let itemy of popisy" (click)='goDetail(itemy)'>
-    {{itemy.titulekCasti}}
+  <button *ngFor="let popis of popisy" (click)='goDetail(popis)'>
+    {{popis.titulekCasti}}
   </button>
 </ion-content>

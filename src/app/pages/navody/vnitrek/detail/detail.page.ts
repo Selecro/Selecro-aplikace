@@ -9,19 +9,15 @@ import { Navod, PopisNavodu } from 'src/app/types/navod';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit {
-  navod: Navod;
-  popisy: Array<PopisNavodu>;
-  itemy: Navod[];
-  
+  popis: PopisNavodu;
 
-  constructor(private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevPopisu');
-    this.navod = this.navodyService.getNavodByName(nazev);
-    this.itemy = this.navodyService.getVsechnyNavody();
-    this.popisy = this.navod.popisy;
+    this.popis = this.router.getCurrentNavigation().extras.queryParams as PopisNavodu; //podívat se :-)
+    console.log("here");
+    console.log(this.popis);
   }
 
   skrtnuti(){
@@ -35,5 +31,4 @@ export class DetailPage implements OnInit {
   hotovo(){
     ;
   }
-
 }

@@ -128,7 +128,6 @@ export class NavodyService {
   
   constructor() {
     this.initMap();
-    this.initMapPopisu();
   }
 
   private initMap(){
@@ -139,16 +138,12 @@ export class NavodyService {
     });
   }
 
-  private initMapPopisu(){
-    this.mapaPopisu = new Map();
-    polePopisu.forEach(popis=>{
-
-      this.mapaPopisu.set(popis.nazevCasti, popis);
-    });
-  }
-
   public getNavodByName(name: string): Navod {
     return this.mapaNavodu.get(name);
+  }
+
+  public getPopisyByName(name: string): Array<PopisNavodu> {
+    return this.getNavodByName(name).popisy;
   }
 
   public getVsechnyNavody(): Array<Navod> {
@@ -156,6 +151,6 @@ export class NavodyService {
   }
 
   public getVsechnyPopisy(): Array<PopisNavodu> {
-    return polePopisu;
+    return this.polePopisu;
   }
 }
