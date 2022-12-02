@@ -18,16 +18,19 @@ export class VnitrekPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log('HERE');
     const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(name);
     this.popisy = this.navodyService.getPopisyByName(name);
-     //vyhazuje chybu
   }
 
   goDetail(popis: PopisNavodu) {
-    const params: NavigationExtras = {
-      queryParams: popis}
+    const navigationExtras: NavigationExtras = {
+      state: {
+        popis: popis
+      }
+    }
 
-    this.router.navigate([`vnitrek/detail`], params);
+    this.router.navigate([`detail`], navigationExtras);
   }
 }

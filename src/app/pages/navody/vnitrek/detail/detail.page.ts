@@ -12,12 +12,11 @@ export class DetailPage implements OnInit {
   popis: PopisNavodu;
 
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
+   
   }
 
   ngOnInit() {
-    this.popis = this.router.getCurrentNavigation().extras.queryParams as PopisNavodu; //podívat se :-)
-    console.log("here");
-    console.log(this.popis);
+    this.popis = this.router.getCurrentNavigation().extras.state.popis;
   }
 
   skrtnuti(){
