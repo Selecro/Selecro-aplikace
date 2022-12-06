@@ -22,19 +22,19 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
-        nazevCasti: 'telo',
+        nazevCasti: 'telo-dinosaura',
         titulekCasti: 'Tělo',
         popis: "Mk (6)<br V<br> ks, V<br> 2ks, V<br> 3ks, V<br> 4ks, V<br> 5ks, V<br> 6ks, V<br> ks (3 řady)<br> 6ks, A<br> 5ks, A<br> 4ks, A<br> ks (3 řady)<br> 3ks, A<br> ks (1 řada)<br> 2ks, A<br> ks (1 řada)<br> Po"
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
-        nazevCasti: 'predni-noha',
+        nazevCasti: 'predni-noha-dinosaura',
         titulekCasti: 'Přední noha (2x)',
         popis: "Mk (6)<br> V<br> ks (7 řad)<br> Po"
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
-        nazevCasti: 'zadni-noha',
+        nazevCasti: 'zadni-noha-dinosaura',
         titulekCasti: 'Zadní noha (2x)',
         popis: "Mk (6)<br> V<br> ks, V<br> 2ks, V<br> ks (2 řady)<br> 2ks, A<br> 4A, 10ks<br> 2A, 10ks<br> ks (8 řad)<br> A<br> Po"
       },
@@ -46,7 +46,7 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
-        nazevCasti: 'osten',
+        nazevCasti: 'osten-dinosaura',
         titulekCasti: 'Osten (6x)',
         popis: "Mk (6)<br> 2ks, V<br> 3ks, V<br> 4ks, V<br> 5ks, V<br> 6ks, V<br> Po"
       }
@@ -60,31 +60,31 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
     popisy: [
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
-        nazevCasti: 'hlava',
+        nazevCasti: 'hlava-harold',
         titulekCasti: 'Hlava',
         popis: 'Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> ks (6 řad)<br> 4 ks, A<br> 3 ks, A<br> 2 ks, A<br> ks, A<br> Po'
       },
       { obrazek: true,
         zkratkyCasti: "Řo, V, Po",
-        nazevCasti: 'chapadla',
+        nazevCasti: 'chapadla-harold',
         titulekCasti: 'Chapadla',
         popis: "6*(25řo, otočím směr háčkování a střídám 2V, W, Po do dalšího oka opět za vnější přízi) "
       },
       { obrazek: true,
         zkratkyCasti: " ",
-        nazevCasti: 'vyplneni',
+        nazevCasti: 'vyplneni-harold',
         titulekCasti: 'Vyplnění',
         popis: "Nezapomeňte v tomto bodě vyplnit."
       },
       { obrazek: true,
         zkratkyCasti: "A, Po",
-        nazevCasti: 'uzavreni',
+        nazevCasti: 'uzavreni-harold',
         titulekCasti: 'Uzavření',
         popis: "A<br>Po na zakončení, necháme si delší kus příze na zapošití."
       },
       { obrazek: true,
         zkratkyCasti: " ",
-        nazevCasti: 'doplnky',
+        nazevCasti: 'doplnky-harold',
         titulekCasti: 'Doplňky',
         popis: "Obočí a pusinku našijeme černou přízí."
       }
@@ -98,37 +98,37 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
     popisy: [
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
-        nazevCasti: 'hlava',
+        nazevCasti: 'hlava-zelva',
         titulekCasti: "Hlava",
         popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> ks (4 řad)<br> 4 ks, A<br> 3 ks, A<br> 2 ks, A<br> ks, A<br> Po"
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
-        nazevCasti: 'horni-cast-krunyre',
+        nazevCasti: 'horni-cast-krunyre-zelva',
         titulekCasti: "Horní část krunýře",
         popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> ks (3 řady)<br> Po"
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
-        nazevCasti: 'spodni-cast-krunyre',
+        nazevCasti: 'spodni-cast-krunyre-zelva',
         titulekCasti: "Spodní část krunýře",
         popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> Po"
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
-        nazevCasti: 'zadni-ploutev',
+        nazevCasti: 'zadni-ploutev-zelva',
         titulekCasti: "Zadní ploutev (2x)",
         popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> Po<br> Po dokončení kolečko ohneme napůl a sešijeme k sobě."
       },
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
-        nazevCasti: 'predni-ploutev',
+        nazevCasti: 'predni-ploutev-zelva',
         titulekCasti: "Přední ploutev (2x)",
         popis: "Mk (8) <br> V<br> ks, V<br> 2 ks, V<br> 3 ks, V<br> 4 ks, V<br> 5 ks, V<br> 6ks, V<br> Po<br> Po dokončení kolečko ohneme napůl a sešijeme k sobě."
       },
       { obrazek: false,
         zkratkyCasti: "Mk, Ks, Po",
-        nazevCasti: 'ocasek',
+        nazevCasti: 'ocasek-zelva',
         titulekCasti: "Ocásek",
         popis: "Mk (4)<br> ks (2 řady)<br> Po"
       },
