@@ -21,28 +21,28 @@
     <div class="rozdeleni">
       <div class="sloupec">
         <div>
-          Použijeme tyto styly
+          <b>Použijeme tyto styly</b>
           {{popis.zkratkyCasti}}
         </div>
       </div>
       <div class="sloupec">
        <img src="assets/icon/{{popis.nazevCasti}}.jpg">
-       {{popis.nazevCasti}}
       </div>
     </div>
     <hr>
     <div class="popis" innerHTML="{{popis.popis}}">
     </div>
   
-
-  <div class="footer-buttons">
-    <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
-      <ion-icon size="small" name="arrow-back-outline"></ion-icon>
-    </ion-button>
-    <ion-button (click)="hotovo()">Hotovo</ion-button>
-    <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
-      <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
-    </ion-button>
-  </div>
+  <ion-toolbar>
+    <div class="footer-buttons">
+      <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
+        <ion-icon size="small" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="hotovo()">Hotovo</ion-button>
+      <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
+        <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
 
 </ion-content>
