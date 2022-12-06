@@ -1,25 +1,39 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="lista">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
     <ion-title>{{popis.titulekCasti}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let popis of popisy">
     <div class="rozdeleni">
       <div class="sloupec">
         <div>
-          {{popis.titulekCasti}}
+          Použijeme tyto styly
+          {{popis.zkratkyCasti}}
         </div>
       </div>
       <div class="sloupec">
-        <img src="assets/icon/{{navod.nazev}}/{{popis.nazevCasti}}.jpg">
+       <img src="assets/icon/{{popis.nazevCasti}}.jpg">
+       {{popis.nazevCasti}}
       </div>
     </div>
     <hr>
     <div class="popis" innerHTML="{{popis.popis}}">
     </div>
-  </div>
+  
 
   <div class="footer-buttons">
     <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">

@@ -9,6 +9,7 @@ export type Navod =  {
   
   export type PopisNavodu = {
     nazevCasti: string,
+    zkratkyCasti: string,
     titulekCasti: string,
     obrazek: boolean,
     popis: string

@@ -10,6 +10,8 @@ import { Navod, PopisNavodu } from 'src/app/types/navod';
 })
 export class DetailPage implements OnInit {
   popis: PopisNavodu;
+  popisy: Array<PopisNavodu>;
+
 
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
    
@@ -17,6 +19,7 @@ export class DetailPage implements OnInit {
 
   ngOnInit() {
     this.popis = this.router.getCurrentNavigation().extras.state.popis;
+    this.popisy = this.navodyService.getVsechnyPopisy();
   }
 
   skrtnuti(){
