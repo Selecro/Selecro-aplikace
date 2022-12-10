@@ -16,21 +16,115 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let item of items">
-    <ion-card (click)='goVnitrek(item)'>
-      <div class="obtiznost">
-        <b>{{item.titulek}}</b>
+  <ion-card *ngFor="let item of items">
+    <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" (click)="goVnitrek(item)">
+      <div class="Nazev_navodu green_name">
+          {{item.titulek}}
       </div>
-      <div class="rozdeleni">
-        <div class="avatar">
-          <img src="assets/icon/{{item.nazev}}.jpg">
-        </div>
-        <div class="popis" class="text">
-          
-          <b>Zkratky:</b> {{item.zkratky}} <br>
-          <b>Pomůcky:</b> {{item.pomucky}}
+      <div class="obsah">
+          <img id="obrazek_navodu">
+          <table class="text">
+            <div class="rozdeleni">
+              <div class="avatar">
+                <img src="assets/icon/{{item.nazev}}.jpg">
+              </div>
+              <div class="popis" class="text">
+                <b>Zkratky:</b> {{item.zkratky}} <br>
+                <b>Pomůcky:</b> {{item.pomucky}}
+              </div>
+            </div>
+          </table>
         </div>
       </div>
-    </ion-card>
-  </div>
+  </ion-card>
+
+  <ion-card *ngFor="let item of items">
+    <div class="bunka yellow" *ngIf="item.obtiznost == 'stredni';" (click)="goVnitrek(item)">
+      <div id="zluty_okraj">
+        <div class="Nazev_navodu yellow_name">
+          {{item.titulek}}
+        </div>
+      </div>
+      <div class="obsah">
+          <img id="obrazek_navodu">
+          <table class="text">
+            <div class="rozdeleni">
+              <div class="avatar">
+                <img src="assets/icon/{{item.nazev}}.jpg">
+              </div>
+              <div class="popis" class="text">
+                <b>Zkratky:</b> {{item.zkratky}} <br>
+                <b>Pomůcky:</b> {{item.pomucky}}
+              </div>
+            </div>
+          </table>
+        </div>
+      </div>
+  </ion-card>
+
+  <ion-card *ngFor="let item of items">
+    <div class="bunka red" *ngIf="item.obtiznost == 'tezky';" (click)="goVnitrek(item)">
+      <div id="cerveny_okraj">
+        <div class="Nazev_navodu red_name">
+            {{item.titulek}}
+        </div>
+      </div>
+      <div class="obsah">
+          <img id="obrazek_navodu">
+          <table class="text">
+            <div class="rozdeleni">
+              <div class="avatar">
+                <img src="assets/icon/{{item.nazev}}.jpg">
+              </div>
+              <div class="popis" class="text">
+                <b>Zkratky:</b> {{item.zkratky}} <br>
+                <b>Pomůcky:</b> {{item.pomucky}}
+              </div>
+            </div>
+          </table>
+        </div>
+      </div>
+  </ion-card>
 </ion-content>
+
+
+<!--
+  <ng-container *ngFor="let item of navod">
+            <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" (click)="getPopisy(item.title)">
+                <div class="Nazev_navodu green_name">
+                    {{item.title}}
+                </div>
+                <div class="obsah">
+                    <img id="obrazek_navodu" src="../assets/icon/{{item.nazev}}.jpg">
+                    <div class="text">
+                        <table>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        Název:
+                                    </strong>
+                                    {{item.title}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        Zkratky:
+                                    </strong>
+                                    {{item.zkratky}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        Pomůcky:
+                                    </strong>
+                                    {{item.pomucky}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </ng-container>
+-->
