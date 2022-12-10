@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod } from '../../types/navod';
+import { Navod, PopisNavodu } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
@@ -22,5 +22,26 @@ export class NavodyPage implements OnInit {
 
   goVnitrek(item: Navod) {
     this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
+  }
+
+  vyberObtiznost(item: Navod) {
+    if (item.obtiznost == 'lehky') {
+      console.log("Funguje");
+    }
+    if (item.obtiznost == 'stredni') {
+      console.log("ble")
+    }
+    if (item.obtiznost == 'tezky') {
+      console.log("možná")
+    }
+  }
+
+  premiove (item: Navod) {
+  }
+
+  vsechno (item: Navod) {
+  }
+
+  dokocene (item: Navod) {
   }
 } 

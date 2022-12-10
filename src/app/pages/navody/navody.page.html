@@ -15,9 +15,24 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-toolbar >
+    <ion-item>
+      <button class="button" onclick="vsechno()">Vše</button>
+      <button class="button" onclick="dokoncene()">Dokončené</button>
+      <button class="button" onclick="premiove()">Prémiové</button>
+      <label class="button" onclick="vyberObtiznost()">Obtížnost</label>
+        <ion-select >
+          <ion-select-option value="lehka">Lehká</ion-select-option>
+          <ion-select-option value="stredni">Střední</ion-select-option>
+          <ion-select-option value="tezka">Těžká</ion-select-option>
+        </ion-select>
+  </ion-item>
+
+</ion-toolbar>
+
 <ion-content>
   <ion-card *ngFor="let item of items">
-    <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" (click)="goVnitrek(item)">
+    <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" onclick="goVnitrek(item)">
       <div class="Nazev_navodu green_name">
           {{item.titulek}}
       </div>
@@ -39,7 +54,7 @@
   </ion-card>
 
   <ion-card *ngFor="let item of items">
-    <div class="bunka yellow" *ngIf="item.obtiznost == 'stredni';" (click)="goVnitrek(item)">
+    <div class="bunka yellow" *ngIf="item.obtiznost == 'stredni';" onclick="goVnitrek(item)">
       <div id="zluty_okraj">
         <div class="Nazev_navodu yellow_name">
           {{item.titulek}}
@@ -63,7 +78,7 @@
   </ion-card>
 
   <ion-card *ngFor="let item of items">
-    <div class="bunka red" *ngIf="item.obtiznost == 'tezky';" (click)="goVnitrek(item)">
+    <div class="bunka red" *ngIf="item.obtiznost == 'tezky';" onclick="goVnitrek(item)">
       <div id="cerveny_okraj">
         <div class="Nazev_navodu red_name">
             {{item.titulek}}
@@ -90,7 +105,7 @@
 
 <!--
   <ng-container *ngFor="let item of navod">
-            <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" (click)="getPopisy(item.title)">
+            <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" onclick="getPopisy(item.title)">
                 <div class="Nazev_navodu green_name">
                     {{item.title}}
                 </div>
