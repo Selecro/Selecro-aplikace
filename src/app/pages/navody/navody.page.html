@@ -20,12 +20,14 @@
       <button class="button" onclick="vsechno()">Vše</button>
       <button class="button" onclick="dokoncene()">Dokončené</button>
       <button class="button" onclick="premiove()">Prémiové</button>
-      <label class="button" onclick="vyberObtiznost()">Obtížnost</label>
-        <ion-select >
+      <ion-list>
+       <!-- <label  onclick="vyberObtiznost()">Obtížnost</label>-->
+        <ion-select class="button" placeholder="Obtížnost" interface="popover">
           <ion-select-option value="lehka">Lehká</ion-select-option>
           <ion-select-option value="stredni">Střední</ion-select-option>
           <ion-select-option value="tezka">Těžká</ion-select-option>
         </ion-select>
+      </ion-list>
   </ion-item>
 
 </ion-toolbar>

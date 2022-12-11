@@ -37,11 +37,14 @@ export class NavodyPage implements OnInit {
   }
 
   premiove (item: Navod) {
+    console.log("ble");
   }
 
   vsechno (item: Navod) {
+    console.log("ble")
   }
 
   dokocene (item: Navod) {
+    console.log("ble")
   }
 } 
