@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Vyrobek } from '../types'
 
 const poleVyrobku: Array<Vyrobek>= [
-  {nazev: "chobotnicka",
+  {nazev: "chobotnice",
   title: "Chobotnička",
    popis: "Navod na vytvoreni chobotnicky",
    pocet: '12',
