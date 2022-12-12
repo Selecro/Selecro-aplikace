@@ -15,8 +15,11 @@ export type Navod =  {
     popis: string
   }
   
-  export enum Obtiznost {
-    tezky='tezky',
-    stredni='stredni',
-    lehky='lehky'
-  }
+
+
+
+export enum Obtiznost {
+  tezky = 'tezky',
+  stredni = 'stredni',
+  lehky = 'lehky',
+}

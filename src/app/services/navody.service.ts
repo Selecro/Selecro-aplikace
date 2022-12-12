@@ -164,6 +164,10 @@ export class NavodyService {
     return this.getNavodByName(name).popisy;
   }
 
+  /*public getLehkyNavod(obtiznost: string): Array<Navod> {
+    return this.getNavodByName(obtiznost);
+  }*/
+
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;
   }

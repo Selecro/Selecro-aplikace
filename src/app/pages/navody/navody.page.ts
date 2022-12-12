@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod, PopisNavodu } from '../../types/navod';
+import { Navod, Obtiznost, PopisNavodu } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
@@ -25,14 +25,18 @@ export class NavodyPage implements OnInit {
   }
 
   vyberObtiznost(item: Navod) {
-    if (item.obtiznost == 'lehky') {
-      console.log("Funguje");
+    if (item[0] == 'lehky' ) {
+      this.navodyService;
+      console.log("ble");
     }
     if (item.obtiznost == 'stredni') {
       console.log("ble")
     }
     if (item.obtiznost == 'tezky') {
       console.log("možná")
+    }
+    else{
+      console.log(item.obtiznost)
     }
   }
 
@@ -47,4 +51,8 @@ export class NavodyPage implements OnInit {
   dokocene (item: Navod) {
     console.log("ble")
   }
+
+ /* getLehkyNavod(item: Navod) {
+    return this.navodyService.getVsechnyNavody(item.obtiznost.lehky);
+  }*/
 } 
