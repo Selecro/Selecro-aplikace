@@ -9,4 +9,4 @@ export type PopisPomucek =  {
   popis: string,
   obrazek: string,
   exist: boolean,
-} 
+}

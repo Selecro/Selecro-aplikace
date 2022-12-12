@@ -13,7 +13,6 @@ export class VyukovyModPage implements OnInit {
   items: Array<Vyrobek>;
 
   constructor(private router: Router, private vyukaService: VyukaService) {
-
    }
 
   ngOnInit() {
@@ -23,5 +22,4 @@ export class VyukovyModPage implements OnInit {
   goDetail(item: Vyrobek) {
     this.router.navigate([`vyukovy-mod/detail`, {nazevVyrobku: item.nazev}]);
   }
-
 }  

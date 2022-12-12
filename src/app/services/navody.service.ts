@@ -151,7 +151,6 @@ export class NavodyService {
   private initMap(){
     this.mapaNavodu = new Map();
     poleNavodu.forEach(navod=>{
-
       this.mapaNavodu.set(navod.nazev, navod);
     });
   }

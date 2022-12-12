@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PopisNavodu, Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
 import { ActivatedRoute, NavigationExtras } from '@angular/router';
@@ -30,7 +30,6 @@ export class VnitrekPage implements OnInit {
         popis: popis
       }
     }
-
     this.router.navigate([`detail`], navigationExtras);
   }
 }

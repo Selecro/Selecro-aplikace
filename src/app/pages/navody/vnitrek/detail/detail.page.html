@@ -3,9 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-
     <ion-title>{{popis.titulekCasti}}</ion-title>
-
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -18,20 +16,20 @@
 </ion-header>
 
 <ion-content>
-    <div class="rozdeleni">
-      <div class="sloupec">
-        <div>
-          <b>Použijeme tyto styly</b>
-          {{popis.zkratkyCasti}}
-        </div>
-      </div>
-      <div class="sloupec">
-       <img src="assets/icon/{{popis.nazevCasti}}.jpg">
+  <div class="rozdeleni">
+    <div class="sloupec">
+      <div>
+        <b>Použijeme tyto styly</b>
+        {{popis.zkratkyCasti}}
       </div>
     </div>
-    <hr>
-    <div class="popis" innerHTML="{{popis.popis}}">
+    <div class="sloupec">
+     <img src="assets/icon/{{popis.nazevCasti}}.jpg">
     </div>
+  </div>
+  <hr>
+  <div class="popis" innerHTML="{{popis.popis}}">
+  </div>
   
   <ion-toolbar>
     <div class="footer-buttons">
@@ -44,5 +42,4 @@
       </ion-button>
     </div>
   </ion-toolbar>
-
 </ion-content>

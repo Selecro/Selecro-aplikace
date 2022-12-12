@@ -3,9 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-
     <ion-title>{{navod.titulek}}</ion-title>
-
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -32,11 +30,9 @@
     </div>
   </div>
   <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
-  
   <p *ngFor="let popis of popisy" align="center"> <!--Tobi, věřím, že si to upravíš :-) -->
     <button  (click)='goDetail(popis)'>
       {{popis.titulekCasti}}
     </button>
   </p>
-  
 </ion-content>
