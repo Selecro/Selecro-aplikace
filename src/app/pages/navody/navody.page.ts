@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod, PopisNavodu } from '../../types/navod';
+import { Navod, Obtiznost, PopisNavodu } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
@@ -47,4 +47,8 @@ export class NavodyPage implements OnInit {
   dokocene(event: Event) {
     console.log("ble")
   }
+
+ /* getLehkyNavod(item: Navod) {
+    return this.navodyService.getVsechnyNavody(item.obtiznost.lehky);
+  }*/
 } 
