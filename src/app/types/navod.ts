@@ -1,15 +1,17 @@
 export type Navod =  {
     nazev: string,
-    title: string,
+    titulek: string,
     pomucky: string,
     zkratky: string,
     popisy: Array<PopisNavodu>,
-    obtiznost: Obtiznost,
+    obtiznost: Obtiznost
   }
   
   export type PopisNavodu = {
-    obrazek: boolean,
     nazevCasti: string,
+    zkratkyCasti: string,
+    titulekCasti: string,
+    obrazek: boolean,
     popis: string
   }
   

@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>{{navod.title}}</ion-title>
+    <ion-title>{{navod.titulek}}</ion-title>
 
     <ion-buttons slot="end">
       <ion-button>
@@ -18,19 +18,25 @@
 </ion-header>
 
 <ion-content>
-  <div >
-    <div class="text">
-      <h2>Budeme potřebovat:</h2>
-      <p>{{navod.pomucky}} </p>
-      <h2>Použijeme tyto styly:</h2>
-      <div>{{navod.zkratky}}</div>
-      <div class="rozdeleni" *ngFor="let popis of popisy">
-        <div class="sloupec">
-          <h2>{{popis.nazevCasti}}:</h2>
-          <div class="popis" innerHTML="{{popis.popis}}"></div>
-        </div>
-        <div *ngIf="popis.obrazek" class="avatar"><img src="assets/icon/{{navod.nazev}}/{{popis.nazevCasti}}.jpg"></div>
+  <div class="rozdeleni">
+    <div class="sloupec">
+      <b>Budeme potřebovat:</b>
+      <p>{{navod.pomucky}} </p> <!--vyhazuje chybu-->
+      <b>Použijeme tyto styly:</b>
+      <div>
+        {{navod.zkratky}}
       </div>
     </div>
+    <div class="sloupec">
+      <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
+    </div>
   </div>
+  <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
+  
+  <p *ngFor="let popis of popisy" align="center"> <!--Tobi, věřím, že si to upravíš :-) -->
+    <button  (click)='goDetail(popis)'>
+      {{popis.titulekCasti}}
+    </button>
+  </p>
+  
 </ion-content>

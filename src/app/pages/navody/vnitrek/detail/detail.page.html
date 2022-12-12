@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="lista">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{popis.titulekCasti}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="rozdeleni">
+      <div class="sloupec">
+        <div>
+          <b>Použijeme tyto styly</b>
+          {{popis.zkratkyCasti}}
+        </div>
+      </div>
+      <div class="sloupec">
+       <img src="assets/icon/{{popis.nazevCasti}}.jpg">
+      </div>
+    </div>
+    <hr>
+    <div class="popis" innerHTML="{{popis.popis}}">
+    </div>
+  
+  <ion-toolbar>
+    <div class="footer-buttons">
+      <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
+        <ion-icon size="small" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="hotovo()">Hotovo</ion-button>
+      <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
+        <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+
+</ion-content>

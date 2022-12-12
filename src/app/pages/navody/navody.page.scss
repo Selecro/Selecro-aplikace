@@ -3,12 +3,34 @@ ion-card {
 }
 
 .rozdeleni {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     display: flex;
+    text-align: center;
 }
 
+.sloupec {
+    flex: 2;
+    border: 5px;
+}
+
+.text {
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    text-align: justify;
+}
 .avatar {
     //flex:2;
     max-width: 50%;
+}
+
+.obraz {
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin: auto;
 }
 
 .popis {
@@ -21,4 +43,77 @@ ion-card {
     text-align: center;
     padding-top: 5px;
     
+}
+/*CSS*/
+
+#container {
+    padding: 40px;
+}
+
+#sloupce {
+    display: flex;
+    margin-top: 2%;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bunka {
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+    width: 30%;
+    min-width: 364px;
+}
+
+.Nazev_navodu {
+    padding: 5px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.green {
+    background-color: #E2FAE3;
+}
+
+.yellow {
+    background-color: #F9FAE1;
+}
+
+.red {
+    background-color: #FDE6E6;
+}
+
+.green_name {
+    background: #3EDE44;
+}
+
+.yellow_name {
+    background: #D6DA34;
+}
+
+.red_name {
+    background: #f73636;
+}
+
+.obsah {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+
+#obrazek_navodu {
+    height: 150px;
+    border-radius: 10px;
+}
+
+h2 {
+     text-align: center;
+}
+
+.text {
+    padding-left: 15px;
 }

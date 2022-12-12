@@ -17,14 +17,16 @@
 
 <ion-content>
   <ion-card *ngFor="let krok of kroky" class="bublina">
-    <div>
-      <div>
-        {{krok.popis}}
-      </div>
-      <div *ngIf="krok.exist">
-        <img  class="pomucka" src="../assets/icon/{{krok.obrazek}}.png">
-      </div>
-    </div>
+    {{krok.popis}}
+    <img *ngIf="krok.exist" class="pomucka" src="../assets/icon/{{krok.obrazek}}.png">
   </ion-card>
 
+  <div class="video-center">
+    <div class="video">
+      <iframe width="100%" height="100%" [src]=getEmbedVideo(pomucka.videoURL) title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
 </ion-content>
