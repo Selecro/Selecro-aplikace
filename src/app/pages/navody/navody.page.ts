@@ -17,14 +17,14 @@ export class NavodyPage implements OnInit {
   }
 
   ngOnInit() {
-    this.items = this.navodyService.getVsechnyNavody()
+    this.items = this.navodyService.getVsechnyNavody();
   }
 
   goVnitrek(item: Navod) {
     this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
   }
 
-  vyberObtiznost(item: Navod) {
+  vyberObtiznost(event: Event) {
     if (item.obtiznost == 'lehky') {
       console.log("Funguje");
     }
@@ -36,15 +36,15 @@ export class NavodyPage implements OnInit {
     }
   }
 
-  premiove (item: Navod) {
+  premiove(event: Event) {
     console.log("ble");
   }
 
-  vsechno (item: Navod) {
+  vsechno(event: Event) {
     console.log("ble")
   }
 
-  dokocene (item: Navod) {
+  dokocene(event: Event) {
     console.log("ble")
   }
 } 

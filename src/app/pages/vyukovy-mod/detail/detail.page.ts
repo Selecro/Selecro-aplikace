@@ -19,7 +19,7 @@ export class DetailPage implements OnInit {
   };
 
   vyrobek: Vyrobek;
-  kroky: Array<Postup>
+  kroky: Array<Postup>;
 
   constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');

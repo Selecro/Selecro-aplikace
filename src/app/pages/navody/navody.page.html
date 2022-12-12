@@ -17,12 +17,12 @@
 
 <ion-toolbar >
     <ion-item>
-      <button class="button" onclick="vsechno()">Vše</button>
-      <button class="button" onclick="dokoncene()">Dokončené</button>
-      <button class="button" onclick="premiove()">Prémiové</button>
+      <button class="button" (click)="vsechno($event)">Vše</button>
+      <button class="button" (click)="dokocene($event)">Dokončené</button>
+      <button class="button" (click)="premiove($event)">Prémiové</button>
       <ion-list>
-       <!-- <label  onclick="vyberObtiznost()">Obtížnost</label>-->
-        <ion-select class="button" placeholder="Obtížnost" interface="popover">
+       <label>Obtížnost</label>
+        <ion-select class="button" (click)="vyberObtiznost($event)" placeholder="Obtížnost" interface="popover">
           <ion-select-option value="lehka">Lehká</ion-select-option>
           <ion-select-option value="stredni">Střední</ion-select-option>
           <ion-select-option value="tezka">Těžká</ion-select-option>
