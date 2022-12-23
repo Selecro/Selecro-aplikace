@@ -21,8 +21,8 @@
       <button class="button" (click)="dokocene($event)">Dokončené</button>
       <button class="button" (click)="premiove($event)">Prémiové</button>
       <ion-list>
-       <label (click)="vyberObtiznost($event)">Obtížnost</label>
-        <ion-select class="button" placeholder="Obtížnost" interface="popover">
+       <label>Obtížnost</label>
+        <ion-select (ionChange)="vyberObtiznost($event)" class="button" placeholder="Obtížnost" interface="popover">
           <ion-select-option value="lehka">Lehká</ion-select-option>
           <ion-select-option value="stredni">Střední</ion-select-option>
           <ion-select-option value="tezka">Těžká</ion-select-option>

@@ -24,15 +24,15 @@ export class NavodyPage implements OnInit {
     this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
   }
 
-  vyberObtiznost(event: Event) {
-    if (this.items[0].obtiznost.toString() == "lehky") {
-      console.log("Funguje")
+  vyberObtiznost(e) {
+    if (e.detail.value == "lehka") {
+      console.log("a")
     }
-    if (this.items[0].obtiznost.toString() == "stredni") {
-      console.log("ble")
+    if (e.detail.value == "stredni") {
+      console.log("b")
     }
-    if (this.items[0].obtiznost.toString() == "tezky") {
-      console.log(this.items)
+    if (e.detail.value == "tezka") {
+      console.log("c")
     }
   }
 
