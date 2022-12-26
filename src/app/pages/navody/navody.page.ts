@@ -3,12 +3,12 @@ import { Navod } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
-
 @Component({
   selector: 'app-navody',
   templateUrl: './navody.page.html',
   styleUrls: ['./navody.page.scss']
 })
+
 export class NavodyPage implements OnInit {
 
   items: Array<Navod>;
