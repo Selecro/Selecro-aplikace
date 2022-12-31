@@ -22,18 +22,18 @@
       <button class="button" (click)="premiove($event)">Prémiové</button>
       <ion-list>
        <label>Obtížnost</label>
-        <ion-select (ionChange)="vyberObtiznost($event)" class="button" placeholder="Obtížnost" interface="popover">
-          <ion-select-option value="lehka">Lehká</ion-select-option>
+        <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button" placeholder="Obtížnost" interface="popover">
+          <ion-select-option value="lehky">Lehká</ion-select-option>
           <ion-select-option value="stredni">Střední</ion-select-option>
-          <ion-select-option value="tezka">Těžká</ion-select-option>
+          <ion-select-option value="tezky">Těžká</ion-select-option>
         </ion-select>
       </ion-list>
   </ion-item>
 </ion-toolbar>
 
 <ion-content>
-  <ion-card *ngFor="let item of items">
-    <div class="bunka {{item.obtiznost}}" onclick="goVnitrek(item)">
+  <ion-card *ngFor="let item of items | callback:selectedElement">
+    <div class="bunka {{item.obtiznost}}" (click)="goVnitrek(item)">
       <div id="cerveny_okraj">
         <div class="Nazev_navodu {{item.obtiznost}}_name">
             {{item.titulek}}

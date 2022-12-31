@@ -12,12 +12,16 @@ import { NavodyService } from '../../services';
 export class NavodyPage implements OnInit {
 
   items: Array<Navod>;
+  obtiznost: String;
+  selectedElement: String;
 
   constructor(private router: Router, private navodyService: NavodyService) { 
+    //this.obtiznost = "lehky";
   }
 
   ngOnInit() {
     this.items = this.navodyService.getVsechnyNavody();
+    //this.obtiznost = "lehky";
   }
 
   goVnitrek(item: Navod) {
@@ -25,15 +29,13 @@ export class NavodyPage implements OnInit {
   }
 
   vyberObtiznost(e) {
-    if (e.detail.value == "lehka") {
-      console.log("a")
+    if (e.detail.value == "lehky" || e.detail.value == "stredni" || e.detail.value == "tezky") {
+      this.obtiznost = e.detail.value;
     }
-    if (e.detail.value == "stredni") {
-      console.log("b")
+    else {
+      this.obtiznost = null;
     }
-    if (e.detail.value == "tezka") {
-      console.log("c")
-    }
+    return this.obtiznost;
   }
 
   premiove(event: Event) {
