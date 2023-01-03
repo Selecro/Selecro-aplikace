@@ -15,57 +15,27 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-toolbar>
+    <ion-item>
+      <button class="button" (click)="vsechno($event)">Vše</button>
+      <button class="button" (click)="dokocene($event)">Dokončené</button>
+      <button class="button" (click)="premiove($event)">Prémiové</button>
+      <ion-list>
+       <label>Obtížnost</label>
+        <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button" placeholder="Obtížnost" interface="popover">
+          <ion-select-option value="lehky">Lehká</ion-select-option>
+          <ion-select-option value="stredni">Střední</ion-select-option>
+          <ion-select-option value="tezky">Těžká</ion-select-option>
+        </ion-select>
+      </ion-list>
+  </ion-item>
+</ion-toolbar>
+
 <ion-content>
-  <ion-card *ngFor="let item of items">
-    <div class="bunka green" *ngIf="item.obtiznost == 'lehky';" (click)="goVnitrek(item)">
-      <div class="Nazev_navodu green_name">
-          {{item.titulek}}
-      </div>
-      <div class="obsah">
-          <img id="obrazek_navodu">
-          <table class="text">
-            <div class="rozdeleni">
-              <div class="avatar">
-                <img src="assets/icon/{{item.nazev}}.jpg">
-              </div>
-              <div class="popis" class="text">
-                <b>Zkratky:</b> {{item.zkratky}} <br>
-                <b>Pomůcky:</b> {{item.pomucky}}
-              </div>
-            </div>
-          </table>
-        </div>
-      </div>
-  </ion-card>
-
-  <ion-card *ngFor="let item of items">
-    <div class="bunka yellow" *ngIf="item.obtiznost == 'stredni';" (click)="goVnitrek(item)">
-      <div id="zluty_okraj">
-        <div class="Nazev_navodu yellow_name">
-          {{item.titulek}}
-        </div>
-      </div>
-      <div class="obsah">
-          <img id="obrazek_navodu">
-          <table class="text">
-            <div class="rozdeleni">
-              <div class="avatar">
-                <img src="assets/icon/{{item.nazev}}.jpg">
-              </div>
-              <div class="popis" class="text">
-                <b>Zkratky:</b> {{item.zkratky}} <br>
-                <b>Pomůcky:</b> {{item.pomucky}}
-              </div>
-            </div>
-          </table>
-        </div>
-      </div>
-  </ion-card>
-
-  <ion-card *ngFor="let item of items">
-    <div class="bunka red" *ngIf="item.obtiznost == 'tezky';" (click)="goVnitrek(item)">
+  <ion-card *ngFor="let item of items | callback:selectedElement">
+    <div class="bunka {{item.obtiznost}}" (click)="goVnitrek(item)">
       <div id="cerveny_okraj">
-        <div class="Nazev_navodu red_name">
+        <div class="Nazev_navodu {{item.obtiznost}}_name">
             {{item.titulek}}
         </div>
       </div>

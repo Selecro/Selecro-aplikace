@@ -151,7 +151,6 @@ export class NavodyService {
   private initMap(){
     this.mapaNavodu = new Map();
     poleNavodu.forEach(navod=>{
-
       this.mapaNavodu.set(navod.nazev, navod);
     });
   }
@@ -163,6 +162,10 @@ export class NavodyService {
   public getPopisyByName(name: string): Array<PopisNavodu> {
     return this.getNavodByName(name).popisy;
   }
+
+  /*public getLehkyNavod(obtiznost: string): Array<Navod> {
+    return this.getNavodByName(obtiznost);
+  }*/
 
   public getVsechnyNavody(): Array<Navod> {
     return poleNavodu;

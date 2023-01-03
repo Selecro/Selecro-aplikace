@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Pomucka, PopisPomucek } from '../types/pomucka'
+import { Pomucka } from '../types/pomucka'
 
  const polePomucek = [
   { nazev: "hacek", 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavodyService } from 'src/app/services';
-import { Navod, PopisNavodu } from 'src/app/types/navod';
+import { PopisNavodu } from 'src/app/types/navod';
 
 @Component({
   selector: 'app-detail',
@@ -12,9 +12,7 @@ export class DetailPage implements OnInit {
   popis: PopisNavodu;
   popisy: Array<PopisNavodu>;
 
-
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
-   
   }
 
   ngOnInit() {
