@@ -1,0 +1,11 @@
+.footer-button{
+    flex: 0 1 auto;
+    width: 20%;
+    --background: #4FC4F5;
+}
+
+.footer-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
