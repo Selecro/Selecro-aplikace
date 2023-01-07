@@ -17,12 +17,22 @@
 }
 
 .modra {
-    --background: #c8e7f4;
+    background: #c8e7f4;
     color: #000000;
     padding-left: 15px;
     padding-right: 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+    padding: 10px;
 }
 
 .fotky-slovnik {
     --background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+    
+}   
+
+#container {
+     padding: 20px;
 }
