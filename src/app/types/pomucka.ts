@@ -6,8 +6,7 @@ export type Pomucka =  {
 }
 
 export type PopisPomucek =  {
-  index: number;
   popis: string,
   obrazek: string,
   exist: boolean,
-} 
+}

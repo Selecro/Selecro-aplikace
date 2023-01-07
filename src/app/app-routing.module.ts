@@ -11,7 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-
   {
     path: 'slovnik/:nazevStylu',
     loadChildren: () => import('./pages/slovnik/slovnik.module').then( m => m.SlovnikPageModule)
@@ -36,8 +35,11 @@ const routes: Routes = [
   {
     path: 'vnitrek',
     loadChildren: () => import('./pages/navody/vnitrek/vnitrek.module').then( m => m.VnitrekPageModule)
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./pages/navody/vnitrek/detail/detail.module').then( m => m.DetailPageModule)
   }
-
 ];
 
 @NgModule({
