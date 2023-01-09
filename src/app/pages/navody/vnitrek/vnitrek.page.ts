@@ -18,7 +18,6 @@ export class VnitrekPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log('HERE');
     const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(name);
     this.popisy = this.navodyService.getPopisyByName(name);
