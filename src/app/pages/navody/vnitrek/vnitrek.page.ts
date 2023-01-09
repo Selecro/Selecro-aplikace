@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-vnitrek',
   templateUrl: './vnitrek.page.html',
   styleUrls: ['./vnitrek.page.scss'],
-  encapsulation: ViewEncapsulation.None, //je to na něco?
+  encapsulation: ViewEncapsulation.None,
 })
 export class VnitrekPage implements OnInit {
   navod: Navod;

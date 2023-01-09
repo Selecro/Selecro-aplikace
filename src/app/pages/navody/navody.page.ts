@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Navod } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
-import { CallbackPipe } from 'src/app/callback.pipe';
 
 @Component({
   selector: 'app-navody',
@@ -16,7 +15,7 @@ export class NavodyPage implements OnInit {
   obtiznost: String;
   selectedElement: String;
 
-  constructor(private router: Router, private navodyService: NavodyService) { 
+  constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
@@ -49,4 +48,4 @@ export class NavodyPage implements OnInit {
     console.log("ble");
   }
 
-} 
+}
