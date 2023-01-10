@@ -4,9 +4,21 @@
     <ion-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
     </ion-button>
-    <ion-button slot="end">
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
+    <div class="search-box" (click)="search()">
+      <input type="text" placeholder="Type to search..">
+        <div class="search-icon" id="search-icon">
+          <div class="cancel-button1">
+            <img src="../../../assets/icon/searchicon0.svg">
+        </div>
+      </div>
+      <div class="cancel-icon" id="cancel-icon">
+        <div class="cancel-button">
+          <img src="../../../assets/icon/searchicon1.svg">
+        </div>
+      </div>
+      <div class="search-data">
+      </div>
+    </div>
   </ion-buttons>
   <ion-title>Návody</ion-title>
   <ion-buttons slot="start">

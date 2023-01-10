@@ -50,7 +50,34 @@ export class NavodyPage implements OnInit {
     console.log("ble")
   }
 
- /* getLehkyNavod(item: Navod) {
-    return this.navodyService.getVsechnyNavody(item.obtiznost.lehky);
-  }*/
+  public search() {
+    const searchBox = document.querySelector(".search-box");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const searchInput = document.querySelector("input");
+    const searchData = document.querySelector(".search-data");
+    document.getElementById("search-icon").onclick =()=>{
+      searchBox.classList.add("active");
+      searchBtn.classList.add("active");
+      searchInput.classList.add("active");
+      cancelBtn.classList.add("active");
+      searchInput.focus();
+      if(searchInput.value != "") {
+        var values = searchInput.value;
+        searchData.classList.remove("active");
+        searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+      }
+      else{
+        searchData.textContent = "";
+      }
+    }
+    document.getElementById("cancel-icon").onclick =()=>{
+      searchBox.classList.remove("active");
+      searchBtn.classList.remove("active");
+      searchInput.classList.remove("active");
+      cancelBtn.classList.remove("active");
+      searchData.classList.toggle("active");
+      searchInput.value = "";
+    }
+  }
 } 
