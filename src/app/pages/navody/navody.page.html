@@ -4,8 +4,8 @@
     <ion-button>
       <ion-icon slot="icon-only" name="person-circle"></ion-icon>
     </ion-button>
-    <div class="search-box" (click)="search()">
-      <input type="text" placeholder="Type to search..">
+    <div class="search-box" (click)="inputbox()">
+      <input type="text" placeholder="Type to search.." (keyup)="search()">
         <div class="search-icon" id="search-icon">
           <div class="cancel-button1">
             <img src="../../../assets/icon/searchicon0.svg">
@@ -15,8 +15,6 @@
         <div class="cancel-button">
           <img src="../../../assets/icon/searchicon1.svg">
         </div>
-      </div>
-      <div class="search-data">
       </div>
     </div>
   </ion-buttons>
