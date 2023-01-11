@@ -14,7 +14,7 @@ export class VyukovyModPage implements OnInit {
   searchInput: any;
 
   constructor(private router: Router, private vyukaService: VyukaService) {
-   }
+  }
 
   ngOnInit() {
     this.items = this.vyukaService.getVsechnyVyrobky();
@@ -23,21 +23,21 @@ export class VyukovyModPage implements OnInit {
   }
 
   goDetail(item: Vyrobek) {
-    this.router.navigate([`vyukovy-mod/detail`, {nazevVyrobku: item.nazev}]);
+    this.router.navigate([`vyukovy-mod/detail`, { nazevVyrobku: item.nazev }]);
   }
 
   inputbox() {
     const searchBox = document.querySelector(".search-box");
     const searchBtn = document.querySelector(".search-icon");
     const cancelBtn = document.querySelector(".cancel-icon");
-    document.getElementById("search-icon").onclick =()=>{
+    document.getElementById("search-icon").onclick = () => {
       searchBox.classList.add("active");
       searchBtn.classList.add("active");
       this.searchInput.classList.add("active");
       cancelBtn.classList.add("active");
       this.searchInput.focus();
     }
-    document.getElementById("cancel-icon").onclick =()=>{
+    document.getElementById("cancel-icon").onclick = () => {
       searchBox.classList.remove("active");
       searchBtn.classList.remove("active");
       this.searchInput.classList.remove("active");
@@ -49,4 +49,4 @@ export class VyukovyModPage implements OnInit {
   search() {
     console.log(this.searchInput.value);
   }
-}  
+}

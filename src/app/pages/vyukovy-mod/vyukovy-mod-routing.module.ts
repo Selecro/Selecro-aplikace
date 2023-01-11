@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'detail',
-    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+    loadChildren: () => import('./detail/detail.module').then(m => m.DetailPageModule)
   }
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class VyukovyModPageRoutingModule {}
+export class VyukovyModPageRoutingModule { }

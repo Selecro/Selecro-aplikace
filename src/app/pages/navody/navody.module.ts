@@ -18,4 +18,4 @@ import { CallbackPipe } from 'src/app/callback.pipe';
   ],
   declarations: [NavodyPage, CallbackPipe]
 })
-export class NavodyPageModule {}
+export class NavodyPageModule { }

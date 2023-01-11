@@ -9,7 +9,7 @@ describe('NavodyPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavodyPage ],
+      declarations: [NavodyPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

@@ -16,7 +16,7 @@ export class NavodyPage implements OnInit {
   selectedElement: String;
   searchInput: any;
 
-  constructor(private router: Router, private navodyService: NavodyService) { 
+  constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class NavodyPage implements OnInit {
   }
 
   goVnitrek(item: Navod) {
-    this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
+    this.router.navigate([`navody/vnitrek/`, { nazevNavodu: item.nazev }]);
   }
 
   vyberObtiznost(e) {
@@ -51,19 +51,19 @@ export class NavodyPage implements OnInit {
   dokocene(event: Event) {
     console.log("ble")
   }
-  
+
   inputbox() {
     const searchBox = document.querySelector(".search-box");
     const searchBtn = document.querySelector(".search-icon");
     const cancelBtn = document.querySelector(".cancel-icon");
-    document.getElementById("search-icon").onclick =()=>{
+    document.getElementById("search-icon").onclick = () => {
       searchBox.classList.add("active");
       searchBtn.classList.add("active");
       this.searchInput.classList.add("active");
       cancelBtn.classList.add("active");
       this.searchInput.focus();
     }
-    document.getElementById("cancel-icon").onclick =()=>{
+    document.getElementById("cancel-icon").onclick = () => {
       searchBox.classList.remove("active");
       searchBtn.classList.remove("active");
       this.searchInput.classList.remove("active");
@@ -75,4 +75,4 @@ export class NavodyPage implements OnInit {
   search() {
     console.log(this.searchInput.value);
   }
-} 
+}
