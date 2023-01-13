@@ -32,7 +32,7 @@
 </ion-toolbar>
 
 <ion-content>
-  <ion-card *ngFor="let item of items | callback:selectedElement">
+  <ion-card *ngFor="let item of items | callback:selectedElement | premiove:selected">
     <div class="bunka {{item.obtiznost}}" (click)="goVnitrek(item)">
       <div id="cerveny_okraj">
         <div class="Nazev_navodu {{item.obtiznost}}_name">

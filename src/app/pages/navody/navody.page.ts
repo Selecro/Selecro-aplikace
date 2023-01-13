@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod, Obtiznost } from '../../types/navod';
+import { Navod } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
@@ -14,6 +14,7 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
   obtiznost: String;
   selectedElement: String;
+  selected: boolean = false;
 
   constructor(private router: Router, private navodyService: NavodyService) { 
     //this.obtiznost = "lehky";
@@ -39,17 +40,7 @@ export class NavodyPage implements OnInit {
   }
 
   premiove(event: Event) {
-    /*for(let i = 0; i<this.items.length; i++) {
-      if(this.items[i].premiove == true) {
-        this.selectedElement = this.items.filter(
-          // Callback function
-            (item) => {
-          // Filter Condition
-            return item.premiove == true;
-          });
-      }
-    }
-    return this.selectedElement;*/
+    this.selected = true;
   }
 
   vsechno(event: Event) {
