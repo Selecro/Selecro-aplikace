@@ -15,13 +15,11 @@ export class NavodyPage implements OnInit {
   obtiznost: String;
   selectedElement: String;
 
-  constructor(private router: Router, private navodyService: NavodyService) { 
-    //this.obtiznost = "lehky";
+  constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
     this.items = this.navodyService.getVsechnyNavody();
-    //this.obtiznost = "lehky";
   }
 
   goVnitrek(item: Navod) {
@@ -43,14 +41,11 @@ export class NavodyPage implements OnInit {
   }
 
   vsechno(event: Event) {
-    console.log("ble")
+    this.selectedElement = null;
   }
 
   dokocene(event: Event) {
-    console.log("ble")
+    console.log("ble");
   }
 
- /* getLehkyNavod(item: Navod) {
-    return this.navodyService.getVsechnyNavody(item.obtiznost.lehky);
-  }*/
-} 
+}

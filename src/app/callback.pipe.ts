@@ -8,9 +8,7 @@ export class CallbackPipe implements PipeTransform {
     transform(records: Array<any>, property:String): any {
         let sortedArray=[];
         if(property != null){
-            sortedArray = records.filter(item => item.obtiznost == property);
-            console.log(sortedArray);
-            return sortedArray;
+            return records.filter(item => item.obtiznost == property);
         }
         else{
             return records;

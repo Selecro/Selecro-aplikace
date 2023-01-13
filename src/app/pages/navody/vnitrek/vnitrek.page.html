@@ -19,7 +19,7 @@
   <div class="rozdeleni">
     <div class="sloupec">
       <b>Budeme potřebovat:</b>
-      <p>{{navod.pomucky}} </p> <!--vyhazuje chybu-->
+      <p>{{navod.pomucky}}</p>
       <b>Použijeme tyto styly:</b>
       <div>
         {{navod.zkratky}}
@@ -29,8 +29,7 @@
       <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
     </div>
   </div>
-  <hr> <!--mělo by to dělat čáru pod textem, ale nefunguje -->
-  <p *ngFor="let popis of popisy" align="center"> <!--Tobi, věřím, že si to upravíš :-) -->
+  <p *ngFor="let popis of popisy">
     <button  (click)='goDetail(popis)'>
       {{popis.titulekCasti}}
     </button>
