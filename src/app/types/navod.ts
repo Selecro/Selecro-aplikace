@@ -5,6 +5,7 @@ export type Navod =  {
   zkratky: string,
   popisy: Array<PopisNavodu>,
   obtiznost: Obtiznost,
+  premiove: boolean,
 }
   
 export type PopisNavodu = {
