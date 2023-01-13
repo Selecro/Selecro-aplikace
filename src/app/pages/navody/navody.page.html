@@ -37,6 +37,8 @@
       <div id="cerveny_okraj">
         <div class="Nazev_navodu {{item.obtiznost}}_name">
             {{item.titulek}}
+            &nbsp;
+            <img *ngIf="item.premiove == true" width="25" height="25" src="../../../assets/icon/star.svg">
         </div>
       </div>
       <div class="obsah">

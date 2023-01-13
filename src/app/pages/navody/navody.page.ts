@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Navod } from '../../types/navod';
+import { Navod, Obtiznost } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
 
@@ -39,7 +39,17 @@ export class NavodyPage implements OnInit {
   }
 
   premiove(event: Event) {
-    console.log("ble");
+    /*for(let i = 0; i<this.items.length; i++) {
+      if(this.items[i].premiove == true) {
+        this.selectedElement = this.items.filter(
+          // Callback function
+            (item) => {
+          // Filter Condition
+            return item.premiove == true;
+          });
+      }
+    }
+    return this.selectedElement;*/
   }
 
   vsechno(event: Event) {
