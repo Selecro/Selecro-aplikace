@@ -14,6 +14,7 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
   obtiznost: String;
   selectedElement: String;
+  selectedItem: String;
   searchInput: any;
 
   constructor(private router: Router, private navodyService: NavodyService) {
@@ -73,6 +74,13 @@ export class NavodyPage implements OnInit {
   }
 
   search() {
-    console.log(this.searchInput.value);
+    for (let i = 0; i < this.items.length; i++) {
+      if(this.searchInput.value === ""){
+        this.selectedItem = null;
+      }
+      else if (this.items[i].titulek.includes(this.searchInput.value)) {
+        this.selectedItem = this.items[i].nazev;
+      }
+    }
   }
 }
