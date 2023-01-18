@@ -14,7 +14,6 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
   obtiznost: String;
   selectedElement: String;
-  selected: boolean = false;
 
   constructor(private router: Router, private navodyService: NavodyService) {
   }
@@ -38,7 +37,7 @@ export class NavodyPage implements OnInit {
   }
 
   premiove(event: Event) {
-    this.selected = true;
+    console.log("ble");
   }
 
   vsechno(event: Event) {
