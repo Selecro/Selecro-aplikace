@@ -17,7 +17,6 @@ export class SlovnikPage implements OnInit {
   
   ngOnInit() {
     const nazev = (this.router.url.split('/'))[2];
-    console.log(nazev);
     this.styl = this.dictionaryService.getStylByName(nazev);
   }
 }

@@ -87,8 +87,8 @@ import { Pomucka } from '../types/pomucka'
       },
       {
         popis: "Klasické nůžky na papír nejsou na některé příze vhodné, protože potom ji přestříháváme na několikrát a akorát se nám konec třepí.",
-        obrazek: "",  
-        exist: false, 
+        obrazek: "zdobneNuzky",  
+        exist: true, 
       },
       {
         popis: "Můžete si pořídit nůžky na látku, nebo různé speciálně zdobené, tvarované.",

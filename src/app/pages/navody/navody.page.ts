@@ -17,6 +17,7 @@ export class NavodyPage implements OnInit {
   selectedItem: String;
   searchInput: any;
 
+
   constructor(private router: Router, private navodyService: NavodyService) {
   }
 
@@ -42,15 +43,15 @@ export class NavodyPage implements OnInit {
   }
 
   premiove(event: Event) {
-    console.log("ble");
+    this.selected = true;
   }
 
   vsechno(event: Event) {
-    console.log("ble")
+    this.selectedElement = null;
   }
 
   dokocene(event: Event) {
-    console.log("ble")
+    console.log("ble");
   }
 
   inputbox() {

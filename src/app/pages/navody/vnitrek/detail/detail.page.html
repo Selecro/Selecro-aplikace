@@ -13,30 +13,28 @@
 </ion-header>
 
 <ion-content>
-  <div class="rozdeleni">
-    <div class="sloupec">
-      <div>
-        <b>Použijeme tyto styly</b>
+  <div id="container">
+    <div class="card">
+      <div class="column">
+        <div><strong>Použijeme tyto styly:</strong></div>
         {{popis.zkratkyCasti}}
       </div>
+      <img class="obraz" src="assets/icon/{{popis.nazevCasti}}.jpg">
     </div>
-    <div class="sloupec">
-     <img src="assets/icon/{{popis.nazevCasti}}.jpg">
+    <div class="line"></div>
+    <div class="popis" innerHTML="{{popis.popis}}">
     </div>
+    
+    <ion-toolbar>
+      <div class="footer-buttons">
+        <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
+          <ion-icon size="small" name="arrow-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="hotovo()">Hotovo</ion-button>
+        <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
+          <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-toolbar>
   </div>
-  <hr>
-  <div class="popis" innerHTML="{{popis.popis}}">
-  </div>
-  
-  <ion-toolbar>
-    <div class="footer-buttons">
-      <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
-        <ion-icon size="small" name="arrow-back-outline"></ion-icon>
-      </ion-button>
-      <ion-button (click)="hotovo()">Hotovo</ion-button>
-      <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
-        <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-toolbar>
 </ion-content>

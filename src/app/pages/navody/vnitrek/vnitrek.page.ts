@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-vnitrek',
   templateUrl: './vnitrek.page.html',
   styleUrls: ['./vnitrek.page.scss'],
-  encapsulation: ViewEncapsulation.None, //je to na něco?
+  encapsulation: ViewEncapsulation.None,
 })
 export class VnitrekPage implements OnInit {
   navod: Navod;
@@ -18,7 +18,6 @@ export class VnitrekPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log('HERE');
     const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(name);
     this.popisy = this.navodyService.getPopisyByName(name);

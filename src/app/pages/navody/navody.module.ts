@@ -17,6 +17,7 @@ import { SearchPipe } from 'src/app/search.pipe';
     IonicModule,
     NavodyPageRoutingModule
   ],
+
   declarations: [NavodyPage, CallbackPipe, SearchPipe]
 })
 export class NavodyPageModule { }

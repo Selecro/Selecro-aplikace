@@ -7,6 +7,7 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
     titulek: "Dinosaurus",
     zkratky: "Mk, V, Ks, A, Po, Řo",
     pomucky: "Háček (velikosti 2mm), jehla, značkovač, duté vlákno, bezpečnostní očka",
+    premiove: false,
     popisy: [
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
@@ -57,6 +58,7 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
     titulek: "Harold",
     zkratky: "Mk, Ks, Řo, Po, V, A",
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
+    premiove: true,
     popisy: [
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
@@ -95,6 +97,7 @@ import { Navod, Obtiznost, PopisNavodu } from '../types/navod';
     titulek: "Vodní želva",
     zkratky: "Mk, Ks, Řo, Po, V, A",
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
+    premiove: false,
     popisy: [
       { obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
