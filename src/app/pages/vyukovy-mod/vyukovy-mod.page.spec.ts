@@ -9,7 +9,7 @@ describe('VyukovyModPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VyukovyModPage ],
+      declarations: [VyukovyModPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

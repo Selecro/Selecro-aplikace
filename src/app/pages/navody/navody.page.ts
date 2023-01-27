@@ -14,17 +14,22 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
   obtiznost: String;
   selectedElement: String;
-  selected: boolean = false;
+  selectedItem: String;
+  searchInput: any;
+
 
   constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
     this.items = this.navodyService.getVsechnyNavody();
+    this.searchInput = document.querySelector("input");
+    this.inputbox();
+    //this.obtiznost = "lehky";
   }
 
   goVnitrek(item: Navod) {
-    this.router.navigate([`navody/vnitrek/`, {nazevNavodu: item.nazev}]);
+    this.router.navigate([`navody/vnitrek/`, { nazevNavodu: item.nazev }]);
   }
 
   vyberObtiznost(e) {
@@ -49,4 +54,34 @@ export class NavodyPage implements OnInit {
     console.log("ble");
   }
 
+  inputbox() {
+    const searchBox = document.querySelector(".search-box");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    document.getElementById("search-icon").onclick = () => {
+      searchBox.classList.add("active");
+      searchBtn.classList.add("active");
+      this.searchInput.classList.add("active");
+      cancelBtn.classList.add("active");
+      this.searchInput.focus();
+    }
+    document.getElementById("cancel-icon").onclick = () => {
+      searchBox.classList.remove("active");
+      searchBtn.classList.remove("active");
+      this.searchInput.classList.remove("active");
+      cancelBtn.classList.remove("active");
+      this.searchInput.value = "";
+    }
+  }
+
+  search() {
+    for (let i = 0; i < this.items.length; i++) {
+      if(this.searchInput.value === ""){
+        this.selectedItem = null;
+      }
+      else if (this.items[i].titulek.includes(this.searchInput.value)) {
+        this.selectedItem = this.items[i].nazev;
+      }
+    }
+  }
 }

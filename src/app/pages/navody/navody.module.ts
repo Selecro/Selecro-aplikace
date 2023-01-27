@@ -8,7 +8,7 @@ import { NavodyPageRoutingModule } from './navody-routing.module';
 
 import { NavodyPage } from './navody.page';
 import { CallbackPipe } from 'src/app/callback.pipe';
-import { PremiovePipe } from 'src/app/premiove.pipe';
+import { SearchPipe } from 'src/app/search.pipe';
 
 @NgModule({
   imports: [
@@ -17,6 +17,7 @@ import { PremiovePipe } from 'src/app/premiove.pipe';
     IonicModule,
     NavodyPageRoutingModule
   ],
-  declarations: [NavodyPage, CallbackPipe, PremiovePipe]
+
+  declarations: [NavodyPage, CallbackPipe, SearchPipe]
 })
-export class NavodyPageModule {}
+export class NavodyPageModule { }

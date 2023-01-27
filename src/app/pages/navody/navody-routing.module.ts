@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'vnitrek',
-    loadChildren: () => import('./vnitrek/vnitrek.module').then( m => m.VnitrekPageModule)
+    loadChildren: () => import('./vnitrek/vnitrek.module').then(m => m.VnitrekPageModule)
   }
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NavodyPageRoutingModule {}
+export class NavodyPageRoutingModule { }
