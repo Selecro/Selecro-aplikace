@@ -14,9 +14,9 @@ export class NavodyPage implements OnInit {
   items: Array<Navod>;
   obtiznost: String;
   selectedElement: String;
-  selectedElement: String;
   selectedItem: String;
   searchInput: any;
+  selected: boolean = false;
 
   constructor(private router: Router, private navodyService: NavodyService) {
   }
@@ -25,7 +25,6 @@ export class NavodyPage implements OnInit {
     this.items = this.navodyService.getVsechnyNavody();
     this.searchInput = document.querySelector("input");
     this.inputbox();
-    //this.obtiznost = "lehky";
   }
 
   goVnitrek(item: Navod) {
@@ -43,15 +42,15 @@ export class NavodyPage implements OnInit {
   }
 
   premiove(event: Event) {
-    console.log("ble");
+    this.selected = true;
   }
 
   vsechno(event: Event) {
     this.selectedElement = null;
+    this.selected = false;
   }
 
   dokocene(event: Event) {
-    console.log("ble");
   }
 
   inputbox() {

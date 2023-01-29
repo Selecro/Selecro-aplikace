@@ -9,7 +9,6 @@ export class SearchPipe implements PipeTransform {
     let sortedArray=[];
     if(property != null){
         sortedArray = records.filter(item => item.nazev == property);
-        console.log(sortedArray);
         return sortedArray;
     }
     else{

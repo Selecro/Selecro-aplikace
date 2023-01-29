@@ -9,6 +9,7 @@ import { NavodyPageRoutingModule } from './navody-routing.module';
 import { NavodyPage } from './navody.page';
 import { CallbackPipe } from 'src/app/callback.pipe';
 import { SearchPipe } from 'src/app/search.pipe';
+import { PremiovePipe } from 'src/app/premiove.pipe';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { SearchPipe } from 'src/app/search.pipe';
     NavodyPageRoutingModule
   ],
 
-  declarations: [NavodyPage, CallbackPipe, SearchPipe]
+  declarations: [NavodyPage, CallbackPipe, SearchPipe, PremiovePipe]
 })
 export class NavodyPageModule { }
