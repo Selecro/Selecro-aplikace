@@ -1,14 +1,14 @@
-.video-center{
+.video-center {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
     height: auto;
-    text-align:center
+    text-align: center
 }
 
-.video{
+.video {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,18 +17,18 @@
     padding: 1em;
 }
 
-.karta-popisu{
+.karta-popisu {
     --background: #4FC4F5;
     color: white
 }
 
-.footer-button{
+.footer-button {
     flex: 0 1 auto;
     width: 20%;
     --background: #4FC4F5;
 }
 
-.footer-buttons{
+.footer-buttons {
     display: flex;
     justify-content: space-between;
     margin: 0 5%;

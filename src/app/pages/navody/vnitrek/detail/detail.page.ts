@@ -20,15 +20,12 @@ export class DetailPage implements OnInit {
     this.popisy = this.navodyService.getVsechnyPopisy();
   }
 
-  skrtnuti(){
-    ;
+  skrtnuti() {
   }
 
-  odpreskrtnuti(){
-    ;
+  odpreskrtnuti() {
   }
 
-  hotovo(){
-    ;
+  hotovo() {
   }
 }

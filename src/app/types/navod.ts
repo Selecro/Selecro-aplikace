@@ -1,4 +1,4 @@
-export type Navod =  {
+export type Navod = {
   nazev: string,
   titulek: string,
   pomucky: string,
@@ -7,7 +7,7 @@ export type Navod =  {
   obtiznost: Obtiznost,
   premiove: boolean,
 }
-  
+
 export type PopisNavodu = {
   nazevCasti: string,
   zkratkyCasti: string,

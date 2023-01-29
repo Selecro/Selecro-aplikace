@@ -17,4 +17,4 @@ import { PomuckyPage } from './pomucky.page';
   ],
   declarations: [PomuckyPage]
 })
-export class PomuckyPageModule {}
+export class PomuckyPageModule { }

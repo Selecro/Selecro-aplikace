@@ -14,4 +14,4 @@ import { VnitrekPage } from './vnitrek.page';
   ],
   declarations: [VnitrekPage]
 })
-export class VnitrekPageModule {}
+export class VnitrekPageModule { }

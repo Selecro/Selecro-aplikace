@@ -16,23 +16,23 @@
   <div id="container">
     <div id="cards">
       <div class="card">
-          <b>Budeme potřebovat:</b>
-          <p>{{navod.pomucky}}</p>
-          <b>Použijeme tyto styly:</b>
-                  <div>
-            {{navod.zkratky}}
-          </div>
+        <b>Budeme potřebovat:</b>
+        <p>{{navod.pomucky}}</p>
+        <b>Použijeme tyto styly:</b>
+        <div>
+          {{navod.zkratky}}
+        </div>
       </div>
       <div class="card">
-            <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
+        <img class="obraz" src="assets/icon/{{navod.nazev}}.jpg">
       </div>
     </div>
     <div class="line"></div>
     <div style="height: 20px;"></div>
     <p *ngFor="let popis of popisy">
-        <button  (click)='goDetail(popis)'>
-          {{popis.titulekCasti}}
-        </button>
+      <button (click)='goDetail(popis)'>
+        {{popis.titulekCasti}}
+      </button>
     </p>
   </div>
 </ion-content>

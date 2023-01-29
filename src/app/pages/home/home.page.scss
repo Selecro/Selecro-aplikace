@@ -66,7 +66,7 @@ h2 {
 }
 
 @media screen and (max-width: 808px) {
-  #container{
+  #container {
     padding: 20px;
   }
 }
@@ -74,28 +74,29 @@ h2 {
 
 
 @media screen and (max-width: 767px) {
+
   /* start of medium tablet styles */
   .obrazek {
-      max-width: 200px;
+    max-width: 200px;
   }
 
- 
+
 }
 
 @media screen and (max-width: 479px) {
   /* start of phone styles */
 
   .obrazek {
-      max-width: 140px;
-      padding: 8px;
+    max-width: 140px;
+    padding: 8px;
   }
 
   .socials_logo {
-      max-width: 25px;
-      min-width: 25px;
+    max-width: 25px;
+    min-width: 25px;
   }
 
   .card {
-      padding: 10px;
+    padding: 10px;
   }
 }

@@ -47,6 +47,5 @@ export class VyukovyModPage implements OnInit {
   }
 
   search() {
-    console.log(this.searchInput.value);
   }
 }

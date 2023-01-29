@@ -17,4 +17,4 @@ import { PrihlaseniPage } from './prihlaseni.page';
   ],
   declarations: [PrihlaseniPage]
 })
-export class PrihlaseniPageModule {}
+export class PrihlaseniPageModule { }

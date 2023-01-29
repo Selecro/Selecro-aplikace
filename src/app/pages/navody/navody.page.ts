@@ -75,7 +75,7 @@ export class NavodyPage implements OnInit {
 
   search() {
     for (let i = 0; i < this.items.length; i++) {
-      if(this.searchInput.value === ""){
+      if (this.searchInput.value === "") {
         this.selectedItem = null;
       }
       else if (this.items[i].titulek.includes(this.searchInput.value)) {
