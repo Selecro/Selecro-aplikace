@@ -17,4 +17,4 @@ import { VyukovyModPage } from './vyukovy-mod.page';
   ],
   declarations: [VyukovyModPage]
 })
-export class VyukovyModPageModule {}
+export class VyukovyModPageModule { }
