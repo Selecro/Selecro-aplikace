@@ -1,4 +1,4 @@
-export type Styl =  {
+export type Styl = {
   nazev: string,
   titulek: string,
   zkratka: string,

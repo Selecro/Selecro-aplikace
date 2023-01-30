@@ -1,12 +1,13 @@
-export type Navod =  {
+export type Navod = {
   nazev: string,
   titulek: string,
   pomucky: string,
   zkratky: string,
   popisy: Array<PopisNavodu>,
   obtiznost: Obtiznost,
+  premiove: boolean,
 }
-  
+
 export type PopisNavodu = {
   nazevCasti: string,
   zkratkyCasti: string,

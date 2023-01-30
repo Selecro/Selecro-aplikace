@@ -12,6 +12,7 @@ export class VyukovyModPage implements OnInit {
 
   items: Array<Vyrobek>;
   searchInput: any;
+  selectedItem: String;
 
   constructor(private router: Router, private vyukaService: VyukaService) {
   }
@@ -47,6 +48,13 @@ export class VyukovyModPage implements OnInit {
   }
 
   search() {
-    console.log(this.searchInput.value);
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.searchInput.value === "") {
+        this.selectedItem = null;
+      }
+      else if (this.items[i].title.includes(this.searchInput.value)) {
+        this.selectedItem = this.items[i].nazev;
+      }
+    }
   }
 }

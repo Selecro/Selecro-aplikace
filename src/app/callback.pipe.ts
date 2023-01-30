@@ -5,12 +5,12 @@ import { PipeTransform, Pipe } from '@angular/core';
     pure: false
 })
 export class CallbackPipe implements PipeTransform {
-    transform(records: Array<any>, property:String): any {
-        let sortedArray=[];
-        if(property != null){
+    transform(records: Array<any>, property: String): any {
+        let sortedArray = [];
+        if (property != null) {
             return records.filter(item => item.obtiznost == property);
         }
-        else{
+        else {
             return records;
         }
     }

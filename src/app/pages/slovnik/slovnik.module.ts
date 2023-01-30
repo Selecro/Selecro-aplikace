@@ -17,4 +17,4 @@ import { SlovnikPage } from './slovnik.page';
   ],
   declarations: [SlovnikPage]
 })
-export class SlovnikPageModule {}
+export class SlovnikPageModule { }

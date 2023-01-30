@@ -8,10 +8,10 @@
         <ion-icon slot="icon-only" name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
-  <ion-title>{{styl.titulek}}</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button menuId="main-menu"></ion-menu-button>
-  </ion-buttons>
+    <ion-title>{{styl.titulek}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -34,11 +34,12 @@
           </div>
         </div>
 
-        <br><b>Popis</b><p class="popisek" innerHTML="{{styl.popis}}"></p>
+        <br><b>Popis</b>
+        <p class="popisek" innerHTML="{{styl.popis}}"></p>
       </div>
-    
+
       <p class="nadpis"><b>Animace</b><br></p>
-        <img class="fotky-slovnik" src="assets/icon/{{styl.nazev}}.gif">
+      <img class="fotky-slovnik" src="assets/icon/{{styl.nazev}}.gif">
       <p class="nadpis"><b>Ve skutečnosti</b></p>
       <img class="fotky-slovnik" src="assets/icon/{{styl.nazev}}-real.png">
     </div>

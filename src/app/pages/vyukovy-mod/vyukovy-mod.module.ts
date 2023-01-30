@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { VyukovyModPageRoutingModule } from './vyukovy-mod-routing.module';
 
 import { VyukovyModPage } from './vyukovy-mod.page';
+import { ApplicationPipesModuleModule } from 'src/app/application-pipes-module.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VyukovyModPageRoutingModule
+    VyukovyModPageRoutingModule,
+    ApplicationPipesModuleModule
   ],
   declarations: [VyukovyModPage]
 })

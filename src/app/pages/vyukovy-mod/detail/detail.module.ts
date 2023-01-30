@@ -16,4 +16,4 @@ import { DetailPage } from './detail.page';
   ],
   declarations: [DetailPage]
 })
-export class DetailPageModule {}
+export class DetailPageModule { }
