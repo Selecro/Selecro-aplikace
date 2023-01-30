@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{popis.titulekCasti}}</ion-title>
+    <ion-title>{{popis[index].titulekCasti}}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -17,21 +17,21 @@
     <div class="card">
       <div class="column">
         <div><strong>Použijeme tyto styly:</strong></div>
-        {{popis.zkratkyCasti}}
+        {{popis[index].zkratkyCasti}}
       </div>
-      <img class="obraz" src="assets/icon/{{popis.nazevCasti}}.jpg">
+      <img class="obraz" src="assets/icon/{{popis[index].nazevCasti}}.jpg">
     </div>
     <div class="line"></div>
-    <div class="popis" innerHTML="{{popis.popis}}">
+    <div class="popis" innerHTML="{{popis[index].popis}}">
     </div>
 
     <ion-toolbar>
       <div class="footer-buttons">
-        <ion-button start class="footer-button" (click)="skrtnuti()" shape="round">
+        <ion-button start class="footer-button" (click)="previousIndex()" shape="round">
           <ion-icon size="small" name="arrow-back-outline"></ion-icon>
         </ion-button>
-        <ion-button (click)="hotovo()">Hotovo</ion-button>
-        <ion-button end class="footer-button" (click)="odpreskrtnuti()" shape="round">
+        <ion-button>Hotovo</ion-button>
+        <ion-button end class="footer-button" (click)="nextIndex()" shape="round">
           <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
         </ion-button>
       </div>

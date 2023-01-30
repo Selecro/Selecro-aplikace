@@ -71,21 +71,13 @@ h2 {
   }
 }
 
-
-
 @media screen and (max-width: 767px) {
-
-  /* start of medium tablet styles */
   .obrazek {
     max-width: 200px;
   }
-
-
 }
 
 @media screen and (max-width: 479px) {
-  /* start of phone styles */
-
   .obrazek {
     max-width: 140px;
     padding: 8px;

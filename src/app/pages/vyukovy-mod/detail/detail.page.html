@@ -18,11 +18,18 @@
       <ion-card class="karta-popisu">
         <ion-card-content>
           <div class="text">
-            <b>Krok:</b> {{krok.cislo}}<br>
-            <b>Styl:</b> {{krok.styl}}<br>
-            <b>Pomůcky:</b> {{krok.pouzijeme}}<br>
+            <b>Krok:</b>
+            {{krok.cislo}}
+            <br>
+            <div *ngIf="krok.styl != null">
+              <b>Styl:</b>
+              {{krok.styl}}
+              <br>
+            </div>
+            <b>Pomůcky:</b> {{krok.pouzijeme}}
+            <br>
             <b>Popis:</b>
-            <p class="popisek" innerHTML="{{krok.popis}}"></p>
+            <p class="popisek" [innerHtml]="krok.popis"></p>
           </div>
         </ion-card-content>
       </ion-card>
@@ -41,10 +48,10 @@
 <ion-toolbar>
   <div class="footer-buttons">
     <ion-button start class="footer-button" (click)="goToPreviousSlide()" shape="round">
-      <ion-icon size="small"></ion-icon>
+      <ion-icon size="small" name="arrow-back-outline"></ion-icon>
     </ion-button>
     <ion-button end class="footer-button" (click)="goToNextSlide()" shape="round">
-      <ion-icon size="small"></ion-icon>
+      <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
     </ion-button>
   </div>
 </ion-toolbar>

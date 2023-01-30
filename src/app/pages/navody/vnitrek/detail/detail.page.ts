@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { NavodyService } from 'src/app/services';
-import { PopisNavodu } from 'src/app/types/navod';
+import { PopisNavodu } from 'src/app/types';
 
 @Component({
   selector: 'app-detail',
@@ -9,23 +9,35 @@ import { PopisNavodu } from 'src/app/types/navod';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit {
-  popis: PopisNavodu;
-  popisy: Array<PopisNavodu>;
+  popis: Array<PopisNavodu>;
+  index: number;
+  title: string;
 
-  constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private navodyService: NavodyService) {
+    this.title = localStorage.getItem("popis");
+    this.popis = this.navodyService.getPopisyByName(this.title);
+    console.log(this.title);
+    this.index = this.popis.findIndex(x => x.nazevCasti === this.title);
   }
 
   ngOnInit() {
-    this.popis = this.router.getCurrentNavigation().extras.state.popis;
-    this.popisy = this.navodyService.getVsechnyPopisy();
+  }
+  
+  public nextIndex() {
+    if (this.index + 1 >= this.popis.length) {
+      this.index = 0;
+    }
+    else {
+      this.index++;
+    }
   }
 
-  skrtnuti() {
-  }
-
-  odpreskrtnuti() {
-  }
-
-  hotovo() {
+  public previousIndex() {
+    if (this.index - 1 < 0) {
+      this.index = this.popis.length - 1;
+    }
+    else {
+      this.index--;
+    }
   }
 }
