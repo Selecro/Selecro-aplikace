@@ -9,35 +9,36 @@ import { PopisNavodu } from 'src/app/types';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit {
-  popis: Array<PopisNavodu>;
-  index: number;
-  title: string;
+  popis: PopisNavodu;
+  popisy: Array<PopisNavodu>;
+  intervalId: any;
+  timer: any = 0;
 
   constructor(private router: Router, private navodyService: NavodyService) {
-    this.title = localStorage.getItem("popis");
-    this.popis = this.navodyService.getPopisyByName(this.title);
-    console.log(this.title);
-    this.index = this.popis.findIndex(x => x.nazevCasti === this.title);
+    this.popis = this.router.getCurrentNavigation().extras.state.popis;
+    this.popisy = this.navodyService.getVsechnyPopisy();
   }
 
   ngOnInit() {
-  }
-  
-  public nextIndex() {
-    if (this.index + 1 >= this.popis.length) {
-      this.index = 0;
-    }
-    else {
-      this.index++;
-    }
+    this.popis = this.router.getCurrentNavigation().extras.state.popis;
+    this.popisy = this.navodyService.getVsechnyPopisy();
   }
 
-  public previousIndex() {
-    if (this.index - 1 < 0) {
-      this.index = this.popis.length - 1;
+  get minutes() {
+    return Math.floor(this.timer / 60) % 60;
+  }
+
+  get seconds() {
+    return ("00" + this.timer % 60).slice(-2);
+  }
+
+  public time() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = 0;
     }
-    else {
-      this.index--;
+    else if (!this.intervalId) {
+      this.intervalId = setInterval(() => this.timer++, 1000);
     }
   }
 }

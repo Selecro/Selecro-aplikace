@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PopisNavodu, Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
@@ -18,12 +18,16 @@ export class VnitrekPage implements OnInit {
   }
 
   ngOnInit() {
-    this.name = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
-    this.navod = this.navodyService.getNavodByName(this.name);
+    const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
+    this.navod = this.navodyService.getNavodByName(name);
   }
 
   goDetail(popis: PopisNavodu) {
-    localStorage.setItem("popis", popis.nazevCasti);
-    this.router.navigate([`detail`]);
+    const navigationExtras: NavigationExtras = {
+      state: {
+        popis: popis
+      }
+    }
+    this.router.navigate([`detail`], navigationExtras);
   }
 }
