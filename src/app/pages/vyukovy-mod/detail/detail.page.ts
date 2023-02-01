@@ -16,6 +16,7 @@ import { SwiperComponent } from 'swiper/angular';
 export class DetailPage implements OnInit {
   @ViewChild('swiper') swiper: SwiperComponent;
   config: SwiperOptions = {
+    loop: true
   };
 
   vyrobek: Vyrobek;

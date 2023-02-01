@@ -29,7 +29,7 @@
     </div>
     <div class="line"></div>
     <div style="height: 20px;"></div>
-    <p *ngFor="let popis of popisy">
+    <p *ngFor="let popis of navod.popisy">
       <button (click)='goDetail(popis)'>
         {{popis.titulekCasti}}
       </button>

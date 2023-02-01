@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Pomucka } from '../types/pomucka'
+import { Pomucka } from '../types'
 
 const polePomucek = [
   {
@@ -9,7 +9,7 @@ const polePomucek = [
     kroky: [
       {
         popis: "Existuje široká škála velikostí.",
-        obrazek: " ",
+        obrazek: null,
         exist: false,
       },
       {
@@ -37,12 +37,12 @@ const polePomucek = [
       },
       {
         popis: "Na přebalu klubíčka bývá napsáno, kolik metrů obsahuje a na jak velký háček (popř. jehlice) je dělaná.",
-        obrazek: " ",
+        obrazek: null,
         exist: false,
       },
       {
         popis: "Samozřejmě můžete využít více velikostí na jeden typ příze (např.: Dolphin Baby se dá háčkovat s háčkem velikosti 4, 4.5 nebo 5 mm), ovlivňuje se tím však velikost oček.",
-        obrazek: " ",
+        obrazek: null,
         exist: false,
       },
     ]
@@ -55,7 +55,7 @@ const polePomucek = [
     kroky: [
       {
         popis: "Slouží nám k označení počátku řady, ale dá se použít i jiný kousek příze.",
-        obrazek: " ",
+        obrazek: null,
         exist: false,
       },
       {
@@ -74,7 +74,7 @@ const polePomucek = [
   {
     nazev: "jehla",
     titulek: "Jehla",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Na přišívání jednotlivých dílů, zapošívání nitě. Upřednostňované plastové jehly se více hodí, pokud děláte se silnějším typem příze.",
@@ -87,7 +87,7 @@ const polePomucek = [
   {
     nazev: "nuzky",
     titulek: "Nůžky",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Nůžky asi už někdy používal každý z nás a u háčkování to není nějak zvlášť jiné.",
@@ -101,7 +101,7 @@ const polePomucek = [
       },
       {
         popis: "Můžete si pořídit nůžky na látku, nebo různé speciálně zdobené, tvarované.",
-        obrazek: "",
+        obrazek: null,
         exist: false,
       },
     ]
@@ -110,7 +110,7 @@ const polePomucek = [
   {
     nazev: "bezpecnostni-oci-a-nos",
     titulek: "Bezpečnostní oči a nos",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Dnes se dá pořídit spousta tvarů, velikostí a barev očí a nosů s bezpečnostní pojistkou.",
@@ -133,7 +133,7 @@ const polePomucek = [
   {
     nazev: "chrastitko",
     titulek: "Chrastítko",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Pokud chcete svůj výrobek nějak ozvláštnit pro dítě, nebo třeba domácího mazlíčka, můžete dovnitř přidat chrastítko.",
@@ -151,11 +151,11 @@ const polePomucek = [
   {
     nazev: "pocitadlo",
     titulek: "Počítadlo",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Existuje počítadlo manuální a digitální. Obě mají stejný účel. Počítat řady, co jsme dosud vytvořili.",
-        obrazek: "",
+        obrazek: null,
         exist: false,
       },
       {
@@ -174,7 +174,7 @@ const polePomucek = [
   {
     nazev: "navijec-prize",
     titulek: "Navíječ příze",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Když se vám klubíčko zasukuje tak, že ho musíte celé rozplést, nebo se vám rozkutálí, tak je navíječ pomocník pro vás. Jedná se o nástroj, který dělá z kusu provázku opět klubíčko. Jednoduše upevníte jeden konec na horní otáčecí válec, přízi napnete a pak už jen točíte kličkou. Navíječ vytvoří klubíčko",
@@ -187,7 +187,7 @@ const polePomucek = [
   {
     nazev: "vypln",
     titulek: "Výplň",
-    videoURL: "",
+    videoURL: null,
     kroky: [
       {
         popis: "Pokud vytváříte něco prostorového (zvířátka, hračky, atd...), tak se vám bude hodit nějaká výplň. Tu může tvořit vata, nebo duté vlákno. Po delší době háčkování můžete použít i zbytky přízí z minulého tvoření. Je to taková recyklace, kterou já uplatňuji třeba u jehelníčků",

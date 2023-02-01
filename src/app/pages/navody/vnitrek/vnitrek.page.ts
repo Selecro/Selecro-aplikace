@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class VnitrekPage implements OnInit {
   navod: Navod;
-  popisy: Array<PopisNavodu>;
+  name: string;
 
   constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
   }
@@ -20,7 +20,6 @@ export class VnitrekPage implements OnInit {
   ngOnInit() {
     const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
     this.navod = this.navodyService.getNavodByName(name);
-    this.popisy = this.navodyService.getPopisyByName(name);
   }
 
   goDetail(popis: PopisNavodu) {
