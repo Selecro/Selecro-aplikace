@@ -26,16 +26,17 @@
     <button (click)="time()">
       {{ minutes }}:{{ seconds }}
     </button>
-    <div class="popis" innerHTML="{{popis.popis}}">
+    <div class="popis" name="element" *ngFor="let item of popisy">
+      {{item}}
     </div>
 
     <ion-toolbar>
       <div class="footer-buttons">
-        <ion-button start class="footer-button" shape="round">
+        <ion-button start class="footer-button" shape="round" (click)="previousIndex()">
           <ion-icon size="small" name="arrow-back-outline"></ion-icon>
         </ion-button>
-        <ion-button>Hotovo</ion-button>
-        <ion-button end class="footer-button" shape="round">
+        <ion-button (click)="finished()">Hotovo</ion-button>
+        <ion-button end class="footer-button" shape="round" (click)="nextIndex()">
           <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
         </ion-button>
       </div>

@@ -1,6 +1,6 @@
 export type Pomucka = {
   nazev: string,
-  titulek: string,
+  title: string,
   kroky: Array<PopisPomucek>,
   videoURL: string,
 }

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{navod.titulek}}</ion-title>
+    <ion-title>{{navod.title}}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -29,7 +29,7 @@
     </div>
     <div class="line"></div>
     <div style="height: 20px;"></div>
-    <p *ngFor="let popis of navod.popisy">
+    <p name="element0" *ngFor="let popis of navod.popisy">
       <button (click)='goDetail(popis)'>
         {{popis.titulekCasti}}
       </button>

@@ -1,6 +1,6 @@
 export type Navod = {
   nazev: string,
-  titulek: string,
+  title: string,
   pomucky: string,
   zkratky: string,
   popisy: Array<PopisNavodu>,
@@ -13,7 +13,7 @@ export type PopisNavodu = {
   zkratkyCasti: string,
   titulekCasti: string,
   obrazek: boolean,
-  popis: string,
+  popis: Array<string>,
 }
 
 export enum Obtiznost {

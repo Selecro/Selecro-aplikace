@@ -28,6 +28,7 @@ export class NavodyPage implements OnInit {
   }
 
   goVnitrek(item: Navod) {
+    localStorage.setItem("nazev", item.nazev);
     this.router.navigate([`navody/vnitrek/`, { nazevNavodu: item.nazev }]);
   }
 
@@ -78,7 +79,7 @@ export class NavodyPage implements OnInit {
       if (this.searchInput.value === "") {
         this.selectedItem = null;
       }
-      else if (this.items[i].titulek.includes(this.searchInput.value)) {
+      else if (this.items[i].title.includes(this.searchInput.value)) {
         this.selectedItem = this.items[i].nazev;
       }
     }
