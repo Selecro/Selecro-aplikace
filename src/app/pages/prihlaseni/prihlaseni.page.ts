@@ -11,4 +11,5 @@ export class PrihlaseniPage implements OnInit {
 
   ngOnInit() {
   }
+
 }

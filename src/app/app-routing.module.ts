@@ -39,7 +39,12 @@ const routes: Routes = [
   {
     path: 'detail',
     loadChildren: () => import('./pages/navody/vnitrek/detail/detail.module').then(m => m.DetailPageModule)
+  },
+  {
+    path: 'registrace',
+    loadChildren: () => import('./pages/prihlaseni/registrace/registrace.module').then( m => m.RegistracePageModule)
   }
+
 ];
 
 @NgModule({
