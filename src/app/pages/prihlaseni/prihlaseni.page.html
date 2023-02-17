@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon slot="icon-only" name="person-circle" routerLink="/prihlaseni"></ion-icon>
+      <ion-button routerLink="/prihlaseni">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Přihlášení</ion-title>
@@ -13,4 +13,16 @@
 </ion-header>
 
 <ion-content>
+
+  <input type="text" placeholder="Email, nebo uživatelské jméno">
+  <input type="text" placeholder="Heslo">
+  <br>
+  <br>
+    <button>Přihlásit se</button>
+  <br>
+    <div class="odkaz">
+      Ještě nemáte účet? <a href="/registrace" >Zaregistruj se!</a>
+    </div> 
+    <br> 
+    <strong>Zapoměli jste heslo?</strong>
 </ion-content>
