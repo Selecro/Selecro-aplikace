@@ -1,47 +1,35 @@
-import { Component, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
-import { PopisNavodu, Navod } from 'src/app/types/navod';
+import { Component, OnInit } from '@angular/core';
+import {  Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
-import { ActivatedRoute, NavigationExtras } from '@angular/router';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-vnitrek',
   templateUrl: './vnitrek.page.html',
   styleUrls: ['./vnitrek.page.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class VnitrekPage implements OnInit {
   navod: Navod;
   name: string;
-  item: string;
   element0: NodeListOf<HTMLElement> | undefined;
 
-  constructor(private router: Router, private navodyService: NavodyService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private navodyService: NavodyService, private route: ActivatedRoute) {
+    route.params.subscribe(val => {
+      this.name = (this.router.url.split('/'))[3];
+      this.navod = this.navodyService.getNavodyByName(this.name);
+      this.element0 = document.getElementsByName("element0");
+      if(localStorage.getItem("finished")) {
+        if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")){
+          this.element0.item(Number(localStorage.getItem("finished"))).removeAttribute("style");
+        }
+        else {
+          this.element0.item(Number(localStorage.getItem("finished"))).setAttribute("style", "background-color: #32CD32");
+        }
+        localStorage.setItem("finished","");
+      }
+    });
   }
 
   ngOnInit() {
-    const name: string = this.activatedRoute.snapshot.paramMap.get('nazevNavodu');
-    this.navod = this.navodyService.getNavodyByName(name);
-    this.element0 = document.getElementsByName("element0");
-    /*
-    let item = localStorage.getItem("item");
-    console.log(item);
-    if (item != "null") {
-      console.log(item);
-    }*/
-  }
-
-  goDetail(popis: PopisNavodu) {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        popis: popis
-      }
-    }
-    this.router.navigate([`detail`], navigationExtras);
-  }
-
-
-  public xd(item: string) {
-    console.log(item);
   }
 }

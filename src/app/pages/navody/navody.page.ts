@@ -27,11 +27,6 @@ export class NavodyPage implements OnInit {
     this.inputbox();
   }
 
-  goVnitrek(item: Navod) {
-    localStorage.setItem("nazev", item.nazev);
-    this.router.navigate([`navody/vnitrek/`, { nazevNavodu: item.nazev }]);
-  }
-
   vyberObtiznost(e) {
     if (e.detail.value == "lehky" || e.detail.value == "stredni" || e.detail.value == "tezky") {
       this.obtiznost = e.detail.value;
