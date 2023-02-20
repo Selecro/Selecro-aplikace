@@ -25,6 +25,7 @@ export class NavodyPage implements OnInit {
     this.items = this.navodyService.getVsechnyNavody();
     this.searchInput = document.querySelector("input");
     this.inputbox();
+    localStorage.setItem("finished", "");
   }
 
   vyberObtiznost(e) {

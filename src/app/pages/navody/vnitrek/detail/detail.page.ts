@@ -11,7 +11,7 @@ import { Navod } from 'src/app/types';
 export class DetailPage implements OnInit {
   navod: Navod;
   name: string;
-  element0: NodeListOf<HTMLElement> | undefined;
+  element: NodeListOf<HTMLElement> | undefined;
   intervalId: any;
   timer: any = 0;
   index: number;
@@ -24,12 +24,21 @@ export class DetailPage implements OnInit {
     this.name = (this.router.url.split('/'))[3];
     this.navod = this.navodyService.getNavodyByName(this.name);
     this.index = this.navod.popisy.findIndex(x => x.nazevCasti === this.router.url.split('/')[5]);
+    this.element = document.getElementsByName("element");
     this.index0 = 0;
-    this.element0 = document.getElementsByName("element0");
     if(localStorage.getItem("time") != "0") {
       this.timer = Number(localStorage.getItem("time"));
       this.time();
     }
+    if(localStorage.getItem("finished") == "true") {
+      this.element.forEach(x => x.setAttribute("style", "text-decoration: line-through; color: gray"));
+      this.index0 = this.element.length;
+    }
+    else if(localStorage.getItem("finished") == "false") {
+      this.element.forEach(x => x.removeAttribute("style"));
+      this.index0 = 0;
+    }
+    localStorage.setItem("finished", "");
   }
 
   get minutes() {
@@ -52,20 +61,22 @@ export class DetailPage implements OnInit {
 
   public previousIndex() {
     if (this.index0 > 0) {
-      this.element0?.item(--this.index0).removeAttribute("style");
+      this.element?.item(--this.index0).removeAttribute("style");
     }
   }
 
   public nextIndex() {
-    if (this.index0 < this.navod.popisy[this.index].popis.length) {
-      this.element0?.item(this.index0++).setAttribute("style", "text-decoration: line-through; color: gray");
+    if (this.index0+1 < this.navod.popisy[this.index].popis.length) {
+      this.element?.item(this.index0++).setAttribute("style", "text-decoration: line-through; color: gray");
     }
     else {
       this.finished();
+      this.router.navigate(["detail/this.nazevCasti"]);
     }
   }
 
   public finished() {
+    this.element.forEach(x => x.removeAttribute("style"));
     this.time();
     localStorage.setItem("time", this.timer);
     localStorage.setItem("finished", String(this.index));

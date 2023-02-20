@@ -19,17 +19,25 @@ export class VnitrekPage implements OnInit {
       this.navod = this.navodyService.getNavodyByName(this.name);
       this.element0 = document.getElementsByName("element0");
       if(localStorage.getItem("finished")) {
-        if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")){
+        if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")) {
           this.element0.item(Number(localStorage.getItem("finished"))).removeAttribute("style");
         }
         else {
           this.element0.item(Number(localStorage.getItem("finished"))).setAttribute("style", "background-color: #32CD32");
         }
-        localStorage.setItem("finished","");
       }
     });
   }
 
   ngOnInit() {
+  }
+
+  finished() {
+    if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")) {
+      localStorage.setItem("finished","true");
+    }
+    else {
+      localStorage.setItem("finished","false");
+    }
   }
 }
