@@ -31,14 +31,6 @@ const routes: Routes = [
   {
     path: 'prihlaseni',
     loadChildren: () => import('./pages/prihlaseni/prihlaseni.module').then(m => m.PrihlaseniPageModule)
-  },
-  {
-    path: 'vnitrek',
-    loadChildren: () => import('./pages/navody/vnitrek/vnitrek.module').then(m => m.VnitrekPageModule)
-  },
-  {
-    path: 'detail',
-    loadChildren: () => import('./pages/navody/vnitrek/detail/detail.module').then(m => m.DetailPageModule)
   }
 ];
 
