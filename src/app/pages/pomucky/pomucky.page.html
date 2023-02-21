@@ -1,74 +1,27 @@
 <ion-header>
   <ion-toolbar class="lista">
-  <ion-buttons slot="end">
-    <ion-button>
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button slot="end">
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>TITULEK</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button menuId="main-menu"></ion-menu-button>
-  </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{pomucka.titulek}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-
-
-
-  <div class="text">
-      <h1 id="hacek">Háček</h1>
-      <p>Existuje široká škála velikostí. Háčky se dělají z různých materiálů a mohou být zdobeny rukojeťmi,
-      ergonomickými úchyty a podobně</p>
-      <img class="obrazek" src="assets/icon/hacek.png">
-
-      <h1>Příze</h1>
-      <p>Dnes můžeme najít obrovské množství značek a materiálů (akrylové, bavlněné, směsové). Na přebalu klubíčka bývá napsáno, kolik
-      metrů obsahuje a na jak velký háček (popř. jehlice) je dělaná. Samozřejmě můžete využít více velikostí na jeden typ příze
-      (např.: Dolphin Baby se dá háčkovat s háčkem velikosti 4, 4.5 nebo 5 mm), ovlivňuje se tím však velikost oček.</p>
-      <img class="obrazek" src="assets/icon/prize.png">
-
-      <h1>Značkovač</h1>
-      <p>Slouží nám k označení počátku řady. Dá se použít i jiný kousek příze, ale značkovač je příjemná pomůcka, která se
-      na trhu objevuje ve více variantách.</p>
-      <img class="obrazek" src="assets/icon/znackovacSpirala.png">
-
-      <h1>Jehla</h1>
-      <p>Na přišívání jednotlivých dílů, zapošívání nitě. Upřednostňované plastové jehly se více hodí, pokud děláte se silnějším typem
-      příze.</p>
-      <img class="obrazek" src="assets/icon/jehla.png">
-
-      <h1>Nůžky</h1>
-      <p>S nůžkami umí asi každý. K háčkování se hodí na zastříhnutí přebytečné nitě</p>
-
-
-      <h1>Bezpečnostní oči a nosy</h1>
-      <p>Dnes se dá pořídit spousta tvarů, velikostí a barev očí a nosů s bezpečnostní pojistkou. Uzavírají se jednoduše.
-      Na závit se postupně nasouvá pojistka, která jde zaklapnout tolikrát, kolik má očko závitů. Čím pevněji oko uzavřeme tím
-      hezčí, nebo ošklivější efekt můžeme vytvořit. Je to kus od kusu, výrobek od výrobku.</p>
-
-      <h1>Chrastítko</h1>
-      <p>Pokud chcete svůj výrobek nějak ozvláštnit pro dítě, nebo třeba domácího mazlíčka, můžete dovnitř přidat chrastítko.
-      Ty se dnes vyrábí v různých velikostech, tvarech a každé chrastí jinou intenzitou.</p>
-
-      <h1>Počítadlo</h1>
-      <p>Existuje počítadlo manuální a digitální. Obě mají stejný účel. Počítat řady, co jsme dosud vytvořili.</p>
-      <p>Manuální může vypadat jako válec a každá jeho strana se dá otáčet. Měníme tak číslovky od 0 do 9.
-      Některá se dají připojit na háček, jiná musíte stále brát a pokládat bokem.</p>
-      <p>Mnohem pohodlnější je z tohoto důvodu počítadlo digitální, které se dá připevnit na palec a pouhým mačkáním
-      tlačítek buď posouváte číslo o 1, nebo celý proces resetujete. Existují i taková počítadla, která umí displej rozsvítit.</p>
-
-      <h1>Navíječ příze</h1>
-      <p>Když se vám klubíčko zasukuje tak, že ho musíte celé rozplést, nebo se vám rozkutálí, tak je navíječ pomocník pro vás.
-      Jedná se o nástroj, který dělá z kusu provázku opět klubíčko. Jednoduše upevníte jeden konec na horní otáčecí válec, přízi
-      napnete a pak už jen točíte kličkou. Navíječ vytvoří klubíčko.</p>
-
-      <h1>Výplň</h1>
-      <p>Pokud vytváříte něco prostorového (zvířátka, hračky, atd...), tak se vám bude hodit nějaká výplň. Tu může tvořit vata, nebo
-      duté vlákno. Po delší době háčkování můžete použít i zbytky přízí z minulého tvoření. Je to taková recyklace, kterou já
-      uplatňuji třeba u jehelníčků.</p>
+<ion-content>
+  <ion-card *ngFor="let krok of kroky" class="bublina">
+    {{krok.popis}}
+    <img *ngIf="krok.exist" class="pomucka" src="../assets/icon/{{krok.obrazek}}.png">
+  </ion-card>
+  <div class="video-center">
+    <div class="video">
+      <iframe width="100%" height="100%" [src]=getEmbedVideo(pomucka.videoURL) title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
   </div>
 </ion-content>

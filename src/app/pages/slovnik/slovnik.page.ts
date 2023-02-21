@@ -12,12 +12,11 @@ import { Styl } from 'src/app/types';
 export class SlovnikPage implements OnInit {
   styl: Styl
 
-  constructor(private dictionaryService: DictionaryService, private router: Router) { 
+  constructor(private dictionaryService: DictionaryService, private router: Router) {
   }
-  
+
   ngOnInit() {
     const nazev = (this.router.url.split('/'))[2];
-    console.log(nazev);
     this.styl = this.dictionaryService.getStylByName(nazev);
   }
 }

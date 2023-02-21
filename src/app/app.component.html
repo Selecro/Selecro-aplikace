@@ -12,17 +12,90 @@
       <ion-list>
         <ion-menu-toggle>
           <ion-item routerLink="/home">
-            <ion-icon name="sel" slot="primary"></ion-icon>
+            <ion-icon slot="primary"></ion-icon>
             <ion-label>Selecro</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-menu-toggle>
-          <ion-item routerLink="/pomucky">
-            <ion-icon name="pom" slot="primary"></ion-icon>
-            <ion-label>Pomůcky</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
+        <ion-accordion-group>
+          <ion-accordion>
+            <ion-item slot="header">
+              <ion-label>Pomůcky</ion-label>
+            </ion-item>
+
+            <ion-list slot="content">
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/hacek">
+                  <ion-icon></ion-icon>
+                  <ion-label>Háček</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/prize">
+                  <ion-icon></ion-icon>
+                  <ion-label>Příze</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/znackovac">
+                  <ion-icon></ion-icon>
+                  <ion-label>Značkovač</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/jehla">
+                  <ion-icon></ion-icon>
+                  <ion-label>Jehla</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/nuzky">
+                  <ion-icon></ion-icon>
+                  <ion-label>Nůžky</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/bezpecnostni-oci-a-nos">
+                  <ion-icon></ion-icon>
+                  <ion-label>Bezpečnostní oči a nos</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/chrastitko">
+                  <ion-icon></ion-icon>
+                  <ion-label>Chrastítko</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/pocitadlo">
+                  <ion-icon></ion-icon>
+                  <ion-label>Počítadlo</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/navijec-prize">
+                  <ion-icon></ion-icon>
+                  <ion-label>Navíječ příze</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle>
+                <ion-item routerLink="pomucky/vypln">
+                  <ion-icon></ion-icon>
+                  <ion-label>Výplň</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+            </ion-list>
+          </ion-accordion>
+        </ion-accordion-group>
 
         <ion-accordion-group>
           <ion-accordion>
@@ -33,56 +106,56 @@
             <ion-list slot="content">
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/retizkove-oko">
-                  <ion-icon name="ro"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Řetízkové oko</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/pevne-oko">
-                  <ion-icon name="po"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Pevné oko</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/kratky-sloupek">
-                  <ion-icon name="ks"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Krátký sloupek</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/polodlouhy-sloupek">
-                  <ion-icon name="pds"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Polodlouhý sloupek</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/dlouhy-sloupek">
-                  <ion-icon name="ds"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Dlouhý sloupek</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/rozhackovani">
-                  <ion-icon name="v"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Rozháčkování</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/shackovani">
-                  <ion-icon name="a"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Sháčkování</ion-label>
                 </ion-item>
               </ion-menu-toggle>
 
               <ion-menu-toggle>
                 <ion-item routerLink="slovnik/magicky-krouzek">
-                  <ion-icon name="mk"></ion-icon>
+                  <ion-icon></ion-icon>
                   <ion-label>Magický kroužek</ion-label>
                 </ion-item>
               </ion-menu-toggle>
@@ -92,14 +165,14 @@
 
         <ion-menu-toggle>
           <ion-item routerLink="/vyukovy-mod">
-            <ion-icon name="vm" slot="primary"></ion-icon>
+            <ion-icon slot="primary"></ion-icon>
             <ion-label>Výukový mód</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle>
           <ion-item routerLink="/navody">
-            <ion-icon name="vm" slot="primary"></ion-icon>
+            <ion-icon slot="primary"></ion-icon>
             <ion-label>Návody</ion-label>
           </ion-item>
         </ion-menu-toggle>

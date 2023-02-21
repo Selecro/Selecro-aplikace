@@ -1,44 +1,47 @@
 <ion-header>
   <ion-toolbar class="lista">
-  <ion-buttons slot="end">
-    <ion-button>
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>{{styl.titulek}}</ion-title>
-  <ion-buttons slot="start">
-    <ion-menu-button menuId="main-menu"></ion-menu-button>
-  </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button slot="end">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{styl.titulek}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="text">
-    <ion-card class="modra">
-      <div class="rozdeleni">
-        <div class="sloupec">
-          <b>Zkratka</b>
-          <ion-card class="zkratka">
-            {{styl.zkratka}}
-          </ion-card>
+  <div id="container">
+    <div class="text">
+      <div class="modra">
+        <div class="rozdeleni">
+          <div class="sloupec">
+            <b>Zkratka</b>
+            <ion-card class="zkratka">
+              {{styl.zkratka}}
+            </ion-card>
+          </div>
+          <div class="sloupec">
+            <b>Značka</b>
+            <ion-card class="znacka">
+              <img class="obraz" src="assets/icon/{{styl.nazev}}.png">
+            </ion-card>
+          </div>
         </div>
-        <div class="sloupec">
-          <b>Značka</b>
-          <ion-card class="znacka">
-            <img class="obraz" src="assets/icon/{{styl.nazev}}.png">
-          </ion-card>
-        </div>
+
+        <br><b>Popis</b>
+        <p class="popisek" innerHTML="{{styl.popis}}"></p>
       </div>
 
-      <br><b>Popis</b><p class="popisek" innerHTML="{{styl.popis}}"></p>
-    </ion-card>
-  
-    <div class="nadpis"><b>Animace</b><br>
-      <ion-card class="fotky-slovnik">
-        <img src="assets/icon/{{styl.nazev}}.gif">
-      </ion-card>
+      <p class="nadpis"><b>Animace</b><br></p>
+      <img class="fotky-slovnik" src="assets/icon/{{styl.nazev}}.gif">
+      <p class="nadpis"><b>Ve skutečnosti</b></p>
+      <img class="fotky-slovnik" src="assets/icon/{{styl.nazev}}-real.png">
     </div>
-    <p class="nadpis"><b>Ve skutečnosti</b>
-    <img src="assets/icon/{{styl.nazev}}-real.png"></p>
   </div>
 </ion-content>

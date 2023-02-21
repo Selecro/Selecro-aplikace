@@ -7,14 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { NavodyPageRoutingModule } from './navody-routing.module';
 
 import { NavodyPage } from './navody.page';
+import { ApplicationPipesModuleModule } from 'src/app/application-pipes-module.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NavodyPageRoutingModule
+    NavodyPageRoutingModule,
+    ApplicationPipesModuleModule
   ],
+
   declarations: [NavodyPage]
 })
-export class NavodyPageModule {}
+export class NavodyPageModule { }

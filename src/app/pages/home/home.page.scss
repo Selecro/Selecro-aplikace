@@ -1,34 +1,94 @@
 #container {
+  padding: 20px;
+}
+
+.novinky {
+  background: #C8E7F4;
+  border-radius: 20px;
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  margin: auto;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+p {
+  font-weight: 400;
+  font-size: calc(.6rem + .5vw);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-.uvod {
+h2 {
   text-align: center;
-  text-size-adjust: 16;
-  padding: 12px;
+  font-weight: bold;
+  font-size: calc(1rem + 1vw);
 }
 
-.zada {
-  background: #c8e7f4;
+.obrazek {
+  padding: 8px;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+}
+
+#obrazky {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#soc_site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  margin-left: 20px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  flex: 1;
+}
+
+.socials_logo {
+  width: 100%;
+  max-width: 30px;
+  min-width: 30px;
+  height: auto;
+}
+
+#soc {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 808px) {
+  #container {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .obrazek {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .obrazek {
+    max-width: 140px;
+    padding: 8px;
+  }
+
+  .socials_logo {
+    max-width: 25px;
+    min-width: 25px;
+  }
+
+  .card {
+    padding: 10px;
+  }
 }

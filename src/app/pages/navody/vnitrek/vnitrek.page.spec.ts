@@ -9,7 +9,7 @@ describe('VnitrekPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VnitrekPage ],
+      declarations: [VnitrekPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

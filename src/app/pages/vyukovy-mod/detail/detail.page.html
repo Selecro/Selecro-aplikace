@@ -8,9 +8,6 @@
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
-      <ion-button>
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -21,11 +18,18 @@
       <ion-card class="karta-popisu">
         <ion-card-content>
           <div class="text">
-            <b>Krok:</b> {{krok.cislo}}<br>
-            <b>Styl:</b> {{krok.styl}}<br>
-            <b>Pomůcky:</b> {{krok.pouzijeme}}<br>
+            <b>Krok:</b>
+            {{krok.cislo}}
+            <br>
+            <div *ngIf="krok.styl != null">
+              <b>Styl:</b>
+              {{krok.styl}}
+              <br>
+            </div>
+            <b>Pomůcky:</b> {{krok.pouzijeme}}
+            <br>
             <b>Popis:</b>
-            <p class="popisek" innerHTML="{{krok.popis}}"></p>
+            <p class="popisek" [innerHtml]="krok.popis"></p>
           </div>
         </ion-card-content>
       </ion-card>

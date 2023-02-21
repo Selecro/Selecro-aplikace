@@ -1,15 +1,40 @@
+#container {
+    padding: 20px;
+}
 
-.rozdeleni {
+.obraz {
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    border-radius: 10px;
+}
+
+.line {
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+    margin: auto;
+    opacity: 50%;
+}
+
+.card {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#cards {
     display: flex;
 }
 
-.avatar {
-    //flex:2;
-    max-width: 50%;
+button {
+    background-color: #FF7B7B;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    font-weight: 600;
 }
-
-.popis {
-    flex:2;
-    text-align: left;
-}
-

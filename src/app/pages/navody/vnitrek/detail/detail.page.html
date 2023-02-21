@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar class="lista">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{popis.titulekCasti}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div class="card">
+      <div class="column">
+        <div *ngIf="popis.zkratkyCasti != null"><strong>Použijeme tyto styly:</strong></div>
+        {{popis.zkratkyCasti}}
+      </div>
+      <img class="obraz" src="assets/icon/{{popis.nazevCasti}}.jpg">
+    </div>
+    <div class="line"></div>
+    <br>
+    <button (click)="time()">
+      {{ minutes }}:{{ seconds }}
+    </button>
+    <div class="popis" innerHTML="{{popis.popis}}">
+    </div>
+
+    <ion-toolbar>
+      <div class="footer-buttons">
+        <ion-button start class="footer-button" shape="round">
+          <ion-icon size="small" name="arrow-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button>Hotovo</ion-button>
+        <ion-button end class="footer-button" shape="round">
+          <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-content>
