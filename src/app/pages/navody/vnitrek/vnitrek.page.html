@@ -30,7 +30,7 @@
     <div class="line"></div>
     <div style="height: 20px;"></div>
     <p *ngFor="let popis of navod.popisy">
-      <button name="element0" routerLink="detail/{{popis.nazevCasti}}">
+      <button name="element0" (click)="finished()" routerLink="detail/{{popis.nazevCasti}}">
         {{popis.titulekCasti}}
       </button>
     </p>
