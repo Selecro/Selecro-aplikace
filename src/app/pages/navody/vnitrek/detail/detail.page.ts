@@ -30,6 +30,7 @@ export class DetailPage implements OnInit {
       this.timer = Number(localStorage.getItem("time"));
       this.time();
     }
+    localStorage.setItem("time", "");
     if(localStorage.getItem("finished") == "true") {
       this.element.forEach(x => x.setAttribute("style", "text-decoration: line-through; color: gray"));
       this.index0 = this.element.length;
@@ -71,7 +72,7 @@ export class DetailPage implements OnInit {
     }
     else {
       this.finished();
-      this.router.navigate(["detail/this.nazevCasti"]);
+      this.router.navigate(["/navody/vnitrek/"+this.navod.nazev]);
     }
   }
 

@@ -44,7 +44,7 @@
 
 <ion-content>
   <ion-card *ngFor="let item of items | callback:selectedElement | search:selectedItem | premiove:selected">
-    <div class="bunka {{item.obtiznost}}" routerLink="vnitrek/{{item.nazev}}">
+    <div class="bunka {{item.obtiznost}}" routerLink="vnitrek/{{item.nazev}}" (click)="timer()">
       <div id="cerveny_okraj">
         <div class="Nazev_navodu {{item.obtiznost}}_name">
           {{item.title}}
