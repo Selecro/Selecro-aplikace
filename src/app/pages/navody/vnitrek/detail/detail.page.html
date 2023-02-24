@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button (click)="back()"></ion-back-button>
     </ion-buttons>
     <ion-title>{{navod.popisy[index].titulekCasti}}</ion-title>
     <ion-buttons slot="end">

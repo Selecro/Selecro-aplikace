@@ -19,7 +19,7 @@ export class VnitrekPage implements OnInit {
       this.navod = this.navodyService.getNavodyByName(this.name);
       this.element0 = document.getElementsByName("element0");
       try {
-        if(localStorage.getItem("finished")) {
+        if(localStorage.getItem("finished") != "null") {
           if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")) {
             this.element0.item(Number(localStorage.getItem("finished"))).removeAttribute("style");
           }
@@ -36,8 +36,8 @@ export class VnitrekPage implements OnInit {
   ngOnInit() {
   }
 
-  finished() {
-    if(this.element0.item(Number(localStorage.getItem("finished"))).getAttribute("style")) {
+  finished(nazevCasti: string) {
+    if(this.element0.item(this.navod.popisy.findIndex(x => x.nazevCasti == nazevCasti)).getAttribute("style")) {
       localStorage.setItem("finished","true");
     }
     else {

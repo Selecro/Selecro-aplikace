@@ -16,6 +16,7 @@ export class DetailPage implements OnInit {
   timer: any = 0;
   index: number;
   index0: number;
+  executed: number = 0;
 
   constructor(private router: Router, private navodyService: NavodyService) {
   }
@@ -26,27 +27,34 @@ export class DetailPage implements OnInit {
     this.index = this.navod.popisy.findIndex(x => x.nazevCasti === this.router.url.split('/')[5]);
     this.element = document.getElementsByName("element");
     this.index0 = 0;
-    if(localStorage.getItem("time") != "0") {
+    if (localStorage.getItem("time") != "null") {
       this.timer = Number(localStorage.getItem("time"));
-      this.time();
     }
-    localStorage.setItem("time", "");
-    if(localStorage.getItem("finished") == "true") {
+    this.time();
+    localStorage.setItem("time", "null");
+  }
+
+  public crossLine() {
+    if (localStorage.getItem("finished") == "true") {
       this.element.forEach(x => x.setAttribute("style", "text-decoration: line-through; color: gray"));
       this.index0 = this.element.length;
     }
-    else if(localStorage.getItem("finished") == "false") {
+    else if (localStorage.getItem("finished") == "false") {
       this.element.forEach(x => x.removeAttribute("style"));
       this.index0 = 0;
     }
-    localStorage.setItem("finished", "");
   }
+
 
   get minutes() {
     return Math.floor(this.timer / 60) % 60;
   }
 
   get seconds() {
+    if (this.executed <= 2) {
+      this.crossLine();
+      this.executed++;
+    }
     return ("00" + this.timer % 60).slice(-2);
   }
 
@@ -67,12 +75,12 @@ export class DetailPage implements OnInit {
   }
 
   public nextIndex() {
-    if (this.index0+1 < this.navod.popisy[this.index].popis.length) {
+    if (this.index0 + 1 < this.navod.popisy[this.index].popis.length) {
       this.element?.item(this.index0++).setAttribute("style", "text-decoration: line-through; color: gray");
     }
     else {
       this.finished();
-      this.router.navigate(["/navody/vnitrek/"+this.navod.nazev]);
+      this.router.navigate(["/navody/vnitrek/" + this.navod.nazev]);
     }
   }
 
@@ -81,5 +89,12 @@ export class DetailPage implements OnInit {
     this.time();
     localStorage.setItem("time", this.timer);
     localStorage.setItem("finished", String(this.index));
+  }
+
+  public back() {
+    this.element.forEach(x => x.removeAttribute("style"));
+    this.time();
+    localStorage.setItem("time", this.timer);
+    localStorage.setItem("finished", "null");
   }
 }
