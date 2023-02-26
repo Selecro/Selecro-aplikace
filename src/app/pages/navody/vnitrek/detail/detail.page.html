@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button (click)="back()"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{popis.titulekCasti}}</ion-title>
+    <ion-title>{{navod.popisy[index].titulekCasti}}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -16,26 +16,27 @@
   <div id="container">
     <div class="card">
       <div class="column">
-        <div *ngIf="popis.zkratkyCasti != null"><strong>Použijeme tyto styly:</strong></div>
-        {{popis.zkratkyCasti}}
+        <div *ngIf="navod.popisy[index].zkratkyCasti != null"><strong>Použijeme tyto styly:</strong></div>
+        {{navod.popisy[index].zkratkyCasti}}
       </div>
-      <img class="obraz" src="assets/icon/{{popis.nazevCasti}}.jpg">
+      <img class="obraz" src="assets/icon/{{navod.popisy[index].nazevCasti}}.jpg">
     </div>
     <div class="line"></div>
     <br>
     <button (click)="time()">
       {{ minutes }}:{{ seconds }}
     </button>
-    <div class="popis" innerHTML="{{popis.popis}}">
+    <div class="popis" name="element" *ngFor="let item of navod.popisy[index].popis">
+      {{item}}
     </div>
 
     <ion-toolbar>
       <div class="footer-buttons">
-        <ion-button start class="footer-button" shape="round">
+        <ion-button start class="footer-button" shape="round" (click)="previousIndex()">
           <ion-icon size="small" name="arrow-back-outline"></ion-icon>
         </ion-button>
-        <ion-button>Hotovo</ion-button>
-        <ion-button end class="footer-button" shape="round">
+        <ion-button routerLink="../../" (click)="finished()">Hotovo</ion-button>
+        <ion-button end class="footer-button" shape="round" (click)="nextIndex()">
           <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
         </ion-button>
       </div>
