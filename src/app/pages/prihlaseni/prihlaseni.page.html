@@ -13,12 +13,16 @@
 </ion-header>
 
 <ion-content>
-
-  <input type="text" placeholder="E-mail, nebo uživatelské jméno">
-  <input type="text" placeholder="Heslo">
+  <ion-item>
+    <ion-input type="text" placeholder="E-mail, nebo uživatelské jméno" (change)="userName()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Heslo" (change)="password()"></ion-input>
+    <ion-icon name="eye" item-right (click)="hideShowPassword()"></ion-icon>
+  </ion-item>
   <br>
   <br>
-    <button>Přihlásit se</button>
+    <ion-button>Přihlásit se</ion-button>
   <br>
     <div class="odkaz">
       Ještě nemáte účet? <a href="/registrace" >Zaregistruj se!</a>
