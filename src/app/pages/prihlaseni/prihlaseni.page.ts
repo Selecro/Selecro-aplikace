@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PrihlaseniPage implements OnInit {
   uzivatel: HTMLElement;
   heslo: HTMLElement;
+  showPassword = false;
+  passwordToggleIcon = "eye";
   
   public showpassword: boolean
 
@@ -29,7 +31,14 @@ export class PrihlaseniPage implements OnInit {
     console.log(sampleRegEx.test("this.druheHeslo"))
   }
 
-  public hideShowPassword() {
-    this.showpassword = !this.showpassword;
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+
+    if(this.passwordToggleIcon == 'eye') {
+      this.passwordToggleIcon = 'eye-off';
+    }
+    else {
+      this.passwordToggleIcon = 'eye';
+    }
   }
 }

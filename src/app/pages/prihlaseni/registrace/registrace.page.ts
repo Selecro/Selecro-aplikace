@@ -10,19 +10,18 @@ export class RegistracePage implements OnInit {
   prvniHeslo: HTMLElement;
   druheHeslo: HTMLElement;
   adresa: HTMLElement;
-  passwordType: string = 'password';
-  passwordIcon: string = 'eye-off';
- 
+  showPassword = false;
+  showPassword2 = false;
+  passwordToggleIcon = "eye";
+  passwordToggleIcon2 = "eye";
+  
+  constructor() {}
 
-  constructor() {
+  ngOnInit() {
     this.uzivatel = document.getElementById("user");
     this.prvniHeslo = document.getElementById("password");
     this.druheHeslo = document.getElementById("secondPassword");
     this.adresa = document.getElementById("email");
-    
-  }
-
-  ngOnInit() {
   }
 
   public userName() {
@@ -41,12 +40,25 @@ export class RegistracePage implements OnInit {
     console.log(sampleRegEx.test("this.adresa"))
   }
 
-  public showPassword(input: any): any {
-    input.type = input.type === 'password' ?  'text' : 'password';
-   }
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
 
-   hideShowPassword() {
-       this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
-       this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
-   }
+    if(this.passwordToggleIcon == 'eye') {
+      this.passwordToggleIcon = 'eye-off';
+    }
+    else {
+      this.passwordToggleIcon = 'eye';
+    }
+  }
+
+  togglePassword2(): void {
+    this.showPassword2 = !this.showPassword2;
+
+    if(this.passwordToggleIcon2 == 'eye') {
+      this.passwordToggleIcon2 = 'eye-off';
+    }
+    else {
+      this.passwordToggleIcon2 = 'eye';
+    }
+  }
 }
