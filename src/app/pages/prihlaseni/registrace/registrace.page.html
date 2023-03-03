@@ -21,11 +21,17 @@
   </ion-item>
   <ion-item>
     <ion-input id="password" type="password" placeholder="Heslo" (change)="password()"></ion-input>
-    <ion-icon name="eye" item-right (click)="hideShowPassword()"></ion-icon>
+    <!--<ion-icon name="eye" item-right (click)="hideShowPassword()"></ion-icon>-->
   </ion-item>
   <ion-item>
     <ion-input id="secondPassword" type="password" placeholder="Heslo pro kontrolu" (change)="password()"></ion-input>
-    <ion-icon name="eye" item-right (click)="hideShowPassword()"></ion-icon>
+    <!--<ion-icon name="eye" item-right (click)="hideShowPassword()"></ion-icon>-->
+  </ion-item>
+  <ion-item>
+    <ion-select interface="popover" placeholder="Vyber jazyk">
+      <ion-select-option value="brown">Angličtina</ion-select-option>
+      <ion-select-option value="blonde">Čeština</ion-select-option>
+    </ion-select>
   </ion-item>
   <br>
   <br>
