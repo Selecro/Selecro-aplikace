@@ -14,19 +14,21 @@
 
 <ion-content>
   <ion-item>
-    <ion-input type="text" placeholder="E-mail, nebo uživatelské jméno" (change)="userName()"></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email" (change)="emailCheck()"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input id="password" [type]="showPassword ? 'text' : 'password'" placeholder="Heslo" (change)="password()"></ion-input>
-    <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" (change)="passwordCheck()"></ion-input>
+    <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
   </ion-item>
   <br>
   <br>
-    <ion-button>Přihlásit se</ion-button>
+  <ion-button (click)="login()">Přihlásit se</ion-button>
   <br>
-    <div class="odkaz">
-      Ještě nemáte účet? <a href="/registrace" >Zaregistruj se!</a>
-    </div> 
-    <br> 
-    <strong>Zapomněli jste heslo?</strong>
+  <div class="odkaz">
+    Ještě nemáte účet? <a href="/registrace">Zaregistruj se!</a>
+  </div>
+  <br>
+  <strong>Zapomněli jste heslo?</strong>
 </ion-content>

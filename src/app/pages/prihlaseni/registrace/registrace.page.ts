@@ -80,7 +80,7 @@ export class RegistracePage implements OnInit {
       });
       try {
         await loading.present();
-        axios.post('http://192.168.0.4:3002/signup', body).then(response => {
+        axios.post('http://' + process.env.APIHOST + ':' + process.env.APIPORT + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
         }).catch(error => {
           console.error(error);

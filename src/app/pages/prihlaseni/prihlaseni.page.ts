@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import axios from 'axios';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -6,39 +9,59 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prihlaseni.page.scss'],
 })
 export class PrihlaseniPage implements OnInit {
-  uzivatel: HTMLElement;
-  heslo: HTMLElement;
-  showPassword = false;
+  email: string;
+  password: string;
   passwordToggleIcon = "eye";
-  
-  public showpassword: boolean
+  showPassword: boolean;
+  emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}');
+  passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
-  constructor() {
-   }
+  constructor(private router: Router, private loadingController: LoadingController) { }
 
   ngOnInit() {
-    
+    console.log(process.env.APIHOST);
   }
 
-  public userName() {
-    let sampleRegEx = new RegExp('^[a-zA-Z0-9_.-]{4,20}$');
-    console.log(sampleRegEx.test("this.uzivatel"))
+  public emailCheck(): boolean {
+    return this.emailRegEx.test(this.email);
   }
 
-  public password() {
-    let sampleRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
-    console.log(sampleRegEx.test("this.prnviHeslo"));
-    console.log(sampleRegEx.test("this.druheHeslo"))
+  public passwordCheck(): boolean {
+    return this.passwordRegEx.test(this.password);
   }
 
-  togglePassword(): void {
+  public togglePassword() {
     this.showPassword = !this.showPassword;
-
-    if(this.passwordToggleIcon == 'eye') {
+    if (this.passwordToggleIcon == 'eye') {
       this.passwordToggleIcon = 'eye-off';
     }
     else {
       this.passwordToggleIcon = 'eye';
+    }
+  }
+
+  public async login() {
+    if ((this.emailCheck() == true) && (this.passwordCheck() == true)) {
+      const body = {
+        email: this.email,
+        passwordHash: this.password,
+      };
+      const loading = await this.loadingController.create({
+        message: 'Please wait...',
+      });
+      try {
+        await loading.present();
+        axios.post('http://' + process.env.APIHOST + ':' + process.env.APIPORT + '/users/login', body).then(response => {
+          this.router.navigateByUrl('/home');
+        }).catch(error => {
+          console.error(error);
+        });
+        await loading.dismiss();
+      }
+      catch(error) {
+        console.error(error);
+      }
+      await loading.dismiss();
     }
   }
 }
