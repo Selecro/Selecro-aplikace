@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -19,7 +20,7 @@ export class PrihlaseniPage implements OnInit {
   constructor(private router: Router, private loadingController: LoadingController) { }
 
   ngOnInit() {
-    console.log(process.env.APIHOST);
+    console.log(environment.APIHOST + environment.APIPORT);
   }
 
   public emailCheck(): boolean {
@@ -51,7 +52,7 @@ export class PrihlaseniPage implements OnInit {
       });
       try {
         await loading.present();
-        axios.post('http://' + process.env.APIHOST + ':' + process.env.APIPORT + '/users/login', body).then(response => {
+        axios.post('http://' + environment.APIHOST + ':' + environment.APIPORT + '/users/login', body).then(response => {
           this.router.navigateByUrl('/home');
         }).catch(error => {
           console.error(error);

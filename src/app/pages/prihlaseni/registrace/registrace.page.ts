@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
+import { environment } from 'src/environments/environment.prod';
 
 enum Language {
   CZ = 'CZ',
@@ -80,7 +81,7 @@ export class RegistracePage implements OnInit {
       });
       try {
         await loading.present();
-        axios.post('http://' + process.env.APIHOST + ':' + process.env.APIPORT + '/signup', body).then(response => {
+        axios.post('http://' + environment.APIHOST + ':' + environment.APIPORT + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
         }).catch(error => {
           console.error(error);
