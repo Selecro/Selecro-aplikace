@@ -14,13 +14,17 @@ export class PrihlaseniPage implements OnInit {
   password: string;
   passwordToggleIcon = "eye";
   showPassword: boolean;
-  emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}');
+  usernameRegEx = new RegExp('^[a-zA-Z0-9_.-]{4,20}$');
+  emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
   constructor(private router: Router, private loadingController: LoadingController) { }
 
   ngOnInit() {
-    console.log(environment.APIHOST + environment.APIPORT);
+  }
+
+  public usernameCheck(): boolean {
+    return this.usernameRegEx.test(this.email);
   }
 
   public emailCheck(): boolean {
@@ -42,7 +46,7 @@ export class PrihlaseniPage implements OnInit {
   }
 
   public async login() {
-    if ((this.emailCheck() == true) && (this.passwordCheck() == true)) {
+    if ((this.emailCheck() == true || this.usernameCheck() == true) && (this.passwordCheck() == true)) {
       const body = {
         email: this.email,
         passwordHash: this.password,
