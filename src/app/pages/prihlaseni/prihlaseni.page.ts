@@ -47,7 +47,7 @@ export class PrihlaseniPage implements OnInit {
   }
 
   public async login() {
-    if ((this.emailCheck() == true || this.usernameCheck() == true) && (this.passwordCheck() == true)) {
+    if ((this.emailCheck() || this.usernameCheck()) && (this.passwordCheck())) {
       const saltRounds = 10;
       bcrypt.genSalt(saltRounds, (err, salt) => {
         bcrypt.hash(this.password, salt, (err, hash) => {
@@ -77,6 +77,15 @@ export class PrihlaseniPage implements OnInit {
         ///console.error(error);
       }
       await loading.dismiss();
+    }
+    else if (!this.emailCheck()) {
+      //Tady bude kus kodu od Anet
+    }
+    else if (!this.usernameCheck()) {
+      //Tady bude kus kodu od Anet
+    }
+    else if (!this.passwordCheck()) {
+      //Tady bude kus kodu od Anet
     }
   }
 }
