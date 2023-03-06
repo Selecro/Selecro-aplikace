@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
+import * as bcrypt from 'bcryptjs';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -47,24 +48,33 @@ export class PrihlaseniPage implements OnInit {
 
   public async login() {
     if ((this.emailCheck() == true || this.usernameCheck() == true) && (this.passwordCheck() == true)) {
+      const saltRounds = 10;
+      bcrypt.genSalt(saltRounds, (err, salt) => {
+        bcrypt.hash(this.password, salt, (err, hash) => {
+          this.password = hash;
+        });
+      });
       const body = {
         email: this.email,
         passwordHash: this.password,
       };
+      delete this.password;
       const loading = await this.loadingController.create({
         message: 'Please wait...',
       });
       try {
         await loading.present();
-        axios.post('http://' + environment.APIHOST + ':' + environment.APIPORT + '/users/login', body).then(response => {
+        axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response => {
           this.router.navigateByUrl('/home');
         }).catch(error => {
-          console.error(error);
+          //Tady bude kus kodu od Anet
+          ///console.error(error);
         });
         await loading.dismiss();
       }
       catch(error) {
-        console.error(error);
+        //Tady bude kus kodu od Anet
+        ///console.error(error);
       }
       await loading.dismiss();
     }

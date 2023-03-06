@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
+import * as bcrypt from 'bcryptjs';
 
 enum Language {
   CZ = 'CZ',
@@ -22,7 +23,7 @@ export class RegistracePage implements OnInit {
   email: string;
   password0: string;
   password1: string;
-  language: Language;
+  language: Language = Language.EN;
   username: string;
   usernameRegEx = new RegExp('^[a-zA-Z0-9_.-]{4,20}$');
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
@@ -42,10 +43,7 @@ export class RegistracePage implements OnInit {
   }
 
   public passwordCheck(): boolean {
-    if ((this.password0 == this.password1) && (this.passwordRegEx.test(this.password0) == true) && (this.passwordRegEx.test(this.password1) == true)) {
-      return true;
-    }
-    return false;
+    return (this.password0 == this.password1) && this.passwordRegEx.test(this.password0) && this.passwordRegEx.test(this.password1)
   }
 
   public togglePassword() {
@@ -69,28 +67,48 @@ export class RegistracePage implements OnInit {
   }
 
   public async register() {
-    if ((this.usernameCheck() == true) && (this.emailCheck() == true) && (this.passwordCheck() == true)) {
+    if (this.usernameCheck() && this.emailCheck() && this.passwordCheck()) {
+      const saltRounds = 10;
+      bcrypt.genSalt(saltRounds, (err, salt) => {
+        bcrypt.hash(this.password0, salt, (err, hash) => {
+          this.password0 = hash;
+        });
+      });
       const body = {
         email: this.email,
         password: this.password0,
         username: this.username,
         language: this.language,
       };
+      delete this.password0;
+      delete this.password1;
       const loading = await this.loadingController.create({
         message: 'Please wait...',
       });
       try {
         await loading.present();
-        axios.post('http://' + environment.APIHOST + ':' + environment.APIPORT + '/signup', body).then(response => {
+        axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
         }).catch(error => {
-          console.error(error);
+          //Tady bude kus kodu od Anet
+          ///console.error(error);
         });
         await loading.dismiss();
       }
-      catch(error) {
-        console.error(error);
+      catch (error) {
+        //Tady bude kus kodu od Anet
+        ///console.error(error);
       }
+      await loading.dismiss();
+    }
+    else if (!this.usernameCheck()) {
+      //Tady bude kus kodu od Anet
+    }
+    else if (!this.emailCheck()) {
+      //Tady bude kus kodu od Anet
+    }
+    else if (!this.passwordCheck()) {
+      //Tady bude kus kodu od Anet
     }
   }
 }
