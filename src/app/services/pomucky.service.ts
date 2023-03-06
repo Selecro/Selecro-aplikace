@@ -4,7 +4,7 @@ import { Pomucka } from '../types'
 const polePomucek = [
   {
     nazev: "hacek",
-    titulek: "Háček",
+    title: "Háček",
     videoURL: "XL4ze9vLC3s",
     kroky: [
       {
@@ -27,7 +27,7 @@ const polePomucek = [
 
   {
     nazev: "prize",
-    titulek: "Příze",
+    title: "Příze",
     videoURL: "XL4ze9vLC3s",
     kroky: [
       {
@@ -50,7 +50,7 @@ const polePomucek = [
 
   {
     nazev: "znackovac",
-    titulek: "Značkovač",
+    title: "Značkovač",
     videoURL: "XL4ze9vLC3s",
     kroky: [
       {
@@ -73,7 +73,7 @@ const polePomucek = [
 
   {
     nazev: "jehla",
-    titulek: "Jehla",
+    title: "Jehla",
     videoURL: null,
     kroky: [
       {
@@ -86,7 +86,7 @@ const polePomucek = [
 
   {
     nazev: "nuzky",
-    titulek: "Nůžky",
+    title: "Nůžky",
     videoURL: null,
     kroky: [
       {
@@ -109,7 +109,7 @@ const polePomucek = [
 
   {
     nazev: "bezpecnostni-oci-a-nos",
-    titulek: "Bezpečnostní oči a nos",
+    title: "Bezpečnostní oči a nos",
     videoURL: null,
     kroky: [
       {
@@ -132,7 +132,7 @@ const polePomucek = [
 
   {
     nazev: "chrastitko",
-    titulek: "Chrastítko",
+    title: "Chrastítko",
     videoURL: null,
     kroky: [
       {
@@ -150,7 +150,7 @@ const polePomucek = [
 
   {
     nazev: "pocitadlo",
-    titulek: "Počítadlo",
+    title: "Počítadlo",
     videoURL: null,
     kroky: [
       {
@@ -173,7 +173,7 @@ const polePomucek = [
 
   {
     nazev: "navijec-prize",
-    titulek: "Navíječ příze",
+    title: "Navíječ příze",
     videoURL: null,
     kroky: [
       {
@@ -186,7 +186,7 @@ const polePomucek = [
 
   {
     nazev: "vypln",
-    titulek: "Výplň",
+    title: "Výplň",
     videoURL: null,
     kroky: [
       {
