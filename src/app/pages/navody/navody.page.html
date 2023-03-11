@@ -26,20 +26,23 @@
 </ion-header>
 
 <ion-toolbar>
-  <ion-item>
-    <ion-button class="button" (click)="vsechno($event)">Vše</ion-button>
-    <ion-button class="button" (click)="dokocene($event)">Dokončené</ion-button>
-    <ion-button class="button" (click)="premiove($event)">Prémiové</ion-button>
+  <ion-buttons slot="start">
+    <ion-button fill="solid" class="button" (click)="vsechno($event)">Vše</ion-button>
+    <ion-button fill="solid" class="button" (click)="dokocene($event)">Dokončené</ion-button>
+    <ion-button fill="solid" class="button" (click)="premiove($event)">Prémiové</ion-button>
+  </ion-buttons>
     <ion-list>
-      <label>Obtížnost</label>
-      <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button"
-        placeholder="Obtížnost" interface="popover">
-        <ion-select-option value="lehky">Lehká</ion-select-option>
-        <ion-select-option value="stredni">Střední</ion-select-option>
-        <ion-select-option value="tezky">Těžká</ion-select-option>
-      </ion-select>
+      <ion-item>
+        <ion-buttons>
+          <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button"
+            placeholder="Obtížnost" interface="popover">
+            <ion-select-option value="lehky">Lehká</ion-select-option>
+            <ion-select-option value="stredni">Střední</ion-select-option>
+            <ion-select-option value="tezky">Těžká</ion-select-option>
+          </ion-select>
+        </ion-buttons>
+      </ion-item>
     </ion-list>
-  </ion-item>
 </ion-toolbar>
 
 <ion-content>

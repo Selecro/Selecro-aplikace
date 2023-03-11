@@ -11,6 +11,11 @@ ion-card-content {
   display: flex;
 }
 
+ion-select {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .star {
   width: 25px;
   height: 25px;
