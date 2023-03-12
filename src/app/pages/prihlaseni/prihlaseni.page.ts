@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
-import * as bcrypt from 'bcryptjs';
+import * as sha256 from 'crypto-js/sha256';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -47,16 +47,10 @@ export class PrihlaseniPage implements OnInit {
   }
 
   public async login() {
-    if ((this.emailCheck() || this.usernameCheck()) && (this.passwordCheck())) {
-      const saltRounds = 10;
-      bcrypt.genSalt(saltRounds, (err, salt) => {
-        bcrypt.hash(this.password, salt, (err, hash) => {
-          this.password = hash;
-        });
-      });
+    if ((this.emailCheck() || this.usernameCheck())) {
       const body = {
         email: this.email,
-        passwordHash: this.password,
+        passwordHash: sha256(this.password).toString(),
       };
       delete this.password;
       const loading = await this.loadingController.create({
