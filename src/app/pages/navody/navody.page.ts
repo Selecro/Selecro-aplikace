@@ -82,6 +82,6 @@ export class NavodyPage implements OnInit {
   }
 
   timer() {
-    localStorage.setItem("timer", "");
+    localStorage.setItem("time", "");
   }
 }
