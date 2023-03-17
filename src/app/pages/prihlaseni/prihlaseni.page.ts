@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
-import * as sha256 from 'crypto-js/sha256';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -50,7 +49,7 @@ export class PrihlaseniPage implements OnInit {
     if ((this.emailCheck() || this.usernameCheck())) {
       const body = {
         email: this.email,
-        passwordHash: sha256(this.password).toString(),
+        passwordHash: this.password,
       };
       delete this.password;
       const loading = await this.loadingController.create({

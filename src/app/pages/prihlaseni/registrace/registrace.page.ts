@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
-import * as sha256 from 'crypto-js/sha256';
 
 enum Language {
   CZ = 'CZ',
@@ -70,7 +69,7 @@ export class RegistracePage implements OnInit {
     if (this.usernameCheck() && this.emailCheck()) {
       const body = {
         email: this.email,
-        password: sha256(this.password0).toString(),
+        password: this.password0,
         username: this.username,
         language: this.language,
       };
