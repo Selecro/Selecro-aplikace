@@ -15,38 +15,52 @@
 </ion-header>
 
 <ion-content>
-  <div id="container">
-    <div id="privitaci_modry_blok">
-      <div class="novinky">
-        <h2>
-          Vítejte!
-        </h2>
-        <p>
-          Zdraví Vás tým Selecro s touto mobilní aplikací na naučení háčkování.
-        </p>
-        <p>
-          Připravujeme pro Vás i stránku na internetu.
-        </p>
-      </div>
-    </div>
-    <div id="obrazky">
-      <img class="obrazek" src="assets/icon/slon.png">
-      <img class="obrazek" src="assets/icon/jednicka.png">
-      <img class="obrazek" src="assets/icon/medved.png">
-    </div>
-    <h2 id="soc">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Vítejte</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Zdraví Vás tým Selecro s touto mobilní aplikací na naučení háčkování.</p>
+        <p>Připravujeme pro Vás i stránku na internetu.</p>
+      </ion-card-content>   
+    </ion-card>
+    <ion-slides pager>  
+      <ion-slide>
+        <ion-img src="assets/icon/slon.png" alt="slon"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="assets/icon/jednicka.png" alt="chobotnička"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="assets/icon/medved.png" alt="medvěd"></ion-img>
+      </ion-slide>
+    </ion-slides>
+    <h2>
       Sociální sítě
     </h2>
-    <div id="soc_site">
-      <a class="card" href="mailto:info@selecro.cz">
-        <img class="socials_logo" src="assets/icon/mail.svg">
-      </a>
-      <a class="card" href="https://www.instagram.com/_selecro_/" target="_blank">
-        <img class="socials_logo" src="assets/icon/instagram.svg">
-      </a>
-      <a class="card" href="https://www.pinterest.com/selecro/" target="_blank">
-        <img class="socials_logo" src="assets/icon/pin.svg">
-      </a>
-    </div>
-  </div>
+    <ion-grid>
+      <ion-row>
+        <ion-card class="soc">
+          <ion-card-content>
+            <a href="mailto:info@selecro.cz">
+              <img class="socials_logo" src="assets/icon/mail.svg">
+            </a>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="soc">
+          <ion-card-content>
+            <a href="https://www.instagram.com/_selecro_/" target="_blank">
+              <img class="socials_logo" src="assets/icon/instagram.svg">
+            </a>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="soc">
+          <ion-card-content>
+            <a href="https://www.pinterest.com/selecro/" target="_blank">
+              <img class="socials_logo" src="assets/icon/pin.svg">
+            </a>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
 </ion-content>
