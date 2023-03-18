@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
+import { SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -18,7 +19,7 @@ export class PrihlaseniPage implements OnInit {
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
-  constructor(private router: Router, private loadingController: LoadingController) { }
+  constructor(private router: Router, private loadingController: LoadingController, private sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
   }
@@ -57,15 +58,28 @@ export class PrihlaseniPage implements OnInit {
       });
       try {
         await loading.present();
-        axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response => {
-          this.router.navigateByUrl('/home');
+        await axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response0 => {
+          this.sessionStorage.store('token', response0.data.token);
         }).catch(error => {
           //Tady bude kus kodu od Anet
           ///console.error(error);
         });
         await loading.dismiss();
       }
-      catch(error) {
+      catch (error) {
+        //Tady bude kus kodu od Anet
+        ///console.error(error);
+      }
+      try {
+        await axios.get(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/{id}', { headers: { Authorization: `Bearer ` + this.sessionStorage.retrieve('token')}}).then(response => {
+          this.sessionStorage.store('settings', response.data);
+          this.router.navigateByUrl('/home');
+        }).catch(error => {
+          //Tady bude kus kodu od Anet
+          ///console.error(error);
+        });
+      }
+      catch (error) {
         //Tady bude kus kodu od Anet
         ///console.error(error);
       }

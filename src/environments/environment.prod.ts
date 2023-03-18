@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  APIHOST: 'https://minec.serveminecraft.net',
+  APIHOST: 'https://127.0.0.1',
   APIPORT: 3002
 };

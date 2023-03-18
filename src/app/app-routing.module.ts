@@ -43,7 +43,12 @@ const routes: Routes = [
   {
     path: 'registrace',
     loadChildren: () => import('./pages/prihlaseni/registrace/registrace.module').then( m => m.RegistracePageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   }
+
 
 ];
 
