@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
-import * as bcrypt from 'bcryptjs';
 
 enum Language {
   CZ = 'CZ',
@@ -67,13 +66,7 @@ export class RegistracePage implements OnInit {
   }
 
   public async register() {
-    if (this.usernameCheck() && this.emailCheck() && this.passwordCheck()) {
-      const saltRounds = 10;
-      bcrypt.genSalt(saltRounds, (err, salt) => {
-        bcrypt.hash(this.password0, salt, (err, hash) => {
-          this.password0 = hash;
-        });
-      });
+    if (this.usernameCheck() && this.emailCheck()) {
       const body = {
         email: this.email,
         password: this.password0,
