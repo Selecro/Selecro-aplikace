@@ -1,17 +1,13 @@
 {
-  "name": "Selecro",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "selecro-aplikace",
+  "version": "1.0.0",
+  "description": "Selecro application",
+  "main": "karma.conf.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
+  "author": "Selecro",
+  "license": "ISC",
   "dependencies": {
     "@angular/common": "~13.2.2",
     "@angular/core": "~13.2.2",

@@ -25,10 +25,7 @@ export class NavodyPage implements OnInit {
     this.items = this.navodyService.getVsechnyNavody();
     this.searchInput = document.querySelector("input");
     this.inputbox();
-  }
-
-  goVnitrek(item: Navod) {
-    this.router.navigate([`navody/vnitrek/`, { nazevNavodu: item.nazev }]);
+    localStorage.setItem("finished", "");
   }
 
   vyberObtiznost(e) {
@@ -78,9 +75,13 @@ export class NavodyPage implements OnInit {
       if (this.searchInput.value === "") {
         this.selectedItem = null;
       }
-      else if (this.items[i].titulek.includes(this.searchInput.value)) {
+      else if (this.items[i].title.includes(this.searchInput.value)) {
         this.selectedItem = this.items[i].nazev;
       }
     }
+  }
+
+  timer() {
+    localStorage.setItem("time", "");
   }
 }

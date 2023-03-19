@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: VnitrekPage
+  },
+  {
+    path: 'detail/:nazevDetailu',
+    loadChildren: () => import('./detail/detail.module').then(m => m.DetailPageModule)
   }
 ];
 
