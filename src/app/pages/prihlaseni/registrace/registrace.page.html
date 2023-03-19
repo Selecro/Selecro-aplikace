@@ -14,7 +14,7 @@
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">Username</ion-label>
+    <ion-label position="floating">Uživatelské jméno</ion-label>
     <ion-input type="username" [(ngModel)]="username" (change)="usernameCheck()"></ion-input>
   </ion-item>
   <ion-item>
@@ -22,17 +22,17 @@
     <ion-input type="email" [(ngModel)]="email" (change)="emailCheck()"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Password</ion-label>
+    <ion-label position="floating">Heslo</ion-label>
     <ion-input type="{{ showPassword0 ? 'text' : 'password' }}" [(ngModel)]="password0" (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword0 ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Repeat password</ion-label>
+    <ion-label position="floating">Zopakujte heslo</ion-label>
     <ion-input type="{{ showPassword1 ? 'text' : 'password' }}" [(ngModel)]="password1" (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword1 ? 'eye-off' : 'eye'" (click)="togglePassword2()"></ion-icon>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Language</ion-label>
+    <ion-label position="floating">Jazyk</ion-label>
     <ion-select [(ngModel)]="language" interface="popover">
       <ion-select-option value="EN">Angličtina</ion-select-option>
       <ion-select-option value="CZ">Čeština</ion-select-option>

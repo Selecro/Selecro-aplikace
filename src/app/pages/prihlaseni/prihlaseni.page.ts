@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
 import * as bcrypt from 'bcryptjs';
@@ -19,7 +19,7 @@ export class PrihlaseniPage implements OnInit {
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
-  constructor(private router: Router, private loadingController: LoadingController) { }
+  constructor(private router: Router, private loadingController: LoadingController, private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -79,7 +79,11 @@ export class PrihlaseniPage implements OnInit {
       await loading.dismiss();
     }
     else if (!this.emailCheck()) {
-      //Tady bude kus kodu od Anet
+      const alert = await this.alertController.create({
+        header: 'Upozornění',
+        message: 'Špatně jste zadali email!',
+        buttons: ['OK'], 
+      });
     }
     else if (!this.usernameCheck()) {
       //Tady bude kus kodu od Anet
