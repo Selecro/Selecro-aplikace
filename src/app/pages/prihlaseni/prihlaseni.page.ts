@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
-import * as bcrypt from 'bcryptjs';
+import { SessionStorageService} from 'ngx-webstorage';
 
 @Component({
   selector: 'app-prihlaseni',
@@ -11,6 +11,7 @@ import * as bcrypt from 'bcryptjs';
   styleUrls: ['./prihlaseni.page.scss'],
 })
 export class PrihlaseniPage implements OnInit {
+  [x: string]: any;
   email: string;
   password: string;
   passwordToggleIcon = "eye";
@@ -19,7 +20,7 @@ export class PrihlaseniPage implements OnInit {
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
-  constructor(private router: Router, private loadingController: LoadingController, private alertController: AlertController) { }
+  constructor(private router: Router, private loadingController: LoadingController, sessionStorage: SessionStorageService, private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -47,13 +48,7 @@ export class PrihlaseniPage implements OnInit {
   }
 
   public async login() {
-    if ((this.emailCheck() || this.usernameCheck()) && (this.passwordCheck())) {
-      const saltRounds = 10;
-      bcrypt.genSalt(saltRounds, (err, salt) => {
-        bcrypt.hash(this.password, salt, (err, hash) => {
-          this.password = hash;
-        });
-      });
+    if ((this.emailCheck() || this.usernameCheck())) {
       const body = {
         email: this.email,
         passwordHash: this.password,
@@ -64,26 +59,35 @@ export class PrihlaseniPage implements OnInit {
       });
       try {
         await loading.present();
-        axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response => {
-          this.router.navigateByUrl('/home');
+        await axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response0 => {
+          this.sessionStorage.store('token', response0.data.token);
         }).catch(error => {
           //Tady bude kus kodu od Anet
           ///console.error(error);
         });
         await loading.dismiss();
       }
-      catch(error) {
+      catch (error) {
+        //Tady bude kus kodu od Anet
+        ///console.error(error);
+      }
+      try {
+        await axios.get(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/{id}', { headers: { Authorization: `Bearer ` + this.sessionStorage.retrieve('token')}}).then(response => {
+          this.sessionStorage.store('settings', response.data);
+          this.router.navigateByUrl('/home');
+        }).catch(error => {
+          //Tady bude kus kodu od Anet
+          ///console.error(error);
+        });
+      }
+      catch (error) {
         //Tady bude kus kodu od Anet
         ///console.error(error);
       }
       await loading.dismiss();
     }
     else if (!this.emailCheck()) {
-      const alert = await this.alertController.create({
-        header: 'Upozornění',
-        message: 'Špatně jste zadali email!',
-        buttons: ['OK'], 
-      });
+      //Tady bude kus kodu od Anet
     }
     else if (!this.usernameCheck()) {
       //Tady bude kus kodu od Anet
