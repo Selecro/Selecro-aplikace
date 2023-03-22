@@ -14,11 +14,11 @@
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">Email or username</ion-label>
+    <ion-label position="floating">Email, nebo uživatelské jméno</ion-label>
     <ion-input type="email" [(ngModel)]="email" (change)="emailCheck()"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Password</ion-label>
+    <ion-label position="floating">Heslo</ion-label>
     <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
   </ion-item>
