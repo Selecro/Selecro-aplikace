@@ -15,4 +15,8 @@ export class SettingsPage implements OnInit {
     this.data = this.sessionStorage.retrieve('settings');
   }
 
+  public logout() {
+    this.sessionStorage.clear();
+  }
+
 }
