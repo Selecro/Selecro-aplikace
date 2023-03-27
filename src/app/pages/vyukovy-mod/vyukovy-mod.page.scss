@@ -1,8 +1,8 @@
 ion-card {
-  margin: 10px;
+  margin: 15px;
   border-radius: 10px;
-  background: #f7e4ea;
-  color: #000;
+  --background: #f7e4ea;
+  --color: #000;
 }
 
 ion-card-content {
@@ -10,7 +10,7 @@ ion-card-content {
 }
 
 ion-card-title {
-  color: #fff;
+  --color: #fff;
   font-size: 1rem;
 }
 
@@ -28,6 +28,7 @@ ion-card-title {
 
 .popis {
   padding-left: 15px;
+  font-size: 14px;
 }
 
 .search-box {
