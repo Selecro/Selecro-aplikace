@@ -84,17 +84,17 @@ export class RegistracePage implements OnInit {
         await loading.present();
         axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
-        }).catch(async error => {
+        }).catch(error => {
           console.error(error.message);
           if (error.message == "email or username already exist") {
-            const alert = await this.alertController.create({
+            const alert = this.alertController.create({
               header: 'UPOZORNĚNÍ!',
               message: 'Vaše uživatelské jméno již existuje./Váš email již existuje.',
               buttons: ['OK'],
             })
           }
           else {
-            const alert = await this.alertController.create({
+            const alert = this.alertController.create({
               header: 'UPOZORNĚNÍ!',
               message: 'Omlouváme se, ale databáze není dostupná. Zkuste to prosím později.',
               buttons: ['OK'],
