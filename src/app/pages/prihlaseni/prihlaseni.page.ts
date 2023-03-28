@@ -59,7 +59,9 @@ export class PrihlaseniPage implements OnInit {
       });
       try {
         await loading.present();
-        await axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body).then(response0 => {
+        await axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/login', body,    {
+          //httpsAgent: new https.Agent({ ca: fs.readFileSync("cert.pem") })
+        }).then(response0 => {
           this.sessionStorage.store('token', response0.data.token);
         }).catch(error => {
           //Tady bude kus kodu od Anet
