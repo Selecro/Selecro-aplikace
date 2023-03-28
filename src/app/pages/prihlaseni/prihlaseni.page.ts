@@ -72,33 +72,68 @@ export class PrihlaseniPage implements OnInit {
         await loading.dismiss();
       }
       catch (error) {
-        //Tady bude kus kodu od Anet
         console.error(error);
-        if (error.message == "Network Error") {}
+        if (error.message == "Network Error") {
+          const alert = await this.alertController.create({
+            header: 'UPOZORNĚNÍ!',
+            message: 'Špatné připojení k internetu.',
+            buttons: ['OK'],
+          })
+        }
       }
       try {
         await axios.get(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/{id}', { headers: { Authorization: `Bearer ` + this.sessionStorage.retrieve('token')}}).then(response => {
           this.sessionStorage.store('settings', response.data);
           this.router.navigateByUrl('/home');
         }).catch(error => {
-          //Tady bude kus kodu od Anet
+          /*Tady bude kus kodu od Anet
           ///console.error(error);
+          if (error.message == "email or username already exist") {
+              const alert = await this.alertController.create({
+              header: 'UPOZORNĚNÍ!',
+              message: 'Vámi zadaný email nebo uživatelské jméno existuje.',
+              buttons: ['OK'],
+            })
+          }
+          
+          */
         });
       }
       catch (error) {
         //Tady bude kus kodu od Anet
-        ///console.error(error);
+        /*console.error(error);
+        if (error.message == "password already exist") {
+              const alert = await this.alertController.create({
+              header: 'UPOZORNĚNÍ!',
+              message: 'Vámi zadané heslo již existuje.',
+              buttons: ['OK'],
+            })
+          }
+
+        */
       }
       await loading.dismiss();
     }
     else if (!this.emailCheck()) {
-      //Tady bude kus kodu od Anet
+      const alert = await this.alertController.create({
+        header: 'UPOZORNĚNÍ!',
+        message: 'Špatně zadaný email.',
+        buttons: ['OK'],
+      })
     }
     else if (!this.usernameCheck()) {
-      //Tady bude kus kodu od Anet
+      const alert = await this.alertController.create({
+        header: 'UPOZORNĚNÍ!',
+        message: 'Špatné zadané uživatelské jméno.',
+        buttons: ['OK'],
+      })
     }
     else if (!this.passwordCheck()) {
-      //Tady bude kus kodu od Anet
+      const alert = await this.alertController.create({
+        header: 'UPOZORNĚNÍ!',
+        message: 'Špatně zadané heslo.',
+        buttons: ['OK'],
+      })
     }
   }
 }

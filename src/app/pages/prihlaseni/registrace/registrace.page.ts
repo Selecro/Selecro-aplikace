@@ -89,7 +89,7 @@ export class RegistracePage implements OnInit {
           if (error.message == "email or username already exist") {
             const alert = this.alertController.create({
               header: 'UPOZORNĚNÍ!',
-              message: 'Vaše uživatelské jméno již existuje./Váš email již existuje.',
+              message: 'Vámi zadané uživatelské jméno již existuje./Vámi zadaný email již existuje.',
               buttons: ['OK'],
             })
           }

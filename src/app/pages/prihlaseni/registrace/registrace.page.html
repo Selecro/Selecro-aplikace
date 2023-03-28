@@ -15,25 +15,26 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Uživatelské jméno</ion-label>
-    <ion-input type="username" ngModel username (change)="usernameCheck()"></ion-input>
+    <ion-input type="username" (change)="usernameCheck()"></ion-input>
     <ion-note slot="helper">Uživatelské jméno musí být dlouhé alepoň 4 znaky. Může obsahovat číslo, speciální znak, velká i malá písmena.</ion-note>
-    <ion-note slot="error">Uživatelské jméno je příliš krátké!</ion-note>
-    <ion-note slot="error">Uživatelské jméno je příliš dlouhé!</ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Email</ion-label>
-    <ion-input type="email" [(ngModel)]="email" (change)="emailCheck()"></ion-input>
+    <ion-input type="email" ngModel email (change)="emailCheck()"></ion-input>
+    <ion-note slot="helper">Zadejte svůj email.</ion-note>
+    <ion-note slot="error">Špatně zadané uživatelské jméno, nebo email!</ion-note>
   </ion-item>
-  
   <ion-item>
     <ion-label position="floating">Heslo</ion-label>
-    <ion-input type="{{ showPassword0 ? 'text' : 'password' }}" ngModel password0 (change)="passwordCheck()"></ion-input>
+    <ion-input type="{{ showPassword0 ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword0 ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
+    <ion-note slot="helper">Heslo musí obsahovat minimálně 8 znaků, maximálně 20. Může obsahovat velká i malá písmena, speciální znak a čísla.</ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Zopakujte heslo</ion-label>
-    <ion-input type="{{ showPassword1 ? 'text' : 'password' }}" ngModel password1 (change)="passwordCheck()"></ion-input>
+    <ion-input type="{{ showPassword1 ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword1 ? 'eye-off' : 'eye'" (click)="togglePassword2()"></ion-icon>
+    <ion-note slot="helper">Heslo pro kontrolu musí obsahovat minimálně 8 znaky, maximálně 20. Může obsahovat velká i malá písmena, speciální znak a čísla.</ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Jazyk</ion-label>
