@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import axios from 'axios';
 import { environment } from 'src/environments/environment.prod';
+import { AlertController } from '@ionic/angular';
 
 enum Language {
   CZ = 'CZ',
@@ -29,7 +30,7 @@ export class RegistracePage implements OnInit {
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,4}');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
 
-  constructor(private router: Router, private loadingController: LoadingController) { }
+  constructor(private router: Router, private loadingController: LoadingController, private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -83,13 +84,21 @@ export class RegistracePage implements OnInit {
         await loading.present();
         axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
-        }).catch(error => {
+        }).catch(async error => {
           console.error(error.message);
           if (error.message == "email or username already exist") {
-            //již existuje
+            const alert = await this.alertController.create({
+              header: 'UPOZORNĚNÍ!',
+              message: 'Vaše uživatelské jméno již existuje./Váš email již existuje.',
+              buttons: ['OK'],
+            })
           }
           else {
-            //Databáze není dostupná, zkuste to prosím později
+            const alert = await this.alertController.create({
+              header: 'UPOZORNĚNÍ!',
+              message: 'Omlouváme se, ale databáze není dostupná. Zkuste to prosím později.',
+              buttons: ['OK'],
+            })
           }
         });
         await loading.dismiss();
@@ -97,19 +106,53 @@ export class RegistracePage implements OnInit {
       catch (error) {
         ///console.error(error);
         if (error.message == "Network Error") {
-          //Špatné připojení k internetu
+          const alert = await this.alertController.create({
+            header: 'UPOZORNĚNÍ!',
+            message: 'Špatné připojení k internetu!',
+            buttons: ['OK'],
+          })
         }
       }
       await loading.dismiss();
     }
     else if (!this.usernameCheck()) {
-      //ošetřit délku
+      if (this.username?.length < 4) {
+        const alert = await this.alertController.create({
+          header: 'UPOZORNĚNÍ!',
+          message: 'Vaše uživatelské jméno je příliš krátké. Minimum jsou 4 znaky.',
+          buttons: ['OK'],
+        })
+      }
+      else if (this.username?.length > 20) {
+        const alert = await this.alertController.create({
+          header: 'UPOZORNĚNÍ!',
+          message: 'Vaše uživatelské jméno je příliš krátké. Maximum je 20 znaků.',
+          buttons: ['OK'],
+        })
+      }
     }
     else if (!this.emailCheck()) {
-      //špatně zadaný email
+      const alert = await this.alertController.create({
+        header: 'UPOZORNĚNÍ!',
+        message: 'Špatně zadaný email.',
+        buttons: ['OK'],
+      })
     }
     else if (!this.passwordCheck()) {
-      //délka
+      if (this.username.length < 8) {
+        const alert = await this.alertController.create({
+          header: 'UPOZORNĚNÍ!',
+          message: 'Vaše heslo je příliš krátké. Minimum je 8 znaků.',
+          buttons: ['OK'],
+        })
+      }
+      else if (this.username.length > 20) {
+        const alert = await this.alertController.create({
+          header: 'UPOZORNĚNÍ!',
+          message: 'Vaše heslo je příliš dlouhé. Maximum je 20.',
+          buttons: ['OK'],
+        })
+      }
     }
   }
 }
