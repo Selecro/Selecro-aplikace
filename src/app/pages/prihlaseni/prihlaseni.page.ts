@@ -18,7 +18,7 @@ export class PrihlaseniPage implements OnInit {
   showPassword: boolean;
   usernameRegEx = new RegExp('^[a-zA-Z0-9_.-]{4,20}$');
   emailRegEx = new RegExp('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}');
-  passwordRegEx = new RegExp('^[a-zA-Z0-9?!.,_-]{8,20}$');
+  passwordRegEx = new RegExp('^[a-zA-Z0-9?!.@#$%^&*_-]{8,20}$');
 
   constructor(private router: Router, private loadingController: LoadingController, sessionStorage: SessionStorageService, private alertController: AlertController) { }
 
@@ -64,14 +64,17 @@ export class PrihlaseniPage implements OnInit {
         }).then(response0 => {
           this.sessionStorage.store('token', response0.data.token);
         }).catch(error => {
-          //Tady bude kus kodu od Anet
-          ///console.error(error);
+          console.error(error);
+          if (error == "user not found with this email") {}
+          else if (error == "user not found with this username") {}
+          else if (error == "password is not valid") {}
         });
         await loading.dismiss();
       }
       catch (error) {
         //Tady bude kus kodu od Anet
-        ///console.error(error);
+        console.error(error);
+        if (error.message == "Network Error") {}
       }
       try {
         await axios.get(environment.APIHOST + ':' + Number(environment.APIPORT) + '/users/{id}', { headers: { Authorization: `Bearer ` + this.sessionStorage.retrieve('token')}}).then(response => {

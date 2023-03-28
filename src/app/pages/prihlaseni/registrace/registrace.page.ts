@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
@@ -83,25 +84,32 @@ export class RegistracePage implements OnInit {
         axios.post(environment.APIHOST + ':' + Number(environment.APIPORT) + '/signup', body).then(response => {
           this.router.navigateByUrl('/prihlaseni');
         }).catch(error => {
-          //Tady bude kus kodu od Anet
-          ///console.error(error);
+          console.error(error.message);
+          if (error.message == "email or username already exist") {
+            //již existuje
+          }
+          else {
+            //Databáze není dostupná, zkuste to prosím později
+          }
         });
         await loading.dismiss();
       }
       catch (error) {
-        //Tady bude kus kodu od Anet
         ///console.error(error);
+        if (error.message == "Network Error") {
+          //Špatné připojení k internetu
+        }
       }
       await loading.dismiss();
     }
     else if (!this.usernameCheck()) {
-      //Tady bude kus kodu od Anet
+      //ošetřit délku
     }
     else if (!this.emailCheck()) {
-      //Tady bude kus kodu od Anet
+      //špatně zadaný email
     }
     else if (!this.passwordCheck()) {
-      //Tady bude kus kodu od Anet
+      //délka
     }
   }
 }

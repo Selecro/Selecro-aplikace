@@ -15,15 +15,20 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Email, nebo uživatelské jméno</ion-label>
-    <ion-input type="email" [(ngModel)]="email" (change)="emailCheck()"></ion-input>
+    <ion-input type="email" ngModel email (change)="emailCheck()"></ion-input>
+    <ion-note slot="helper">Zadejte svůj email.</ion-note>
+    <ion-note slot="error">Špatně zadané uživatelské jméno, nebo heslo!</ion-note>
+    <ion-note slot="end">ble</ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Heslo</ion-label>
-    <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" (change)="passwordCheck()"></ion-input>
+    <ion-input type="{{ showPassword ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
     <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
+    <ion-note slot="helper">Heslo musí obsahovat minimálně 8 znaky, maximálně 20. Může obsahovat velká i malá písmena, speciální znak a čísla.</ion-note>
+    <ion-note slot="error">Heslo je příliš krátké!</ion-note>
+    <ion-note slot="error">Heslo je příliš dlouhé!</ion-note>
   </ion-item>
-  <br>
-  <br>
+  <br><br>
   <ion-button (click)="login()">Přihlásit se</ion-button>
   <br>
   <div class="odkaz">
