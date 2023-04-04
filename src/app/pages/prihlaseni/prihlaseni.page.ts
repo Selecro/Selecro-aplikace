@@ -102,10 +102,18 @@ export class PrihlaseniPage implements OnInit {
       catch (error) {
         //Tady bude kus kodu od Anet
         /*console.error(error);
-        if (error.message == "password already exist") {
+        if (error.message == "email already exist") {
               const alert = await this.alertController.create({
               header: 'UPOZORNĚNÍ!',
-              message: 'Vámi zadané heslo již existuje.',
+              message: 'Vámi zadaný email již existuje.',
+              buttons: ['OK'],
+            })
+          }
+
+          if (error.message == "username already exist") {
+              const alert = await this.alertController.create({
+              header: 'UPOZORNĚNÍ!',
+              message: 'Vámi zadaný uživatelské jméno již existuje.',
               buttons: ['OK'],
             })
           }
