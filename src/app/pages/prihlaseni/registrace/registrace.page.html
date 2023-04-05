@@ -20,7 +20,7 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Email</ion-label>
-    <ion-input type="email" ngModel email (change)="emailCheck()"></ion-input>
+    <ion-input type="email" [ngModel]="email" (change)="emailCheck()"></ion-input>
     <ion-note slot="helper">Zadejte svůj email.</ion-note>
     <ion-note slot="error">Špatně zadané uživatelské jméno, nebo email!</ion-note>
   </ion-item>
