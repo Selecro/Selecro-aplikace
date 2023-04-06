@@ -39,11 +39,11 @@ export class PrihlaseniPage implements OnInit {
 
   public togglePassword() {
     this.showPassword = !this.showPassword;
-    if (this.passwordToggleIcon == 'eye') {
-      this.passwordToggleIcon = 'eye-off';
+    if (this.passwordToggleIcon == 'eye-off') {
+      this.passwordToggleIcon = 'eye';
     }
     else {
-      this.passwordToggleIcon = 'eye';
+      this.passwordToggleIcon = 'eye-off';
     }
   }
 

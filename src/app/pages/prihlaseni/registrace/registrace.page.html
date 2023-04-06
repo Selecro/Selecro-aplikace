@@ -27,13 +27,13 @@
   <ion-item>
     <ion-label position="floating">Heslo</ion-label>
     <ion-input type="{{ showPassword0 ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
-    <ion-icon slot="end" [name]="showPassword0 ? 'eye-off' : 'eye'" (click)="togglePassword()"></ion-icon>
+    <ion-icon slot="end" [name]="showPassword0 ? 'eye' : 'eye-off'" (click)="togglePassword()"></ion-icon>
     <ion-note slot="helper">Heslo musí obsahovat minimálně 8 znaků, maximálně 20.</ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Zopakujte heslo</ion-label>
     <ion-input type="{{ showPassword1 ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
-    <ion-icon slot="end" [name]="showPassword1 ? 'eye-off' : 'eye'" (click)="togglePassword2()"></ion-icon>
+    <ion-icon slot="end" [name]="showPassword1 ? 'eye' : 'eye-off'" (click)="togglePassword2()"></ion-icon>
     <ion-note slot="helper">Heslo pro kontrolu musí obsahovat minimálně 8 znaky, maximálně 20.</ion-note>
   </ion-item>
   <ion-item>
