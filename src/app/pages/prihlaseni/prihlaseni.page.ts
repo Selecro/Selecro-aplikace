@@ -17,7 +17,7 @@ export class PrihlaseniPage implements OnInit {
   passwordToggleIcon = "eye";
   showPassword: boolean;
   usernameRegEx = new RegExp('^[a-zA-Z0-9_.-]{4,20}$');
-  emailRegEx = new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$');
+  emailRegEx = new RegExp('^^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[.]+[a-zA-Z]{2,4}$');
   passwordRegEx = new RegExp('^[a-zA-Z0-9?!.@#$%^&*_-]{8,20}$');
 
   constructor(private router: Router, private loadingController: LoadingController, sessionStorage: SessionStorageService, private alertController: AlertController) { }
