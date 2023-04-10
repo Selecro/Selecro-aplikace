@@ -7,17 +7,25 @@
       Selecro
     </ion-title>
     <ion-buttons slot="end">
+      <ion-list>
+        <ion-item>
+          <ion-label>Language</ion-label>
+          <ion-select (ionChange)="switchLanguage($event.target.value)">
+            <ion-select-option value="CZ">Czech</ion-select-option>
+            <ion-select-option value="EN">English</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Vítejte</ion-card-title>
+        <ion-card-title>dfg</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p>Zdraví Vás tým Selecro s touto mobilní aplikací na naučení háčkování.</p>
