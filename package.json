@@ -32,7 +32,7 @@
     "https": "^1.0.0",
     "ionic-angular": "^3.9.10",
     "json-server": "^0.17.0",
-    "ngx-webstorage": "6.0.0",
+    "ngx-webstorage": "^6.0.0",
     "rxjs": "~6.6.0",
     "swiper": "^8.2.4",
     "tslib": "^2.2.0",

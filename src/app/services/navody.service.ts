@@ -9,7 +9,15 @@ const poleNavodu = [
     zkratky: "Mk, V, Ks, A, Po, Řo",
     pomucky: "Háček (velikosti 2mm), jehla, značkovač, duté vlákno, bezpečnostní očka",
     premiove: false,
+    pocet: 7,
     popisy: [
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "dinosaurus",
+        titulekCasti: "Příprava",
+        popis: ["Háček (velikost 4,5 mm)", "Dolphin Baby 2 klubka na tělo", "Dolphin Baby 1 na ostny", "Kousek černé příze na nozdry", "Bezpečnostní očka (velikost 10 mm)", "Značkovač", "Nůžky", "Výplň", "Jehla"]
+      },
       {
         obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
@@ -68,7 +76,15 @@ const poleNavodu = [
     zkratky: "Mk, Ks, Řo, Po, V, A",
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     premiove: false,
+    pocet: 5,
     popisy: [
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "harold",
+        titulekCasti: "Příprava",
+        popis: ["Háček (velikost 3 mm)", "Bezpečnostní očka (velikost 10 mm)", "YarnArt Jeans 1 klubko", "Kousek černé na doplňky", "Výplň", "Značkovač", "Nůžky", "Jehla"]
+      },
       {
         obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
@@ -107,13 +123,21 @@ const poleNavodu = [
     ]
   },
   {
-    obtiznost: Obtiznost.tezky,
+    obtiznost: Obtiznost.stredni,
     nazev: "vodni-zelva",
     title: "Vodní želva",
     zkratky: "Mk, Ks, Řo, Po, V, A",
     pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     premiove: true,
+    pocet: 6,
     popisy: [
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "vodni-zelva",
+        titulekCasti: "Příprava",
+        popis: ["Háček (velikost 3 mm)", "YarnArt Jeans 1 klubíčko na tělo", "YarnArt Jeans 1 klubíčko na krunýř", "Kousek černé a růžové na doplňky", "Bezpečnostní očka (10 mm)", "Značkovač", "Výplň", "Nůžky", "Jehla"]
+      },
       {
         obrazek: true,
         zkratkyCasti: "Mk, V, Ks, A, Po",
