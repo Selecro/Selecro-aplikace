@@ -14,7 +14,7 @@ export class VyukovyModPage implements OnInit {
   searchInput: any;
   selectedItem: String;
 
-  constructor(private router: Router, private vyukaService: VyukaService) {
+  constructor(private router: Router, private vyukaService: VyukaService ) {
   }
 
   ngOnInit() {

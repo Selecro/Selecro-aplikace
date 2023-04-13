@@ -6,6 +6,11 @@
     <ion-title>
       Selecro
     </ion-title>
+    <ion-select #selectedlang (ionChange)="switchLanguage(selectedlang.value)" placeholder="{{ 'APP.jazyk' | translate }}">
+      <ion-select-option *ngFor="let language of translate.getLangs()" [value]="language">
+        {{ language }}
+      </ion-select-option>
+    </ion-select>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>

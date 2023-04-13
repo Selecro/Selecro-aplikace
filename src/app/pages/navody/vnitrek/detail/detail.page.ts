@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { NavodyService } from 'src/app/services';
 import { Navod } from 'src/app/types';
 
@@ -18,7 +19,7 @@ export class DetailPage implements OnInit {
   index0: number;
   executed: number = 0;
 
-  constructor(private router: Router, private navodyService: NavodyService) {
+  constructor(private router: Router, private navodyService: NavodyService, public translate: TranslateService ) {
   }
 
   ngOnInit() {
