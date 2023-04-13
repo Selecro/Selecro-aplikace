@@ -1,5 +1,7 @@
 {
-    "home": {
-        "vitejte" : "EN"
+    "HOME": {
+        "vitejte": "EN",
+        "vyber": "Vybrali jste {{language}}!",
+        "vyberte": "Vyberte jazyk"
     }
 }

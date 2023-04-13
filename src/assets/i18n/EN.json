@@ -1,5 +1,7 @@
 {
     "HOME": {
-        "vitejte" : "CZ"
+        "vitejte": "CZ",
+        "vyber": "You have chosen {{language}}!",
+        "vyberte": "Choose a language"
     }
 }
