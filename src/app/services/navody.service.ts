@@ -2,12 +2,11 @@ import { Injectable } from '@angular/core';
 import { Navod, Obtiznost, PopisNavodu } from '../types';
 
 const poleNavodu = [
-  {
+  /*{
     obtiznost: Obtiznost.lehky,
     nazev: "dinosaurus",
     title: "Dinosaurus",
     zkratky: "Mk, V, Ks, A, Po, Řo",
-    pomucky: "Háček (velikosti 2mm), jehla, značkovač, duté vlákno, bezpečnostní očka",
     premiove: false,
     pocet: 7,
     popisy: [
@@ -68,13 +67,12 @@ const poleNavodu = [
         popis: ["Mk (6)", "2ks, V", "3ks, V", "4ks, V", "5ks, V", "6ks, V", "Po"]
       }
     ]
-  },
+  },*/
   {
-    obtiznost: Obtiznost.stredni,
+    obtiznost: Obtiznost.lehky,
     nazev: "harold",
     title: "Harold",
     zkratky: "Mk, Ks, Řo, Po, V, A",
-    pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     premiove: false,
     pocet: 5,
     popisy: [
@@ -127,7 +125,6 @@ const poleNavodu = [
     nazev: "vodni-zelva",
     title: "Vodní želva",
     zkratky: "Mk, Ks, Řo, Po, V, A",
-    pomucky: "Háček (velikost 3,5 mm), jehla, příze (Jeans), značkovač, bezpečnostní očka (10 mm), výplň",
     premiove: true,
     pocet: 6,
     popisy: [
@@ -174,11 +171,157 @@ const poleNavodu = [
         popis: ["Mk (8)", "V", "ks, V", "2 ks, V", "3 ks, V", "4 ks, V", "5 ks, V", "6ks, V", "Po", "Po dokončení kolečko ohneme napůl a sešijeme k sobě."]
       },
       {
-        obrazek: false,
+        obrazek: true,
         zkratkyCasti: "Mk, Ks, Po",
         nazevCasti: "ocasek-zelva",
         titulekCasti: "Ocásek",
         popis: ["Mk (4)", "ks (2 řady)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "doplnky-zelva",
+        titulekCasti: "Doplňky",
+        popis: ["Dá se vytvořit pusinka", "Další možnost je našít růžové tváře"]
+      },
+    ],
+  },
+  {
+    obtiznost: Obtiznost.lehky,
+    nazev: "obraceci-chobotnicka",
+    title: "Obracecí chobotnička",
+    zkratky: "Mk, Ks, Řo, Po, PDS, V, A",
+    premiove: false,
+    pocet: 7,
+    popisy: [
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "obraceci-chobotnicka",
+        titulekCasti: "Příprava",
+        popis: ["Háček (velikost 3 mm)", "YarnArt Jeans 2 klubíčka (každé jiné barvy)", "YarnArt Jeans černá na oči a doplňky", "Značkovač", "Nůžky", "Jehla"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, A, Po",
+        nazevCasti: "hlava-obraceci-chobotnicka",
+        titulekCasti: "Hlava (2x)",
+        popis: ["Mk (8)", "V", "ks, V", "2 ks, V", "ks (10 řad)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "sesiti-hlava-obraceci-chobotnicka",
+        titulekCasti: "Sešití hlav",
+        popis: ["Jednu hlavu obrátím vzhůru nohama", "Obrácenou hlavu vložím do té druhé", "Sešívám delší nití", "Nezapomenu na konci zapošít, aby hlavy držely při otáčení"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Řo, PDS, Po",
+        nazevCasti: "chapadlo-obraceci-chobotnicka",
+        titulekCasti: "Chapadlo (16x)",
+        popis: ["6Řo", "Obracím směr 4PDS, 5PDS do jednoho oka, 4PDS", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: null,
+        nazevCasti: "sesiti-chapadlo-obraceci-chobotnicka",
+        titulekCasti: "Sešití chapadla (8x)",
+        popis: ["Vezmu jedno chapadlo od každé barvy a dám je pohledovou stranou do sebe", "Sešivám je nejdelší ze čtyř nití, co z nich vysí", "K tělu budu přišívat na 4 oka bez mezery"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, Po",
+        nazevCasti: "stastna-obraceci-chobotnicka",
+        titulekCasti: "Šťastné oko (2x)",
+        popis: ["Mk (5)", "V", "ks, V", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, Ks, Řo, Po",
+        nazevCasti: "nastvana-obraceci-chobotnicka",
+        titulekCasti: "Naštvané oči (2x)",
+        popis: ["Levé: Mk (5)", "Řo, otočím, 5ks, 2Řo, 3ks, Po", "Pravé: Mk (5)", "Řo, 7ks, 2Řo, ks, Po"]
+      },
+      {
+        obrazek: false,
+        zkratkyCasti: null,
+        nazevCasti: "dolpnky-obraceci-chobotnicka",
+        titulekCasti: "Doplňky",
+        popis: ["Dá se přidat ještě pusinka", "Bílá čárka do oka"]
+      },
+    ],
+  },
+  {
+    obtiznost: Obtiznost.tezky,
+    nazev: "pavouk",
+    title: "Pavouk",
+    zkratky: "Mk, Ks, Řo, Po, PDS, V, A",
+    premiove: false,
+    pocet: 0,
+    popisy: [
+      {
+        obrazek: false,
+        zkratkyCasti: null,
+        nazevCasti: "pavouk",
+        titulekCasti: "Příprava",
+        popis: ["Háček (velikost 3 mm)", "YarnArt Jeans 1 klubíčko", "Jakákoliv tenká příze s chlupem (nepovinné)", "Kousek černé na pusu", "Bezpečnostní očka (velikost 10 mm a 8 mm)", "Značkovač", "Výplň", "Nůžky", "Jehla"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, A, Po",
+        nazevCasti: "hlava-pavouk",
+        titulekCasti: "Hlava",
+        popis: ["Mk (6)", "V", "ks, V", "2 ks, V", "3 ks, V", "4 ks, V", "5ks, V", "ks (2 řady)", "5ks, A", "4ks, A", "3ks, A", "2ks, A", "ks, A", "A", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, A, Po",
+        nazevCasti: "telo-pavouk",
+        titulekCasti: "Tělo",
+        popis: ["Mk (6)", "V", "ks, V", "2 ks, V", "3 ks, V", "4 ks, V", "5ks, V", "6ks, V", "ks (3 řady)", "6ks, A", "5ks, A", "ks (1 řada)", "4ks, A", "3ks, A", "ks (1 řada)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, Po",
+        nazevCasti: "prvni-noha-pavouk",
+        titulekCasti: "První noha (2x)",
+        popis: ["Mk (6)", "2ks, V", "ks (4 řady)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, PDS, Po",
+        nazevCasti: "druha-noha-pavouk",
+        titulekCasti: "Druhá noha (2x)",
+        popis: ["Mk (6)", "2ks, V", "ks (3 řady)", "3Po, ks, 3PDS, ks", "ks (3 řady)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, PDS, Po",
+        nazevCasti: "treti-noha-pavouk",
+        titulekCasti: "Třetí noha (2x)",
+        popis: ["Mk (6)", "2ks, V", "ks (4 řady)", "3Po, ks, 3PDS, ks", "ks (4 řady)", "Po"]
+      },
+      {
+        obrazek: true,
+        zkratkyCasti: "Mk, V, Ks, PDS, Po",
+        nazevCasti: "ctvrta-noha-pavouk",
+        titulekCasti: "Čtvrtá noha (2x)",
+        popis: ["Mk (6)", "2ks, V", "ks (5 řad)", "3Po, ks, 3PDS, ks", "ks (5 řad)", "Po"]
+      },
+      {
+        obrazek: false,
+        zkratkyCasti: "Mk, V, Ks, Po",
+        nazevCasti: "zub-pavouk",
+        titulekCasti: "Zub (2x)",
+        popis: ["Mk (6)", "2ks, V", "ks (2 řady)", "Po"]
+      },
+      {
+        obrazek: false,
+        zkratkyCasti: null,
+        nazevCasti: "doplnky-pavouk",
+        titulekCasti: "Doplňky",
+        popis: ["Chloupky na nohou", "Pusinka"]
       },
     ],
   },

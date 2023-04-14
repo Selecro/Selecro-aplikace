@@ -9,8 +9,8 @@ const polePomucek = [
     kroky: [
       {
         popis: "Existuje široká škála velikostí.",
-        obrazek: null,
-        exist: false,
+        obrazek: "velikosti-hacku",
+        exist: true,
       },
       {
         popis: "Háčky se dělají z různých materiálů.",
@@ -91,18 +91,18 @@ const polePomucek = [
     kroky: [
       {
         popis: "Nůžky asi už někdy používal každý z nás a u háčkování to není nějak zvlášť jiné.",
-        obrazek: "nuzky",
+        obrazek: "zastrihovaci-nuzky",
         exist: true,
       },
       {
         popis: "Klasické nůžky na papír nejsou na některé příze vhodné, protože potom ji přestříháváme na několikrát a akorát se nám konec třepí.",
-        obrazek: "zdobneNuzky",
+        obrazek: "nuzky",
         exist: true,
       },
       {
         popis: "Můžete si pořídit nůžky na látku, nebo různé speciálně zdobené, tvarované.",
-        obrazek: null,
-        exist: false,
+        obrazek: "zdobene-nuzky",
+        exist: true,
       },
     ]
   },
@@ -192,7 +192,7 @@ const polePomucek = [
       {
         popis: "Pokud vytváříte něco prostorového (zvířátka, hračky, atd...), tak se vám bude hodit nějaká výplň. Tu může tvořit vata, nebo duté vlákno. Po delší době háčkování můžete použít i zbytky přízí z minulého tvoření. Je to taková recyklace, kterou já uplatňuji třeba u jehelníčků",
         obrazek: "vypln",
-        exist: false,
+        exist: true,
       },
     ]
   }
