@@ -310,7 +310,7 @@ const poleNavodu = [
         popis: ["Mk (6)", "2ks, V", "ks (5 řad)", "3Po, ks, 3PDS, ks", "ks (5 řad)", "Po"]
       },
       {
-        obrazek: false,
+        obrazek: true,
         zkratkyCasti: "Mk, V, Ks, Po",
         nazevCasti: "zub-pavouk",
         titulekCasti: "Zub (2x)",
