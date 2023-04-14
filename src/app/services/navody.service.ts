@@ -192,7 +192,7 @@ const poleNavodu = [
     title: "Obracecí chobotnička",
     zkratky: "Mk, Ks, Řo, Po, PDS, V, A",
     premiove: false,
-    pocet: 7,
+    pocet: 8,
     popisy: [
       {
         obrazek: true,
@@ -258,7 +258,7 @@ const poleNavodu = [
     title: "Pavouk",
     zkratky: "Mk, Ks, Řo, Po, PDS, V, A",
     premiove: false,
-    pocet: 0,
+    pocet: 9,
     popisy: [
       {
         obrazek: false,
