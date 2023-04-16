@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VyukaService } from '../../services';
 import { Vyrobek } from '../../types';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-vyukovy-mod',
@@ -14,8 +15,15 @@ export class VyukovyModPage implements OnInit {
   searchInput: any;
   selectedItem: String;
 
-  constructor(private router: Router, private vyukaService: VyukaService ) {
-  }
+  constructor(private router: Router, private vyukaService: VyukaService, public translate: TranslateService ) {
+      translate.addLangs(['CZ', 'EN']);
+      translate.setDefaultLang('CZ');
+    }
+    
+    public switchLanguage(lang:string) {
+      return this.translate.use(lang);
+    }
+  
 
   ngOnInit() {
     this.items = this.vyukaService.getVsechnyVyrobky();

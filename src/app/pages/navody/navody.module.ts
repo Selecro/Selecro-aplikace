@@ -8,6 +8,14 @@ import { NavodyPageRoutingModule } from './navody-routing.module';
 
 import { NavodyPage } from './navody.page';
 import { ApplicationPipesModuleModule } from 'src/app/application-pipes-module.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   imports: [
@@ -15,7 +23,15 @@ import { ApplicationPipesModuleModule } from 'src/app/application-pipes-module.m
     FormsModule,
     IonicModule,
     NavodyPageRoutingModule,
-    ApplicationPipesModuleModule
+    ApplicationPipesModuleModule,
+    HttpClientModule,
+    TranslateModule.forRoot({ 
+      loader: { 
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
 
   declarations: [NavodyPage]

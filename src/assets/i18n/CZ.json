@@ -1,8 +1,67 @@
 {
     "APP": {
-        "jazyk": "Vyberte jazyk"
+        "jazyk": "Vyberte jazyk",
+        "pomucky": "Pomůcky",
+        "hacek": "Háček",
+        "prize": "Příze",
+        "znackovac": "Značkovač",
+        "jehla": "Jehla",
+        "nuzky": "Nůžky",
+        "bezpecnostniOciANos": "Bezpečnostní oči a nos",
+        "chrastitko": "Chrastítko",
+        "pocitadlo": "Počítadlo",
+        "navijecPrize": "Navíječ příze",
+        "vypln": "Výplň",
+        "slovnik": "Slovník",
+        "retizkoveOko": "Řetízkové oko",
+        "pevneOko": "Pevné oko",
+        "kratkySloupek": "Krátký sloupek",
+        "polodlouhySloupek": "Polodlouhý sloupek",
+        "dlouhySloupek": "Dlouhý sloupek",
+        "rozhackovani": "Rozháčkování",
+        "shackovani": "Sháčkování",
+        "magickyKrouzek": "Magický kroužek",
+        "vyukovyMod": "Výukový mód",
+        "navody": "Návody"
     },
     "HOME": {
-        "vitejte": "Vítejte!"
+        "vitejte": "Vítejte!",
+        "text1": "Zdraví Vás tým Selecro s touto mobilní aplikací na naučení háčkování.",
+        "text2": "Připravujeme pro Vás i stránku na internetu.",
+        "socialniSite": "Sociální sítě"
+    },
+    "VYUKOVYMOD": {
+        "cas": "Čas:",
+        "pocetKroku": "Počet kroků:",
+        "popis": "Popis:"
+    },
+    "VYUKOVYMODDETAIL": {
+        "krok": "Krok:",
+        "styl": "Styl:",
+        "pomucky": "Pomůcky:",
+        "popis": "Popis:"
+    },
+    "SLOVNIK": {
+        "slovnikZkratka": "Zkratka:",
+        "image": "Značka:",
+        "popis": "Popis",
+        "animace": "Animace",
+        "veSkutecnosti": "Ve skutečnosti"
+    },
+    "PRIHLASENI": {
+        "prihlaseni": "Přihlášení"
+    },
+    "NAVODY": {
+        "navody": "Návody",
+        "vse": "Vše",
+        "dokoncene": "Dokončené",
+        "premiove": "Prémiové",
+        "lehke": "Lehké",
+        "stredni": "Střední",
+        "tezka": "Těžká"
+    },
+    "NAVODYVNITREK": {
+        "budemePotrebovat": "Budeme potřebovat:",
+        "pouzijeme": "Použijeme tyto kroky:"
     }
 }

@@ -7,13 +7,28 @@ import { IonicModule } from '@ionic/angular';
 import { SlovnikPageRoutingModule } from './slovnik-routing.module';
 
 import { SlovnikPage } from './slovnik.page';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SlovnikPageRoutingModule
+    SlovnikPageRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({ 
+      loader: { 
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [SlovnikPage]
 })
