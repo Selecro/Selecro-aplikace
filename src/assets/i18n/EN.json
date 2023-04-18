@@ -58,10 +58,12 @@
         "premiove": "Premium",
         "lehke": "Easy",
         "stredni": "Medium",
-        "tezka": "Hard"
+        "tezka": "Hard",
+        "obtiznost": "Difficulty",
+        "zkratky": "Abbreviations:"
     },
     "NAVODYVNITREK": {
         "budemePotrebovat": "You'll need:",
-        "pouzijeme": "You'll use these styles:"
+        "pouzijeme": "You'll use these styles"
     }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Styl } from '../types'
 
-const poleStyluCZ = [
+const poleStyluCZ: Array<Styl> = [
   {
     nazev: "retizkove-oko",
     title: "Řetízkové oko",
@@ -52,7 +52,7 @@ const poleStyluCZ = [
     popis: "Dostatečný kus příze si položím mezi prostředníček a ukazováček levé ruky (pokud jsem pravák). Omotám kolem vnější strany ukazováčku, celého palce a vracím se zpět tam, kde začíná příze. Mezi prostředníček a ukazováček. Vytvořím tak „znak nekonečna“.</p><p>Vezmu si háček a podeberu vnitřní u palce, vnější přízi za křížem a vnější před křížem. Pravým ukazováčkem si pak tyto tři přehozené části podržím a naberu si přízi na levou ruku, jako bych chtěla začít háčkovat. Pak naberu na háček a protáhnu všemi třemi oky, při tom levým palcem a prostředníčkem držím vznikající kruh.</p><p>V tomto okamžiku se dostáváme do pevného bodu. Máme kruh a máme volný „špagátek“. Háčkujeme směrem doleva, tedy v protisměru hodinových ručiček. Háčkem nabereme kruh tím, že půjdeme zevnitř ven. Společně s kruhem budeme nabírat i svěšený provázek, díky kterému nakonec kruh utáhneme, aby byl opravdu kruhem."
   },
 ];
-const poleStyluEN = [
+const poleStyluEN: Array<Styl>= [
   {
     nazev: "retizkove-oko",
     title: "Chain stitch",

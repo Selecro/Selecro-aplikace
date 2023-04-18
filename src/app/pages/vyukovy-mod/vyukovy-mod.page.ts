@@ -19,17 +19,14 @@ export class VyukovyModPage implements OnInit {
       translate.addLangs(['CZ', 'EN']);
       translate.setDefaultLang('CZ');
     }
-    
-    public switchLanguage(lang:string) {
-      return this.translate.use(lang);
-    }
-  
 
   ngOnInit() {
     this.items = this.vyukaService.getVsechnyVyrobky();
     this.searchInput = document.querySelector("input");
     this.inputbox();
   }
+
+  
 
   goDetail(item: Vyrobek) {
     this.router.navigate([`vyukovy-mod/detail`, { nazevVyrobku: item.nazev }]);
@@ -65,4 +62,9 @@ export class VyukovyModPage implements OnInit {
       }
     }
   }
+
+  public switchLanguage(lang:string) {
+    return this.translate.use(lang);
+  }
+
 }

@@ -23,10 +23,10 @@ export function createTranslateLoader(http: HttpClient) {
     VyukovyModPageRoutingModule,
     ApplicationPipesModuleModule,
     HttpClientModule,
-    TranslateModule.forRoot({ 
-      loader: { 
+    TranslateModule.forChild({
+      loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
+        useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
     })

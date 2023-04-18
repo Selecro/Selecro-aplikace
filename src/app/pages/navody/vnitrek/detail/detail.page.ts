@@ -20,6 +20,8 @@ export class DetailPage implements OnInit {
   executed: number = 0;
 
   constructor(private router: Router, private navodyService: NavodyService, public translate: TranslateService ) {
+    translate.addLangs(['CZ', 'EN']);
+    translate.setDefaultLang('CZ');
   }
 
   ngOnInit() {
@@ -35,6 +37,10 @@ export class DetailPage implements OnInit {
     localStorage.setItem("time", "null");
   }
 
+  public switchLanguage(lang:string) {
+    return this.translate.use(lang);
+  }
+  
   public crossLine() {
     if (localStorage.getItem("finished") == "true") {
       this.element.forEach(x => x.setAttribute("style", "text-decoration: line-through; color: gray"));

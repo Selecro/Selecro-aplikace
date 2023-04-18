@@ -21,10 +21,10 @@ export function createTranslateLoader(http: HttpClient) {
     IonicModule,
     DetailPageRoutingModule,
     HttpClientModule,
-    TranslateModule.forRoot({ 
-      loader: { 
+    TranslateModule.forChild({
+      loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
+        useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
     })

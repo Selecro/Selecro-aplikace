@@ -18,7 +18,7 @@ export function createTranslateLoader(http: HttpClient) {
     IonicModule,
     VnitrekPageRoutingModule,
     HttpClientModule,
-    TranslateModule.forRoot({ 
+    TranslateModule.forChild({ 
       loader: { 
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),

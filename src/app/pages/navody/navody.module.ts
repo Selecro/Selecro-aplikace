@@ -25,7 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
     NavodyPageRoutingModule,
     ApplicationPipesModuleModule,
     HttpClientModule,
-    TranslateModule.forRoot({ 
+    TranslateModule.forChild({ 
       loader: { 
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),

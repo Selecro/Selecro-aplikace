@@ -346,7 +346,7 @@ const poleVyrobkuCZ: Array<Vyrobek> = [
   }]
   const poleVyrobkuEN: Array<Vyrobek> = [
     {
-      nazev: "chobotnicka",
+      nazev: "chobotnice",
       title: "Octopus",
       popis: "Manual for creating an octopus",
       pocet: "12",

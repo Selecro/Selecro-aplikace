@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Navod, Obtiznost, PopisNavodu } from '../types';
 
-const poleNavoduCZ = [
+const poleNavoduCZ: Array<Navod> = [
   {
     obtiznost: Obtiznost.lehky,
     nazev: "dinosaurus",
@@ -161,7 +161,7 @@ const poleNavoduCZ = [
   },
 ];
 
-const poleNavoduEN = [
+const poleNavoduEN: Array<Navod> = [
   {
     obtiznost: Obtiznost.lehky,
     nazev: "dinosaurus",
@@ -174,7 +174,7 @@ const poleNavoduEN = [
         obrazek: true,
         zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
         nazevCasti: "hlava-dinosaura",
-        titulekCasti: "head",
+        titulekCasti: "Head",
         popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3SC, Inc", "4Sc, Inc", "5Sc, Inc", "Sc (6 rows)", "5Sc, Dec", "4Sc, Dec", "3Sc, Dec", "2Sc, Dec", "Sc, Dec", "Dec", "SlSt"]
       },
       {

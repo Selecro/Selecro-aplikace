@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import {  HttpClient } from '@angular/common/http';
+import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export function createTranslateLoader(http: HttpClient) {
@@ -18,6 +18,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    HttpClientModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

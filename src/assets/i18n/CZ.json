@@ -58,10 +58,12 @@
         "premiove": "Prémiové",
         "lehke": "Lehké",
         "stredni": "Střední",
-        "tezka": "Těžká"
+        "tezka": "Těžká",
+        "obtiznost": "Obtížnost",
+        "zkratky": "Zkratky:"
     },
     "NAVODYVNITREK": {
         "budemePotrebovat": "Budeme potřebovat:",
-        "pouzijeme": "Použijeme tyto kroky:"
+        "pouzijeme": "Použijeme tyto styly"
     }
 }
