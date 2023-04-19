@@ -1,0 +1,69 @@
+{
+    "APP": {
+        "jazyk": "Choose language",
+        "pomucky": "Tools",
+        "hacek": "Hook",
+        "prize": "Yarn",
+        "znackovac": "Row marker",
+        "jehla": "Needle",
+        "nuzky": "Scissors",
+        "bezpecnostniOciANos": "Safety eyes and nose",
+        "chrastitko": "Rattle",
+        "pocitadlo": "Row counter",
+        "navijecPrize": "Yarn winder",
+        "vypln": "Filling",
+        "slovnik": "Dictionary",
+        "retizkoveOko": "Chain",
+        "pevneOko": "Slip stitch",
+        "kratkySloupek": "Single crochet",
+        "polodlouhySloupek": "Half double crochet",
+        "dlouhySloupek": "Double crochet",
+        "rozhackovani": "Increase",
+        "shackovani": "Decrease",
+        "magickyKrouzek": "Magic ring",
+        "vyukovyMod": "Educational mode",
+        "navody": "Manuals"
+    },
+    "HOME": {
+        "vitejte": "Welcome!",
+        "text1": "The Selecro team made a mobile app for you to learn to crochet.",
+        "text2": "We're working on an web app for you to download on any device.",
+        "socialniSite": "Social Media"
+    },
+    "VYUKOVYMOD": {
+        "cas": "Time:",
+        "pocetKroku": "Amount of steps:",
+        "popis": "Description:"
+    },
+    "VYUKOVYMODDETAIL": {
+        "krok": "Steps:",
+        "styl": "Style:",
+        "pomucky": "Tools:",
+        "popis": "Description:"
+    },
+    "SLOVNIK": {
+        "slovnikZkratka": "Abbreviation:",
+        "image": "Label:",
+        "popis": "Description",
+        "animace": "Animation",
+        "veSkutecnosti": "In real life"
+    },
+    "PRIHLASENI": {
+        "prihlaseni": "Login"
+    },
+    "NAVODY": {
+        "navody": "Manuals",
+        "vse": "All",
+        "dokoncene": "Finished",
+        "premiove": "Premium",
+        "lehke": "Easy",
+        "stredni": "Medium",
+        "tezka": "Hard",
+        "obtiznost": "Difficulty",
+        "zkratky": "Abbreviations:"
+    },
+    "NAVODYVNITREK": {
+        "budemePotrebovat": "You'll need:",
+        "pouzijeme": "You'll use these styles"
+    }
+}

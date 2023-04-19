@@ -18,7 +18,7 @@
         </div>
       </div>
     </ion-buttons>
-    <ion-title>Výukový mód</ion-title>
+    <ion-title>{{ 'APP.vyukovyMod' | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menuId="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -34,9 +34,9 @@
         <ion-card-content> 
           <img class="avatar" src="assets/icon/{{item.nazev}}.jpg">
           <div class="popis">
-            <b>Čas:</b> {{item.cas}}<br>
-            <b>Počet kroků:</b> {{item.pocet}} <br>        
-            <b>Popis:</b> {{item.popis}}
+            <b>{{ 'VYUKOVYMOD.cas' | translate }}</b> {{item.cas}}<br>
+            <b>{{ 'VYUKOVYMOD.pocetKroku' | translate }}</b> {{item.pocet}} <br>        
+            <b>{{ 'VYUKOVYMOD.popis' | translate }}</b> {{item.popis}}
           </div>
         </ion-card-content> 
       </ion-card>

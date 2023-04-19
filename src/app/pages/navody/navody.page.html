@@ -18,7 +18,7 @@
         </div>
       </div>
     </ion-buttons>
-    <ion-title>Návody</ion-title>
+    <ion-title>{{ 'NAVODY.navody' | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menuId="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -27,18 +27,18 @@
 
 <ion-toolbar>
   <ion-buttons slot="start">
-    <ion-button fill="solid" class="button" (click)="vsechno($event)">Vše</ion-button>
-    <ion-button fill="solid" class="button" (click)="dokocene($event)">Dokončené</ion-button>
-    <ion-button fill="solid" class="button" (click)="premiove($event)">Prémiové</ion-button>
+    <ion-button fill="solid" class="button" (click)="vsechno($event)">{{ 'NAVODY.vse' | translate }}</ion-button>
+    <ion-button fill="solid" class="button" (click)="dokocene($event)">{{ 'NAVODY.dokoncene' | translate }}</ion-button>
+    <ion-button fill="solid" class="button" (click)="premiove($event)">{{ 'NAVODY.premiove' | translate }}</ion-button>
   </ion-buttons>
     <ion-list>
       <ion-item>
         <ion-buttons>
           <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button"
-            placeholder="Obtížnost" interface="popover">
-            <ion-select-option value="lehky">Lehká</ion-select-option>
-            <ion-select-option value="stredni">Střední</ion-select-option>
-            <ion-select-option value="tezky">Těžká</ion-select-option>
+            placeholder="{{ 'NAVODY.obtiznost' | translate }}" interface="popover">
+            <ion-select-option value="lehky">{{ 'NAVODY.lehke' | translate }}</ion-select-option>
+            <ion-select-option value="stredni">{{ 'NAVODY.stredni' | translate }}</ion-select-option>
+            <ion-select-option value="tezky">{{ 'NAVODY.tezka' | translate }}</ion-select-option>
           </ion-select>
         </ion-buttons>
       </ion-item>
@@ -57,8 +57,8 @@
     <ion-card-content>
       <img class="avatar" src="assets/icon/{{item.nazev}}.jpg" alt="avatar">
       <div class="popis">
-        <p><strong>Zkratky:</strong> {{item.zkratky}}</p>
-        <p><strong>Pomůcky:</strong> {{item.pomucky}}</p>     
+        <p><strong>{{ 'NAVODY.zkratky' | translate }}</strong> {{item.zkratky}}</p>
+        <p><strong>{{ 'VYUKOVYMODDETAIL.pomucky' | translate }}</strong> {{item.pomucky}}</p>     
       </div>
     </ion-card-content>
   </ion-card>

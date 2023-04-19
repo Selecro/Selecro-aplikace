@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { VyukaService } from 'src/app/services';
 import { Postup, Vyrobek } from 'src/app/types';
 import { SwiperOptions } from 'swiper';
@@ -21,10 +22,12 @@ export class DetailPage implements OnInit {
   vyrobek: Vyrobek;
   kroky: Array<Postup>;
 
-  constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer, public translate: TranslateService ) {
     const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
     this.vyrobek = this.vyukaService.getVyrobekByName(nazev);
     this.kroky = this.vyrobek.kroky;
+    translate.addLangs(['CZ', 'EN']);
+    translate.setDefaultLang('CZ');
   }
 
   ngOnInit() {
@@ -40,5 +43,9 @@ export class DetailPage implements OnInit {
 
   goToPreviousSlide() {
     this.swiper.swiperRef.slidePrev();
+  }
+
+  public switchLanguage(lang:string) {
+    return this.translate.use(lang);
   }
 }

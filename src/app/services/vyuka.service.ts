@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Vyrobek } from '../types'
 
-const poleVyrobku: Array<Vyrobek> = [
+const poleVyrobkuCZ: Array<Vyrobek> = [
   {
     nazev: "chobotnice",
     title: "Chobotnička",
@@ -343,7 +344,350 @@ const poleVyrobku: Array<Vyrobek> = [
 
     ]
   }]
-
+  const poleVyrobkuEN: Array<Vyrobek> = [
+    {
+      nazev: "chobotnice",
+      title: "Octopus",
+      popis: "Manual for creating an octopus",
+      pocet: "12",
+      cas: "60min",
+      kroky: [
+      {
+        cislo: "1.",
+        styl: "Mr",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Most important thing in this step is not to tighten the magic ring too much, so you will be able to tighten the product. Always be sure to keep an eye out for the loose end, incorporate it into the ring, so you can tighten it.</p><p>You can see the reference page to see how to make a magic ring. There are many ways to create it. In most you will come to the same result, as shown in the video (via 0:35). You can create two chain stitches, put the hook through the first one and then make six single crochets into it.",
+        videoUrl: "06DsV4I1fN8"
+      },
+      {
+        cislo: "2.",
+        styl: "Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "This step is called increasing. Thanks to it you will be able to make your product bigger. You can increase almost any style you want. The most common is used with single, double and half double crochet.</p><p>Make sure you hold the loose end, so you can tighten the ring more and get rid of the gap in the ring.",
+        videoUrl: "TW0VbGVXBps"
+      },
+      {
+        cislo: "3.",
+        styl: "Sc, Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Gradual increase. If you want an even shape, you have to increase it evenly. To do it, you have to increase and make single crochets in between. Imagine that the last step was 0Sc, Inc and now you will continue with 1Sc, Inc then 2Sc, Inc.",
+        videoUrl: "Ivyrl2Mb2o8"
+      },
+      {
+        cislo: "4. and 5.",
+        styl: "Sc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "The next two rows will be the same. To make an even shape. You’ve increased enough and thanks to these two steps the octopus will become a little bit bigger. If you want your octopus to be taller, make more of these rows.",
+        videoUrl: "WJJbSN6qTpc"
+      },
+      {
+        cislo: "6.",
+        styl: "Sc,Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Step 3 included increasing the size of the octopus, step 6 includes decreasing the size. It will help to shape the octopus’ head. <i>Dec</i>  is decrease, which is connecting two single crochets. You can achieve it by putting two Sc into one stitch.",
+        videoUrl: "MwfZ48fExG0"
+      },
+      {
+        cislo: "7.",
+        styl: "Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Continue decreasing the size of the product. In most products, this would be the last step but because we are making tentacles on the head, we will continue. Don’t decrease the head too much. Make bigger gaps so it’s easier to make the tentacles.</p><p>With the last slip stitch close off the head and leave a long loose end so you can close the bottom of the head up after filling it.",
+        videoUrl: "GAR5JQXzk88"
+      },
+      {
+        cislo: "8.",
+        styl: "SlSt, Hdc, Dc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Slip stitch, half double, double and half double crochet. This combination will go into each one of the stitches. So, you will repeat this six times. You’re creating arches which are meant to be the tentacles.</p><p>The slip stitch makes a transition between the individual tentacles, half double and double crochets define the shape.</p><p>It’s close together, so be careful not to miss any.",
+        videoUrl: "iXgXMEuX-HE"
+      },
+      {
+        cislo: "9.",
+        styl: null,
+        pouzijeme: "Safety eyes",
+        popis: "Putting on the safety eyes isn’t always the easiest task. There are many of us that look for the eyes to not be crooked and puzzle over it. Don’t worry, you’re not alone.</p><p>A little tip is to count the rows. Then the eyes should be in the same plane.</p><p>Before putting on the washer, be sure to check the positioning. Some safety eyes have washer that’s hard to put on, let alone take it off.",
+        videoUrl: "MPAzRwy3-g0"
+      },
+      {
+        cislo: "10.",
+        styl: null,
+        pouzijeme: "Safety eye washer, filling",
+        popis: "The washer can be pushed as many times as there are threads. The bigger the washer is and the thinner the yarn is the more the washer is visible. Sometimes it helps us to make the face better.</p><p>We have to fill the octopus up, so take your cotton, hollow fiber or your failed attempts and start filling the head up. You don’t have to fill the product full to the brim, so you can sew the gap off.",
+        videoUrl: "dBmU8n4AfDg"
+      },
+      {
+        cislo: "11.",
+        styl: null,
+        pouzijeme: "Needle",
+        popis: "To sew, pull through the loose end that you left and the end. You first sew into the stitches that you built on the tentacles. This will help to tighten the head. If you put too much filling into the head, you will still see a gap.</p><p>The sewing style is individual, so it’s up to you if you sew according to my description or make your own. The only thing to do is tighten it very hard.</p><p>Most important thing is to finish off the product so that it doesn’t unravel or so the loose end doesn’t unthread.",
+        videoUrl: "IwOXPcn8H3E"
+      },
+      {
+        cislo: "12.",
+        styl: null,
+        pouzijeme: "Needle, scissors",
+        popis: "The ending is going to be like this: Choose a random place on the product, where you will thread through (mostly on the back of the product). Put the needle through a stitch and then come out the same stitch. Don’t tighten too much, only a little bit so an arch is created. Pull the thread through the arch you’ve made. You should create a knot and there will be a loose end left. Pull the loose end through the product and pull out the other side of it.</p><p>Take out the needle and take your scissors. Tense the yarn and cut the thread as close as possible to the product. Be careful not to cut the product open.",
+        videoUrl: "70BrpsQ4lzo"
+      },
+    ]
+    },
+  
+    {
+      nazev: "ruze",
+    title: "Rose",
+    popis: "Create a beautiful rose with leaves",
+    pocet: "17",
+    cas: "60min",
+    kroky: [
+      {
+        cislo: "1.",
+        styl: null,
+        pouzijeme: "Hook",
+        popis: "Create a base for a chain stitch. Wind your yarn across your index and middle finger of your left hand. Lay it on the inside side of your fingers and hold it with your thumb. Turn it around once and create a cross on the inside and at the same time turn it around again. Pick up the front string through the bottom and the second one through the top. Hook behind the string and pull through the first one.",
+        videoUrl: "XL4ze9vLC3s"
+      },
+      {
+        cislo: "2.",
+        styl: "Ch",
+        pouzijeme: "Hook",
+        popis: "Now that you have a slipknot on your hook, take yarn over your hook and pull through the loop. You have one loop on your hook. Take yarn over your hook and pull through. Do this 27 times.",
+        videoUrl: "jOlXPt2eARQ"
+      },
+      {
+        cislo: "3.",
+        styl: "Dc, Ch",
+        pouzijeme: "Hook",
+        popis: "Count the third chain from the hook and start making double crochets. Make two into one chain. Add a chain stitch, it helps create the flower.",
+        videoUrl: "X8WGTnnEC_A"
+      },
+      {
+        cislo: "4.",
+        styl: "Dc, Ch",
+        pouzijeme: "Hook",
+        popis: "To compensate for the gap created by the chain stitch, skip one chain stitch and pull the hook through the next one. So, you will always pull through the one after the next. Make three double crochets into one chain. Repeat this until you’re at the end.",
+        videoUrl: "Y_pbeKZayz8"
+      },
+      {
+        cislo: "5.",
+        styl: "Dc, Ch",
+        pouzijeme: "Hook",
+        popis: "Create two chain stitches to make an extension. Turn the product over and continue with a second row.</p><p>Repeatedly make double crochets, in the first chain make one double crochet, in the second chain make two double crochets, in the third chain make one double crochet and two chain stitches, which you will end on the chain stitch from step three and four.</p><p>You can choose between a single crochet or a slip stitch (both shown in the video), the difference is in the tightening and the gap between the leaves.",
+        videoUrl: "i67kKrqFqRY"
+      },
+      {
+        cislo: "6.",
+        styl: "Dc, Ch",
+        pouzijeme: "Hook",
+        popis: "Continue the same way. Two chain stitches, take yarn over your hook, create a double crochet into the next chain, two double crochets into the next chain, then one double crochet into the next chain, then two chains, ended with a single crochet or a slip stitch in place of the chain stitch in the row before.",
+        videoUrl: "oPUgWP9Lglw"
+      },
+      {
+        cislo: "7.",
+        styl: "Ch, Dc, SlSt",
+        pouzijeme: "Hook",
+        popis: "The last leaf is the same as the ones before, only difference is that the last two chain stitches will be finished off two chains from the base.</p><p>Make a slip stitch and you have made your flower. Now we can curl and shape it.",
+        videoUrl: "p-SBATchhlo"
+      },
+      {
+        cislo: "8.",
+        styl: null,
+        pouzijeme: "Needle",
+        popis: "Try to roll up the flower as much as you can, so it looks like a rose. Pull on it hard, push it while rolling it. Then we have to secure it by sewing. Sewing is intuitive, so it’s up to you how you do it. I will show an example of how I do it.",
+        videoUrl: "vO_Qf_xJh9w"
+      },
+      {
+        cislo: "9.",
+        styl: null,
+        pouzijeme: "Needle",
+        popis: "Finishing off is the most important part and it’s easy to do. When you’re happy with the sewing and the flower is holding its shape, you can finish it off. Pick a place, which you’ll pull through the needle and thread. Then put the needle through the chain next to the one you’re in and pull through but not all the way, create an arch. Then pull the needle through.</p><p>This is also individual, I’m showing my way.",
+        videoUrl: "vELtmQHUzOM"
+      },
+      {
+        cislo: "10.",
+        styl: "Ch",
+        pouzijeme: "Hook",
+        popis: "Start making a leaf, you can have a different amount, but you have to come back to this step, so you can create leaves.</p><p>Make thirteen chains.",
+        videoUrl: "oqk38lrk-JQ"
+      },
+      {
+        cislo: "11.",
+        styl: "Dc",
+        pouzijeme: "Hook",
+        popis: "Count three chains and make three double crochets into the third chain. For the next chain, take the yarn over your hook two times instead of one. Make two of these double crochets into one chain.",
+        videoUrl: "StfiMAJ2POc"
+      },
+      {
+        cislo: "12.",
+        styl: "Dc",
+        pouzijeme: "Hook",
+        popis: "For the next chain, take the yarn over the hook two times and make one double crochet into one chain. Go into the next chain and make one double crochet again. Do it three more times.",
+        videoUrl: "fxHwZU5r5fw"
+      },
+      {
+        cislo: "13.",
+        styl: "Dc, Hdc",
+        pouzijeme: "Hook",
+        popis: "Make one normal double crochet into the next chain. Then make one half double crochet into another chain.",
+        videoUrl: "ebjvvrVYHnI"
+      },
+      {
+        cislo: "14.",
+        styl: "Hdc, Sc",
+        pouzijeme: "Hook",
+        popis: "Make one single crochet into the next chain. Then make three single crochets into the next chain. And lastly make one single crochet into the next chain.  Now, let’s start making the same thing but backwards. So make a half double crochet.",
+        videoUrl: "Qf99mIRTvas"
+      },
+      {
+        cislo: "15.",
+        styl: "Dc",
+        pouzijeme: "Hook",
+        popis: "Make two double crochets, take yarn over your hook and pull through two loops and then take yarn over the hook again and pull through two loops. Three double crochets where you take yarn over the hook two times. Second to last chain has three double crochets.",
+        videoUrl: "KYN4iC1lsKA"
+      },
+      {
+        cislo: "16.",
+        styl: "SlSt, Ch, Sc",
+        pouzijeme: "Hook",
+        popis: "Connect your start and end with a slip stitch. Make three chain stitches, turn around the product and make two single crochets. Finish with a slip stitch and you’ve got a leaf with a stalk. The stalk is not necessary and if you don’t like it, don’t make it.</p><p>We will sew the leaf to the rose.",
+        videoUrl: "Rt7hW4sszoo"
+      },
+      {
+        cislo: "17.",
+        styl: null,
+        pouzijeme: "Needle",
+        popis: "You can sew it so it’s invisible, poke only into one layer of the flower as shown in the video.",
+        videoUrl: "0eHFJNXWfUw"
+      },
+    ]
+    },
+    {
+      nazev: "zalozka",
+    title: "Bookmark",
+    popis: "Fun bookmark for people of all ages",
+    pocet: "18",
+    cas: "60min",
+    kroky: [
+      {
+        cislo: "1.",
+        styl: "Mr",
+        pouzijeme: "Hook",
+        popis: "We will start with the hardest type of stitch. The magic ring. You can create it like shown in the video or make it easier by making two chains and pulling through the first chain six times.",
+        videoUrl: "NOXIskqmC0Q"
+      },
+      {
+        cislo: "2.",
+        styl: "Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Mark the start of the row. You can use markers or a piece of yarn. Increasing means making two double crochets into one stitch.</p><p>The first stitch isn’t the most visible so it’s hard to put the hook through it, its affected by how much you tighten.</p><p>Hold the string you used to tighten the ring under the item so you can tighten it more.",
+        videoUrl: "8COmvVjuNCI"
+      },
+      {
+        cislo: "3.",
+        styl: "Sc, Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Gradual increase. Between the Inc, add a single crochet. This step will be Inc and one single crochet. Repeat it six times. To make sure you’ve made enough, count the stitches. The number is always +6 (18 in this step) but not when the row is made with one style.",
+        videoUrl: "s61YbmAz8ig"
+      },
+      {
+        cislo: "4.",
+        styl: "Sc, Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Continue with the gradual increase, which means that now you’ll make two single crochets and then Inc. After you’re done with the row, you should count 24 stitches.</p><p>Now you’re going to start to see that the circle is getting bigger.",
+        videoUrl: "Eu2U2H1vOsM"
+      },
+      {
+        cislo: "5.",
+        styl: "Sc, Inc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Now it’s three single crochets and Inc. Once again, repeat it six times and you should have 30 stitches.</p><p>Increase one more time. Four single crochets and Inc. Six times so you should have 36 stitches.",
+        videoUrl: "Soz8p-_p0gk"
+      },
+      {
+        cislo: "6., 7. a 8.",
+        styl: "Sc",
+        pouzijeme: "Hook, stitch marker",
+        popis: "The next three rows will be the same. Make them all with single crochets, or straight rows, so the product increases in size a little bit.",
+        videoUrl: "nFvPTp6DPl0"
+      },
+      {
+        cislo: "9.",
+        styl: "Sc, Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "You will now start to tighten the hemisphere, so you can create a ball. Gradual decrease works the same as the gradual increase. The difference is you count down, not up. So, make four single crochets and Dec.</p><p>Do it six times and you’ll have 30 stitches.",
+        videoUrl: "qKeh_ILkgm4"
+      },
+      {
+        cislo: "10.",
+        styl: "Sc, Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Three single crochets, Dec – now you can see how it’s tightening.</p><p>If you have safety eyes, this is the perfect moment to put them in, in the video there will be a crochet version of them.",
+        videoUrl: "eM3djYCpFu0"
+      },
+      {
+        cislo: "11. a 12.",
+        styl: "Sc, Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "Continue to decrease. Two single crochets and Dec.</p><p>One single crochet, Dec. Now we will fill the head with cotton. For those with safety eyes, add them in if you haven’t yet.</p><p>Fill it up with cotton, hollow fiber, scrap yarn or old pillow stuffing.",
+        videoUrl: "oXCrwIgnyfE"
+      },
+      {
+        cislo: "13. ",
+        styl: "Dec",
+        pouzijeme: "Hook, stitch marker",
+        popis: "When you’re satisfied, tighten the 12 stitches in pairs put the hook through the next stitch as if you are starting a next row and make a slip stitch. Leave some yarn for sewing.",
+        videoUrl: "LRfLBApNgvQ"
+      },
+      {
+        cislo: "14.",
+        styl: null,
+        pouzijeme: "Needle, scissors",
+        popis: "Sew the ball so the gap on the bottom is closed off. Correct the shape.",
+        videoUrl: "BP8IxCX-xR4"
+      },
+      {
+        cislo: "15.",
+        styl: "Mr, SlSt",
+        pouzijeme: "Hook, scissors",
+        popis: "Now you will create the eyes. If you don’t want to crochet them, you can take felt and cut the eyes out of it. But if you’re still having fun crocheting, let’s create them. Create a magic ring, same as in the first step.</p><p> Into the first stitch, create a slip stitch. These eyes will be small. Repeat and create one more eye.",
+        videoUrl: "SyGaT44H728"
+      },
+      {
+        cislo: "16.",
+        styl: null,
+        pouzijeme: "Needle, scissord",
+        popis: "Now sew on the eyes. It’s up to you where you sew them on, in the video is an example of sewing them on.",
+        videoUrl: "7VhN_yctywY"
+      },
+      {
+        cislo: "17.",
+        styl: null,
+        pouzijeme: "Needle",
+        popis: "Sew on a mouth, by yourself or watching the video. You don’t have to make him smile. He can frown, be mad… or anything you want.",
+        videoUrl: "7iNCCeg7G1Q"
+      },
+      {
+        cislo: "18.",
+        styl: "Ch, Sc",
+        pouzijeme: "Hook",
+        popis: "Now for the bookmark. You can create plain chains, put it on a loose string, or make it wider as shown in the video. Make chains for how thick you want it and add one more. Turn over the chain and you’ll be going backwards by making single crochets. After making single crochets add a chain again. Repeat until desired length.",
+        videoUrl: "c0hboILLyRI"
+      },
+      {
+        cislo: "17.",
+        styl: "SlSt",
+        pouzijeme: "Hook, scissors",
+        popis: "Attach the bookmark to the head. Pull through one stitch on the bookmark and one stitch on the head and make a slip stitch. After attaching it whole, cut the excess yarn off and you’re done.",
+        videoUrl: "6mgPGFgQMCg"
+      },
+      {
+        cislo: "18.",
+        styl: "Ch",
+        pouzijeme: "Needle",
+        popis: "Second method is to create a simple chain that you can easily attach to the head of the smiley face.",
+        videoUrl: "JF-W5Dk3IE0"
+      },
+    ]
+    }]
 @Injectable({
   providedIn: 'root'
 })
@@ -351,7 +695,7 @@ export class VyukaService {
 
   mapaVyrobku: Map<string, Vyrobek>;
 
-  constructor() {
+  constructor(public translate: TranslateService ) {
     this.initMap();
   }
 
@@ -361,9 +705,16 @@ export class VyukaService {
 
   private initMap() {
     this.mapaVyrobku = new Map();
-    poleVyrobku.forEach(vyuka => {
-      this.mapaVyrobku.set(vyuka.nazev, vyuka);
-    });
+    if (this.translate.currentLang === 'EN') {
+      poleVyrobkuEN.forEach(vyuka => {
+        this.mapaVyrobku.set(vyuka.nazev, vyuka);
+      });
+    }
+    else {
+      poleVyrobkuCZ.forEach(vyuka => {
+        this.mapaVyrobku.set(vyuka.nazev, vyuka);
+      });
+    }
   }
 
   public getVyrobekByName(name: string): Vyrobek {
@@ -371,6 +722,11 @@ export class VyukaService {
   }
 
   public getVsechnyVyrobky(): Array<Vyrobek> {
-    return poleVyrobku;
+    if (this.translate.currentLang === 'EN') {
+      return poleVyrobkuEN;
+    }
+    else {
+      return poleVyrobkuCZ;
+    }
   }
 }

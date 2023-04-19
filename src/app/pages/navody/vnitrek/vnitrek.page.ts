@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Navod } from 'src/app/types/navod';
 import { NavodyService } from 'src/app/services';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-vnitrek',
@@ -13,7 +14,7 @@ export class VnitrekPage implements OnInit {
   name: string;
   element0: NodeListOf<HTMLElement> | undefined;
 
-  constructor(private router: Router, private navodyService: NavodyService, private route: ActivatedRoute) {
+  constructor(private router: Router, private navodyService: NavodyService, private route: ActivatedRoute, public translate: TranslateService) {
     route.params.subscribe(val => {
       this.name = (this.router.url.split('/'))[3];
       this.navod = this.navodyService.getNavodyByName(this.name);
@@ -31,6 +32,8 @@ export class VnitrekPage implements OnInit {
       catch(e) {
       }
     });
+    translate.addLangs(['CZ', 'EN']);
+    translate.setDefaultLang('CZ');
   }
 
   ngOnInit() {
@@ -43,5 +46,9 @@ export class VnitrekPage implements OnInit {
     else {
       localStorage.setItem("finished","false");
     }
+  }
+
+  public switchLanguage(lang:string) {
+    return this.translate.use(lang);
   }
 }

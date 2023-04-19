@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Pomucka } from '../types'
 
-const polePomucek = [
+const polePomucekCZ = [
   {
     nazev: "hacek",
     title: "Háček",
@@ -198,6 +199,203 @@ const polePomucek = [
   }
 ];
 
+const polePomucekEN = [
+  {
+    nazev: "hacek",
+    title: "Hook",
+    videoURL: "bV-dubempbc",
+    kroky: [
+      {
+        popis: "Crochet hooks come in a wide range of sizes.",
+        obrazek: null,
+        exist: false,
+      },
+      {
+        popis: "They are made from many varied materials (metal, plastic, etc.)",
+        obrazek: "hacek",
+        exist: true,
+      },
+      {
+        popis: "Hooks can be decorated by handles, ergonomic grips, etc.",
+        obrazek: "okrasny-hacek",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "prize",
+    title: "Yarn",
+    videoURL: "IOvAdXIL8Vg",
+    kroky: [
+      {
+        popis: "There are a considerable number of brands and materials (acrylic, cotton, mix).",
+        obrazek: "prize",
+        exist: true,
+      },
+      {
+        popis: "Sometimes on the packaging is written how long the yarn is and what size hook it’s made for.",
+        obrazek: null,
+        exist: false,
+      },
+      {
+        popis: "You can use more hook sizes on one type of yarn (e.g., For Dolphin Baby (brand of yarn) you can use sizes 4, 4.5, and 5mm). Size affects holes between the stitches.",
+        obrazek: null,
+        exist: false,
+      },
+    ]
+  },
+
+  {
+    nazev: "znackovac",
+    title: "Stitch marker",
+    videoURL: "LtpxNswfMrs",
+    kroky: [
+      {
+        popis: "Serves the purpose of being an indicator of the start of the row. You can use a piece of yarn.",
+        obrazek: null,
+        exist: false,
+      },
+      {
+        popis: "The marker is a useful tool, which is sold in a few variants. The spiral is used for thicker yarns.",
+        obrazek: "znackovac-spirala",
+        exist: true,
+      },
+      {
+        popis: "This one has the advantage that you can close it and that it’s useful for all types of yarn.",
+        obrazek: "znackovac",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "jehla",
+    title: "Needle",
+    videoURL: "U6YFVgPBqJ4",
+    kroky: [
+      {
+        popis: "For sewing pieces together or incorporating the yarn that’s left into the product. Plastic needles are better if you’re working with a thicker type of yarn.",
+        obrazek: "jehla",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "nuzky",
+    title: "Scissors",
+    videoURL: "50Hvj3rbFAQ",
+    kroky: [
+      {
+        popis: "Using scissors is an easy task for most people. In crocheting it’s no different.",
+        obrazek: "zastrihovaci-nuzky",
+        exist: true,
+      },
+      {
+        popis: "Scissors that are used for paper mostly aren’t suitable for yarn and you’ll have to cut it more times and that makes the yarn flutter.",
+        obrazek: "nuzky",
+        exist: true,
+      },
+      {
+        popis: "You can get scissors that are made for fabric, or in a different shape and with different decorations.",
+        obrazek: "zdobene-nuzky",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "bezpecnostni-oci-a-nos",
+    title: "Safety eyes and noses",
+    videoURL: "6MKkv62YKcQ",
+    kroky: [
+      {
+        popis: "There are many different shapes, sizes and colors of safety eyes and noses with the washers or without them.",
+        obrazek: "bezpecnostni-nos",
+        exist: true,
+      },
+      {
+        popis: "They are easy to close. The washer is pushed onto the thread of the nose or eye which can be pushed as many times as there are threads.",
+        obrazek: "zavit-a-pojistka",
+        exist: true,
+      },
+      {
+        popis: "The more firmly the washer is pushed the “uglier” or “prettier” the effect can be – it depends on the product you’re making.",
+        obrazek: "bezpecnostni-oko",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "chrastitko",
+    title: "Rattle",
+    videoURL: "ZHjAEHY40-s",
+    kroky: [
+      {
+        popis: "If you want to make your product more kid or pet-friendly and fun, you can put a rattle inside your product.",
+        obrazek: "chrastitko",
+        exist: true,
+      },
+      {
+        popis: "Rattles are made in different sizes, shapes, and various intensities of the rattle.",
+        obrazek: "chrastitko-kulate",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "pocitadlo",
+    title: "Row counter",
+    videoURL: null,
+    kroky: [
+      {
+        popis: "There are two types of counters. Manual and digital. Both have the same purpose, to count rows you’ve crocheted.",
+        obrazek: null,
+        exist: false,
+      },
+      {
+        popis: "Manual counter looks like a cylinder that has two parts; both can be turned. They have numbers from 0 to 9 on them. Some can be put on your hook, and some have to be picked up and put down repeatedly.",
+        obrazek: "manualni",
+        exist: true,
+      },
+      {
+        popis: "Digital counters are more comfortable, you can put them on your thumb and by clicking a button you raise your current number by one or reset the counter. Some digital counters can light up the display.",
+        obrazek: "digitalni",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "navijec-prize",
+    title: "Yarn winder",
+    videoURL: null,
+    kroky: [
+      {
+        popis: "If your ball of yarn becomes entangled so you have to untangle it or it unravels before your eyes, the yarn winder is a great tool. This tool takes your yarn and makes it into a ball. You take one side and put it on the top rotating cylinder, strain the yarn and then all you do is just turn the lever.",
+        obrazek: "navijec-prize",
+        exist: true,
+      },
+    ]
+  },
+
+  {
+    nazev: "vypln",
+    title: "Filling",
+    videoURL: "DvlX75z79tw",
+    kroky: [
+      {
+        popis: "If you’re creating a 3D product (animal, toy, etc.), then you will need filling. Cotton or hollow fiber can be used for filling. You can also use your cut off loose yarn, failed attempts. It’s good for recycling.",
+        obrazek: "vypln",
+        exist: true,
+      },
+    ]
+  }
+];
+
 
 @Injectable({
   providedIn: 'root'
@@ -206,7 +404,7 @@ export class PomuckyService {
 
   pomucky: Map<string, Pomucka>;
 
-  constructor() {
+  constructor(public translate: TranslateService) {
     this.initMap();
   }
 
@@ -216,8 +414,16 @@ export class PomuckyService {
 
   private initMap() {
     this.pomucky = new Map();
-    polePomucek.forEach(pomucka => {
-      this.pomucky.set(pomucka.nazev, pomucka);
-    });
+    if (this.translate.currentLang === 'EN') {
+      polePomucekEN.forEach(pomucka => {
+        this.pomucky.set(pomucka.nazev, pomucka);
+      });
+    }
+    else {
+      polePomucekCZ.forEach(pomucka => {
+        this.pomucky.set(pomucka.nazev, pomucka);
+      });
+    }
+    
   }
 }
