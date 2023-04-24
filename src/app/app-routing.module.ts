@@ -29,14 +29,9 @@ const routes: Routes = [
     loadChildren: () => import('./pages/navody/navody.module').then(m => m.NavodyPageModule)
   },
   {
-    path: 'vnitrek',
-    loadChildren: () => import('./pages/navody/vnitrek/vnitrek.module').then(m => m.VnitrekPageModule)
-  },
-  {
-    path: 'detail',
-    loadChildren: () => import('./pages/navody/vnitrek/detail/detail.module').then(m => m.DetailPageModule)
+    path: 'prihlaseni',
+    loadChildren: () => import('./pages/prihlaseni/prihlaseni.module').then(m => m.PrihlaseniPageModule)
   }
-
 ];
 
 @NgModule({

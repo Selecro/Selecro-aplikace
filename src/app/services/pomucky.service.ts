@@ -5,12 +5,12 @@ const polePomucek = [
   {
     nazev: "hacek",
     title: "Háček",
-    videoURL: "bV-dubempbc",
+    videoURL: "XL4ze9vLC3s",
     kroky: [
       {
         popis: "Existuje široká škála velikostí.",
-        obrazek: "velikosti-hacku",
-        exist: true,
+        obrazek: null,
+        exist: false,
       },
       {
         popis: "Háčky se dělají z různých materiálů.",
@@ -28,7 +28,7 @@ const polePomucek = [
   {
     nazev: "prize",
     title: "Příze",
-    videoURL: "IOvAdXIL8Vg",
+    videoURL: "XL4ze9vLC3s",
     kroky: [
       {
         popis: "Dnes můžeme najít obrovské množství značek a materiálů (akrylové, bavlněné, směsové).",
@@ -51,7 +51,7 @@ const polePomucek = [
   {
     nazev: "znackovac",
     title: "Značkovač",
-    videoURL: "LtpxNswfMrs",
+    videoURL: "XL4ze9vLC3s",
     kroky: [
       {
         popis: "Slouží nám k označení počátku řady, ale dá se použít i jiný kousek příze.",
@@ -74,7 +74,7 @@ const polePomucek = [
   {
     nazev: "jehla",
     title: "Jehla",
-    videoURL: "U6YFVgPBqJ4",
+    videoURL: null,
     kroky: [
       {
         popis: "Na přišívání jednotlivých dílů, zapošívání nitě. Upřednostňované plastové jehly se více hodí, pokud děláte se silnějším typem příze.",
@@ -87,22 +87,22 @@ const polePomucek = [
   {
     nazev: "nuzky",
     title: "Nůžky",
-    videoURL: "50Hvj3rbFAQ",
+    videoURL: null,
     kroky: [
       {
         popis: "Nůžky asi už někdy používal každý z nás a u háčkování to není nějak zvlášť jiné.",
-        obrazek: "zastrihovaci-nuzky",
-        exist: true,
-      },
-      {
-        popis: "Klasické nůžky na papír nejsou na některé příze vhodné, protože potom ji přestříháváme na několikrát a akorát se nám konec třepí.",
         obrazek: "nuzky",
         exist: true,
       },
       {
-        popis: "Můžete si pořídit nůžky na látku, nebo různé speciálně zdobené, tvarované.",
-        obrazek: "zdobene-nuzky",
+        popis: "Klasické nůžky na papír nejsou na některé příze vhodné, protože potom ji přestříháváme na několikrát a akorát se nám konec třepí.",
+        obrazek: "zdobneNuzky",
         exist: true,
+      },
+      {
+        popis: "Můžete si pořídit nůžky na látku, nebo různé speciálně zdobené, tvarované.",
+        obrazek: null,
+        exist: false,
       },
     ]
   },
@@ -110,7 +110,7 @@ const polePomucek = [
   {
     nazev: "bezpecnostni-oci-a-nos",
     title: "Bezpečnostní oči a nos",
-    videoURL: "6MKkv62YKcQ",
+    videoURL: null,
     kroky: [
       {
         popis: "Dnes se dá pořídit spousta tvarů, velikostí a barev očí a nosů s bezpečnostní pojistkou.",
@@ -133,7 +133,7 @@ const polePomucek = [
   {
     nazev: "chrastitko",
     title: "Chrastítko",
-    videoURL: "ZHjAEHY40-s",
+    videoURL: null,
     kroky: [
       {
         popis: "Pokud chcete svůj výrobek nějak ozvláštnit pro dítě, nebo třeba domácího mazlíčka, můžete dovnitř přidat chrastítko.",
@@ -187,12 +187,12 @@ const polePomucek = [
   {
     nazev: "vypln",
     title: "Výplň",
-    videoURL: "DvlX75z79tw",
+    videoURL: null,
     kroky: [
       {
         popis: "Pokud vytváříte něco prostorového (zvířátka, hračky, atd...), tak se vám bude hodit nějaká výplň. Tu může tvořit vata, nebo duté vlákno. Po delší době háčkování můžete použít i zbytky přízí z minulého tvoření. Je to taková recyklace, kterou já uplatňuji třeba u jehelníčků",
         obrazek: "vypln",
-        exist: true,
+        exist: false,
       },
     ]
   }
