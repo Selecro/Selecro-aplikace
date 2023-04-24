@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Vyrobek } from '../types'
+import { Postup, Vyrobek } from '../types'
 
 const poleVyrobku: Array<Vyrobek> = [
   {
@@ -372,5 +372,10 @@ export class VyukaService {
 
   public getVsechnyVyrobky(): Array<Vyrobek> {
     return poleVyrobku;
+  }
+
+  public getKroky(nazev: string): Array<Postup> {
+    let index = poleVyrobku.findIndex(x => x.nazev === nazev);
+    return poleVyrobku[index].kroky;
   }
 }

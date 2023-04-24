@@ -3,8 +3,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { VyukaService } from 'src/app/services';
 import { Postup, Vyrobek } from 'src/app/types';
-import { SwiperOptions } from 'swiper';
-import { SwiperComponent } from 'swiper/angular';
 
 @Component({
   selector: 'app-detail',
@@ -13,32 +11,49 @@ import { SwiperComponent } from 'swiper/angular';
 })
 
 export class DetailPage implements OnInit {
-  @ViewChild('swiper') swiper: SwiperComponent;
-  config: SwiperOptions = {
-    loop: true
-  };
-
-  vyrobek: Vyrobek;
-  kroky: Array<Postup>;
+  vyrobek: any;
+  Postup: Array<Postup>;
+  index: number;
+  nazev: string;
 
   constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
-    const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
-    this.vyrobek = this.vyukaService.getVyrobekByName(nazev);
-    this.kroky = this.vyrobek.kroky;
+    this.nazev = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
+    this.vyrobek = this.vyukaService.getVyrobekByName(this.nazev);
+    this.Postup = this.vyukaService.getKroky(this.nazev);
+    this.index = 0;
+    console.log(this.vyrobek);
   }
 
   ngOnInit() {
+    this.vyrobek = this.vyukaService.getVyrobekByName(this.nazev);
+    this.Postup = this.vyukaService.getKroky(this.nazev);
+    console.log(this.vyrobek);
+  }
+
+  ngDoCheck() {
+    this.vyrobek = this.vyukaService.getVyrobekByName(this.nazev);
+    this.Postup = this.vyukaService.getKroky(this.nazev);
   }
 
   getEmbedVideo(embed: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${embed}?showinfo=0&loop=1&modestbranding=1`);
   }
 
-  goToNextSlide() {
-    this.swiper.swiperRef.slideNext();
+  public goToNextSlide() {
+    if (this.index + 1 >= this.Postup.length) {
+      this.index = 0;
+    }
+    else {
+      this.index++;
+    }
   }
 
-  goToPreviousSlide() {
-    this.swiper.swiperRef.slidePrev();
+  public goToPreviousSlide() {
+    if (this.index - 1 < 0) {
+      this.index = this.Postup.length - 1;
+    }
+    else {
+      this.index--;
+    }
   }
 }

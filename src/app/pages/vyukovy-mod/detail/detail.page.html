@@ -13,36 +13,33 @@
 </ion-header>
 
 <ion-content>
-  <swiper #swiper [config]="config">
-    <ng-template swiperSlide *ngFor="let krok of kroky">
       <ion-card class="karta-popisu">
         <ion-card-content>
           <div class="text">
             <b>Krok:</b>
-            {{krok.cislo}}
+            {{Postup[index].cislo}}
             <br>
-            <div *ngIf="krok.styl != null">
+            <div *ngIf="Postup[index].styl != null">
               <b>Styl:</b>
-              {{krok.styl}}
+              {{Postup[index].styl}}
               <br>
             </div>
-            <b>Pomůcky:</b> {{krok.pouzijeme}}
+            <b>Pomůcky:</b> {{Postup[index].pouzijeme}}
             <br>
             <b>Popis:</b>
-            <p class="popisek" [innerHtml]="krok.popis"></p>
+            <p class="popisek" [innerHtml]="Postup[index].popis"></p>
           </div>
         </ion-card-content>
       </ion-card>
+
       <div class="video-center">
         <div class="video">
-          <iframe width="100%" height="100%" [src]=getEmbedVideo(krok.videoUrl) title="YouTube video player"
+          <iframe width="100%" height="100%" [src]=getEmbedVideo(Postup[index].videoUrl) title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
       </div>
-    </ng-template>
-  </swiper>
 </ion-content>
 
 <ion-toolbar>
