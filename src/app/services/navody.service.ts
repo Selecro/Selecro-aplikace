@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { Navod, Obtiznost, PopisNavodu } from '../types';
 
-const poleNavoduCZ: Array<Navod> = [
+const poleNavodu = [
   {
     obtiznost: Obtiznost.lehky,
     nazev: "dinosaurus",
@@ -161,199 +160,24 @@ const poleNavoduCZ: Array<Navod> = [
   },
 ];
 
-const poleNavoduEN: Array<Navod> = [
-  {
-    obtiznost: Obtiznost.lehky,
-    nazev: "dinosaurus",
-    title: "Dino",
-    zkratky: "Mr, Inc, Sc, Dec, Sl St, Ch",
-    pomucky: "Hook (size 2mm), Needle, Stitch marker, Hollow fiber, Safety eyes",
-    premiove: false,
-    popisy: [
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "hlava-dinosaura",
-        titulekCasti: "Head",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3SC, Inc", "4Sc, Inc", "5Sc, Inc", "Sc (6 rows)", "5Sc, Dec", "4Sc, Dec", "3Sc, Dec", "2Sc, Dec", "Sc, Dec", "Dec", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "nos-dinosaura",
-        titulekCasti: "Nose",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "Sc (3 rows)", "3Sc, Dec", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "telo-dinosaura",
-        titulekCasti: "Body",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3SC, Inc", "4Sc, Inc", "5Sc, Inc", "6Sc, Inc", "Sc (3 rows)", "6Sc, Dec", "5Sc, Dec", "4Sc, Dec", "Sc (3 rows)", "3Sc, Dec", "Sc (1 row)", "2Sc, A", "Sc (1 rows)", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "predni-noha-dinosaura",
-        titulekCasti: "Front leg (2x)",
-        popis: ["Mr (6)", "Inc", "Sc (7 rows)", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "zadni-noha-dinosaura",
-        titulekCasti: "Back leg (2x)",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "Sc (2 rows)", "2Sc, Dec", "4Dec, 10Sc", "2Dec, 10Sc", "Sc (8 rows)", "Dec", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "ocas-dinosaura",
-        titulekCasti: "Tail",
-        popis: ["Mr (6)", "Inc", "11Sc, Inc", "12Sc, Inc", "13Sc, Inc", "14Sc, Inc", "15Sc, Inc", "16Sc, Inc", "17Sc, Inc", "18Sc, Inc", "19Sc, Inc", "20Sc, Inc", "21Sc, Inc", "22Sc, Inc", "23Sc, Inc", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "osten-dinosaura",
-        titulekCasti: "Spike (6x)",
-        popis: ["Mr (6)", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "5Sc, Inc", "6Sc, Inc", "SlSt"]
-      }
-    ]
-  },
-  {
-    obtiznost: Obtiznost.stredni,
-    nazev: "harold",
-    title: "Harold",
-    zkratky: "Mr, Sc, Ch, Sl St, Inc, Dec",
-    pomucky: "Hook (size 3,5 mm), Needle, Yarn (Jeans), Stitch marker, Safety eyes (10 mm), Filling",
-    premiove: false,
-    popisy: [
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "hlava-harold",
-        titulekCasti: "Head",
-        popis: ["Mr (8)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "Sc (6 rows)", "4Sc, Dec", "3Sc, Dec", "2Sc, Dec", "Sc, Dec", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Ch, Inc, Sl St",
-        nazevCasti: "chapadla-harold",
-        titulekCasti: "Tentacles",
-        popis: ["6*(25Ch, change the direction of crocheting and alternate 2Dec, double Dec, SlSt, into the next chain again on the inside)"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: null,
-        nazevCasti: "vyplneni-harold",
-        titulekCasti: "Filling",
-        popis: ["Don't forget to fill it in."]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Dec, Sl St",
-        nazevCasti: "uzavreni-harold",
-        titulekCasti: "Closing off",
-        popis: ["Dec", "SlSt to close off, leave a longer strand of yarn for sewing."]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: null,
-        nazevCasti: "doplnky-harold",
-        titulekCasti: "Details",
-        popis: ["Create the eyebrows and mouth with black yarn."]
-      }
-    ]
-  },
-  {
-    obtiznost: Obtiznost.tezky,
-    nazev: "vodni-zelva",
-    title: "Sea turtle",
-    zkratky: "Mr, Sc, Ch, Sl St, Inc, Dec",
-    pomucky: "Hook (size 3,5 mm), Needle, Yarn (Jeans), Stitch marker, Safety eyes (10 mm), Filling",
-    premiove: true,
-    popisy: [
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "hlava-zelva",
-        titulekCasti: "Head",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "Sc (4 rows)", "4Sc, Dec", "3Sc, Dec", "2Sc, Dec", "Sc, Dec", "Dec", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Dec, Sl St",
-        nazevCasti: "horni-cast-krunyre-zelva",
-        titulekCasti: "Top part of shell",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "5Sc, Inc", "6Sc, Inc", "Sc (3 rows)", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "spodni-cast-krunyre-zelva",
-        titulekCasti: "Bottom part of shell",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "5Sc, Inc", "6Sc, Inc", "SlSt"]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "zadni-ploutev-zelva",
-        titulekCasti: "Back fin (2x)",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "SlSt", "After finish, fold the circle in half and sew it together."]
-      },
-      {
-        obrazek: true,
-        zkratkyCasti: "Mr, Inc, Sc, Sl St",
-        nazevCasti: "predni-ploutev-zelva",
-        titulekCasti: "Front fin (2x)",
-        popis: ["Mr (6)", "Inc", "Sc, Inc", "2Sc, Inc", "3Sc, Inc", "4Sc, Inc", "5Sc, Inc", "6Sc, Inc", "SlSt", "After finish, fold the circle in half and sew it together."]
-      },
-      {
-        obrazek: false,
-        zkratkyCasti: "Mr, Sc, Sl St",
-        nazevCasti: "ocasek-zelva",
-        titulekCasti: "Tail",
-        popis: ["Mr (4)", "Sc (2 rows)", "SlSt"]
-      },
-    ],
-  },
-];
-
 @Injectable({
   providedIn: 'root'
 })
 export class NavodyService {
 
-  constructor(public translate: TranslateService) {
+  constructor() {
   }
 
   public getNavodyByName(name: string) {
-    if (this.translate.currentLang === 'EN') {
-      return poleNavoduEN.find(element => element.nazev == name);
-    }
-    else {
-      return poleNavoduCZ.find(element => element.nazev == name);
-    }
+    return poleNavodu.find(element => element.nazev == name);
   }
 
   public getVsechnyNavody(): Array<Navod> {
-    if (this.translate.currentLang === 'EN') {
-      return poleNavoduEN;
-    }
-    else {
-      return poleNavoduCZ;
-    }
+    return poleNavodu;
   }
 
   public getPopisy(titl: string): Array<PopisNavodu> {
-    if (this.translate.currentLang === 'EN') {
-      let index = poleNavoduEN.findIndex(x => x.title == titl);
-    return poleNavoduEN[index].popisy;
-    }
-    else {
-      let index = poleNavoduCZ.findIndex(x => x.title == titl);
-    return poleNavoduCZ[index].popisy;
-    }
+    let index = poleNavodu.findIndex(x => x.title == titl);
+    return poleNavodu[index].popisy;
   }
 }

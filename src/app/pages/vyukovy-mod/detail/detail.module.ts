@@ -5,13 +5,6 @@ import { SwiperModule } from 'swiper/angular';
 import { IonicModule } from '@ionic/angular';
 import { DetailPageRoutingModule } from './detail-routing.module';
 import { DetailPage } from './detail.page';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
 
 @NgModule({
   imports: [
@@ -19,15 +12,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     SwiperModule,
     IonicModule,
-    DetailPageRoutingModule,
-    HttpClientModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
-    })
+    DetailPageRoutingModule
   ],
   declarations: [DetailPage]
 })

@@ -19,25 +19,25 @@
   <ion-card>
     <ion-card-header>
       <ion-item-divider>
-        <ion-card-title>{{ 'SLOVNIK.slovnikZkratka' | translate }}</ion-card-title>
+        <ion-card-title>Zkratka:</ion-card-title>
         <ion-card class="zkratka">
           {{styl.zkratka}}
         </ion-card>
       </ion-item-divider>
       <ion-item-divider>
-        <ion-card-title>{{ 'SLOVNIK.image' | translate }}</ion-card-title>
+        <ion-card-title>Značka:</ion-card-title>
         <ion-card class="znacka">
           <ion-img class="obraz" src="assets/icon/{{styl.nazev}}.svg"></ion-img>
         </ion-card>
       </ion-item-divider>
     </ion-card-header>
     <ion-card-content>
-      <p><strong>{{ 'SLOVNIK.popis' | translate }}</strong></p>
+      <p><strong>Popis</strong></p>
       <p innerHTML="{{styl.popis}}"></p>
     </ion-card-content>
   </ion-card>
-  <h4>{{ 'SLOVNIK.animace' | translate }}</h4>
+  <h4>Animace</h4>
   <ion-card><ion-img src="assets/icon/{{styl.nazev}}.gif"></ion-img></ion-card>
-  <h4>{{ 'SLOVNIK.veSkutecnosti' | translate }}</h4>
+  <h4>Ve skutečnosti</h4>
   <ion-card><ion-img src="assets/icon/{{styl.nazev}}-real.png"></ion-img></ion-card>
 </ion-content>

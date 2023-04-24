@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 import { NavodyService } from 'src/app/services';
 import { Navod } from 'src/app/types';
 
@@ -19,9 +18,7 @@ export class DetailPage implements OnInit {
   index0: number;
   executed: number = 0;
 
-  constructor(private router: Router, private navodyService: NavodyService, public translate: TranslateService ) {
-    translate.addLangs(['CZ', 'EN']);
-    translate.setDefaultLang('CZ');
+  constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
@@ -37,10 +34,6 @@ export class DetailPage implements OnInit {
     localStorage.setItem("time", "null");
   }
 
-  public switchLanguage(lang:string) {
-    return this.translate.use(lang);
-  }
-  
   public crossLine() {
     if (localStorage.getItem("finished") == "true") {
       this.element.forEach(x => x.setAttribute("style", "text-decoration: line-through; color: gray"));
