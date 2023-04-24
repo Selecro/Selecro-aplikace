@@ -1,5 +1,5 @@
 export type Vyrobek = {
-  nazev: string
+  nazev: string,
   title: string,
   kroky: Array<Postup>,
   cas: string,
