@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Navod } from '../../types/navod';
 import { Router } from '@angular/router';
 import { NavodyService } from '../../services';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navody',
@@ -19,9 +18,7 @@ export class NavodyPage implements OnInit {
   searchInput: any;
   selected: boolean = false;
 
-  constructor(private router: Router, private navodyService: NavodyService, public translate: TranslateService ) {
-    translate.addLangs(['CZ', 'EN']);
-    translate.setDefaultLang('CZ');
+  constructor(private router: Router, private navodyService: NavodyService) {
   }
 
   ngOnInit() {
@@ -30,10 +27,7 @@ export class NavodyPage implements OnInit {
     this.inputbox();
     localStorage.setItem("finished", "");
   }
-  
-  public switchLanguage(lang:string) {
-    return this.translate.use(lang);
-  }
+
   vyberObtiznost(e) {
     if (e.detail.value == "lehky" || e.detail.value == "stredni" || e.detail.value == "tezky") {
       this.obtiznost = e.detail.value;

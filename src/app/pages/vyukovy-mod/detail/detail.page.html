@@ -18,17 +18,17 @@
       <ion-card class="karta-popisu">
         <ion-card-content>
           <div class="text">
-            <b>{{ 'VYUKOVYMODDETAIL.krok' | translate }}</b>
+            <b>Krok:</b>
             {{krok.cislo}}
             <br>
             <div *ngIf="krok.styl != null">
-              <b>{{ 'VYUKOVYMODDETAIL.styl' | translate }}</b>
+              <b>Styl:</b>
               {{krok.styl}}
               <br>
             </div>
-            <b>{{ 'VYUKOVYMODDETAIL.pomucky' | translate }}</b> {{krok.pouzijeme}}
+            <b>Pomůcky:</b> {{krok.pouzijeme}}
             <br>
-            <b>{{ 'VYUKOVYMODDETAIL.popis' | translate }}</b>
+            <b>Popis:</b>
             <p class="popisek" [innerHtml]="krok.popis"></p>
           </div>
         </ion-card-content>

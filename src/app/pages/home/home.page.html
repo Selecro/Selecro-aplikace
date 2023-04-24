@@ -6,11 +6,6 @@
     <ion-title>
       Selecro
     </ion-title>
-    <ion-select #selectedlang (ionChange)="switchLanguage(selectedlang.value)" placeholder="{{ 'APP.jazyk' | translate }}">
-      <ion-select-option *ngFor="let language of translate.getLangs()" [value]="language">
-        {{ language }}
-      </ion-select-option>
-    </ion-select>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -18,14 +13,15 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
     <ion-card>
       <ion-card-header>
-        <ion-card-title>{{ 'HOME.vitejte' | translate }}</ion-card-title>
+        <ion-card-title>Vítejte</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>{{ 'HOME.text1' | translate }}</p>
-        <p>{{ 'HOME.text2' | translate }}</p>
+        <p>Zdraví Vás tým Selecro s touto mobilní aplikací na naučení háčkování.</p>
+        <p>Připravujeme pro Vás i stránku na internetu.</p>
       </ion-card-content>   
     </ion-card>
     <ion-slides pager>  
@@ -40,7 +36,7 @@
       </ion-slide>
     </ion-slides>
     <h2>
-      {{ 'HOME.socialniSite' | translate }}
+      Sociální sítě
     </h2>
     <ion-grid>
       <ion-row>
