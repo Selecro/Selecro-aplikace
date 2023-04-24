@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button routerLink="/prihlaseni">
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
       <div class="search-box" (click)="inputbox()">
@@ -57,8 +57,8 @@
     <ion-card-content>
       <img class="avatar" src="assets/icon/{{item.nazev}}.jpg" alt="avatar">
       <div class="popis">
+        <p><strong>Počet částí:</strong> {{item.pocet}}</p> 
         <p><strong>Zkratky:</strong> {{item.zkratky}}</p>
-        <p><strong>Pomůcky:</strong> {{item.pomucky}}</p>     
       </div>
     </ion-card-content>
   </ion-card>

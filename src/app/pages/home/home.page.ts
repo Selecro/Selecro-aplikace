@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, RouterEvent, RouterLink } from '@angular/router';
+import { SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +10,6 @@ import { Component } from '@angular/core';
 
 export class HomePage {
 
-  constructor() { }
+  constructor(private router: Router, private sessionStorage: SessionStorageService) { }
+
 }
