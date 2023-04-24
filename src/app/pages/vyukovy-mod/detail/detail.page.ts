@@ -17,7 +17,6 @@ export class DetailPage implements OnInit {
   nazev: string;
 
   constructor(private vyukaService: VyukaService, private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
-   // const nazev: string = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
     this.nazev = this.activatedRoute.snapshot.paramMap.get('nazevVyrobku');
     this.vyrobek = this.vyukaService.getVyrobekByName(this.nazev);
     this.Postup = this.vyukaService.getKroky(this.nazev);
