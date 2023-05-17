@@ -21,7 +21,8 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Heslo</ion-label>
-    <ion-input type="{{ showPassword ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()"></ion-input>
+    <ion-input type="{{ showPassword ? 'text' : 'password' }}" ngModel password (change)="passwordCheck()" minlength="8" 
+      maxlength="20"></ion-input>
     <ion-icon slot="end" [name]="showPassword ? 'eye' : 'eye-off'" (click)="togglePassword()"></ion-icon>
     <ion-note slot="helper">Heslo musí obsahovat minimálně 8 znaků, maximálně 20.</ion-note>
     <ion-note slot="error">Špatně zadané heslo.</ion-note>
