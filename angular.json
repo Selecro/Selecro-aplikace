@@ -78,9 +78,6 @@
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
-            },
-            "ci": {
-              "progress": false
             }
           }
         },
@@ -101,7 +98,7 @@
             "scripts": [],
             "assets": [
               {
-                "glob": "favicon.ico",
+                "glob": "src/assets/logo.ico",
                 "input": "src/",
                 "output": "/"
               },

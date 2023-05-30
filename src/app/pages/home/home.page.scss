@@ -1,94 +1,35 @@
-#container {
-  padding: 20px;
-}
-
-.novinky {
-  background: #C8E7F4;
-  border-radius: 20px;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-  margin: auto;
-}
-
-p {
-  font-weight: 400;
-  font-size: calc(.6rem + .5vw);
+ion-card {
+  background-color: #C8E7F4;
+  color: #000;
 }
 
 h2 {
   text-align: center;
-  font-weight: bold;
-  font-size: calc(1rem + 1vw);
+  margin-top: 40px;
 }
 
-.obrazek {
-  padding: 8px;
-  width: 100%;
-  max-width: 230px;
-  height: auto;
-}
-
-#obrazky {
-  margin-top: 20px;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#soc_site {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.card {
-  margin-left: 20px;
-  padding: 15px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  flex: 1;
+.soc {
+  background-color: #fff;
+  height: 80px;
 }
 
 .socials_logo {
-  width: 100%;
-  max-width: 30px;
-  min-width: 30px;
-  height: auto;
+  max-width: 40px;
+  min-width: 40px;
 }
 
-#soc {
-  margin-top: 20px;
+ion-grid {
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (max-width: 808px) {
-  #container {
-    padding: 20px;
-  }
+ion-img {
+  max-width: 250px;
 }
 
-@media screen and (max-width: 767px) {
-  .obrazek {
-    max-width: 200px;
-  }
+ion-slides {
+  --bullet-background: blue;
+  --bullet-background-active: darkblue;
+  padding-bottom: 40px;
 }
 
-@media screen and (max-width: 479px) {
-  .obrazek {
-    max-width: 140px;
-    padding: 8px;
-  }
-
-  .socials_logo {
-    max-width: 25px;
-    min-width: 25px;
-  }
-
-  .card {
-    padding: 10px;
-  }
-}

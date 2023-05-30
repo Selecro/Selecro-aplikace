@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button routerLink="/prihlaseni">
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
       <div class="search-box" (click)="inputbox()">
@@ -26,19 +26,19 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let item of items | search:selectedItem">
-    <ion-card (click)='goDetail(item)'>
-      <div class="rozdeleni">
-        <div class="avatar">
-          <img src="assets/icon/{{item.nazev}}.jpg">
-        </div>
-        <div class="popis" class="text">
-          <b>Název:</b> {{item.title}} <br>
-          <b>Čas:</b> {{item.cas}}<br>
-          <b>Počet kroků:</b> {{item.pocet}} <br>
-          <b>Popis:</b> {{item.popis}}
-        </div>
+  <div id="body">
+    <div *ngFor="let item of items | search:selectedItem">
+      <div class="bunka" (click)='goDetail(item)'>
+        <div class="ruzovy_okraj">{{item.title}}</div>
+        <div class="obsah"> 
+          <img class="avatar" src="assets/icon/{{item.nazev}}.jpg">
+          <div class="popis">
+            <b>Čas:</b> {{item.cas}}<br>
+            <b>Počet kroků:</b> {{item.pocet}} <br>        
+            <b>Popis:</b> {{item.popis}}
+          </div>
+        </div> 
       </div>
-    </ion-card>
+    </div>
   </div>
 </ion-content>

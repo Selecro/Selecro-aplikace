@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="lista">
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button routerLink="/prihlaseni">
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
       <div class="search-box" (click)="inputbox()">
@@ -26,46 +26,40 @@
 </ion-header>
 
 <ion-toolbar>
-  <ion-item>
-    <button class="button" (click)="vsechno($event)">Vše</button>
-    <button class="button" (click)="dokocene($event)">Dokončené</button>
-    <button class="button" (click)="premiove($event)">Prémiové</button>
+  <ion-buttons slot="start">
+    <ion-button fill="solid" class="button" (click)="vsechno($event)">Vše</ion-button>
+    <ion-button fill="solid" class="button" (click)="dokocene($event)">Dokončené</ion-button>
+    <ion-button fill="solid" class="button" (click)="premiove($event)">Prémiové</ion-button>
+  </ion-buttons>
     <ion-list>
-      <label>Obtížnost</label>
-      <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button"
-        placeholder="Obtížnost" interface="popover">
-        <ion-select-option value="lehky">Lehká</ion-select-option>
-        <ion-select-option value="stredni">Střední</ion-select-option>
-        <ion-select-option value="tezky">Těžká</ion-select-option>
-      </ion-select>
+      <ion-item>
+        <ion-buttons>
+          <ion-select [(ngModel)]="selectedElement" (ionChange)="vyberObtiznost($event)" class="button"
+            placeholder="Obtížnost" interface="popover">
+            <ion-select-option value="lehky">Lehká</ion-select-option>
+            <ion-select-option value="stredni">Střední</ion-select-option>
+            <ion-select-option value="tezky">Těžká</ion-select-option>
+          </ion-select>
+        </ion-buttons>
+      </ion-item>
     </ion-list>
-  </ion-item>
 </ion-toolbar>
 
 <ion-content>
-  <ion-card *ngFor="let item of items | callback:selectedElement | search:selectedItem | premiove:selected">
-    <div class="bunka {{item.obtiznost}}" (click)="goVnitrek(item)">
-      <div id="cerveny_okraj">
-        <div class="Nazev_navodu {{item.obtiznost}}_name">
-          {{item.titulek}}
-          &nbsp;
-          <img *ngIf="item.premiove == true" width="25" height="25" src="../../../assets/icon/star.svg">
-        </div>
+  <ion-card *ngFor="let item of items | callback:selectedElement | search:selectedItem | premiove:selected" routerLink="vnitrek/{{item.nazev}}" class="bunka {{item.obtiznost}}" (click)="timer()">
+    <ion-header>
+      <ion-card-title class="Nazev_navodu {{item.obtiznost}}_name">
+        {{item.title}}
+        &nbsp;
+        <img *ngIf="item.premiove == true" src="../../../assets/icon/star.svg" alt="star" class="star">
+      </ion-card-title>
+    </ion-header>
+    <ion-card-content>
+      <img class="avatar" src="assets/icon/{{item.nazev}}.jpg" alt="avatar">
+      <div class="popis">
+        <p><strong>Zkratky:</strong> {{item.zkratky}}</p>
+        <p><strong>Pomůcky:</strong> {{item.pomucky}}</p>     
       </div>
-      <div class="obsah">
-        <img id="obrazek_navodu">
-        <table class="text">
-          <div class="rozdeleni">
-            <div class="avatar">
-              <img src="assets/icon/{{item.nazev}}.jpg">
-            </div>
-            <div class="popis" class="text">
-              <b>Zkratky:</b> {{item.zkratky}} <br>
-              <b>Pomůcky:</b> {{item.pomucky}}
-            </div>
-          </div>
-        </table>
-      </div>
-    </div>
+    </ion-card-content>
   </ion-card>
 </ion-content>
